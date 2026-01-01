@@ -8,16 +8,16 @@ A complete visual reference for the HotlistAI brand identity.
 
 ### Primary Colors
 
-```
+\`\`\`
 Background (Light):  #FAFAFA
 Background (Dark):   #0A0A0A
 Foreground (Light):  #171717
 Foreground (Dark):   #EDEDED
-```
+\`\`\`
 
 ### Grayscale Palette
 
-```
+\`\`\`
 Gray 50:   #FAFAFA
 Gray 100:  #F5F5F5
 Gray 200:  #E5E5E5
@@ -29,16 +29,16 @@ Gray 700:  #404040
 Gray 800:  #262626
 Gray 900:  #171717
 Gray 950:  #0A0A0A
-```
+\`\`\`
 
 ### Accent Colors
 
-```
+\`\`\`
 Primary:   #1A1A1A (Near Black)
 Border:    #E5E5E5 (Light) / #262626 (Dark)
 Ring:      #171717 (Focus states)
 Muted:     #F5F5F5 (Light) / #262626 (Dark)
-```
+\`\`\`
 
 ### Color Usage Rules
 
@@ -55,20 +55,20 @@ Muted:     #F5F5F5 (Light) / #262626 (Dark)
 ### Font Families
 
 **Primary (Sans-serif):**
-```
+\`\`\`
 Geist Sans
 font-family: 'Geist', sans-serif
-```
+\`\`\`
 
 **Monospace:**
-```
+\`\`\`
 Geist Mono
 font-family: 'Geist Mono', monospace
-```
+\`\`\`
 
 ### Type Scale
 
-```
+\`\`\`
 text-xs:    0.75rem  (12px)
 text-sm:    0.875rem (14px)
 text-base:  1rem     (16px)
@@ -82,25 +82,25 @@ text-6xl:   3.75rem  (60px)
 text-7xl:   4.5rem   (72px)
 text-8xl:   6rem     (96px)
 text-9xl:   8rem     (128px)
-```
+\`\`\`
 
 ### Font Weights
 
-```
+\`\`\`
 font-light:     300
 font-normal:    400
 font-medium:    500
 font-semibold:  600
 font-bold:      700
-```
+\`\`\`
 
 ### Line Height
 
-```
+\`\`\`
 Body text:      leading-relaxed (1.625)
 Headings:       leading-tight (1.25)
 Large display:  leading-none (1)
-```
+\`\`\`
 
 ### Typography Rules
 
@@ -117,7 +117,7 @@ Large display:  leading-none (1)
 
 ### Base Scale (Tailwind)
 
-```
+\`\`\`
 0:    0px
 px:   1px
 0.5:  2px
@@ -138,26 +138,26 @@ px:   1px
 48:   192px
 56:   224px
 64:   256px
-```
+\`\`\`
 
 ### Section Spacing
 
-```
+\`\`\`
 Small:    py-12 (48px)
 Medium:   py-16 (64px)
 Large:    py-24 (96px)
 XL:       py-32 (128px)
-```
+\`\`\`
 
 ### Component Spacing
 
-```
+\`\`\`
 Button padding:     px-6 py-3
 Input padding:      px-4 py-2
 Card padding:       p-6
 Container padding:  px-4 md:px-6
 Gap default:        gap-4
-```
+\`\`\`
 
 ### Spacing Rules
 
@@ -172,38 +172,38 @@ Gap default:        gap-4
 
 ### Container
 
-```
+\`\`\`
 max-w-7xl (1280px)
 mx-auto
 px-4 md:px-6
-```
+\`\`\`
 
 ### Breakpoints
 
-```
+\`\`\`
 sm:   640px
 md:   768px
 lg:   1024px
 xl:   1280px
 2xl:  1536px
-```
+\`\`\`
 
 ### Layout Method Priority
 
 **1. Flexbox (90% of layouts)**
-```
+\`\`\`
 flex
 items-center
 justify-between
 gap-4
-```
+\`\`\`
 
 **2. CSS Grid (complex 2D layouts)**
-```
+\`\`\`
 grid
 grid-cols-1 md:grid-cols-2 lg:grid-cols-3
 gap-6
-```
+\`\`\`
 
 **3. Absolute positioning (rare, only when necessary)**
 
@@ -219,7 +219,7 @@ gap-6
 
 ## Border Radius
 
-```
+\`\`\`
 rounded-none:   0px
 rounded-sm:     2px
 rounded:        4px
@@ -229,39 +229,39 @@ rounded-xl:     12px
 rounded-2xl:    16px
 rounded-3xl:    24px
 rounded-full:   9999px
-```
+\`\`\`
 
 ### Radius Usage
 
-```
+\`\`\`
 Buttons:      rounded-md (6px)
 Cards:        rounded-lg (8px)
 Inputs:       rounded-md (6px)
 Images:       rounded-lg (8px)
 Avatars:      rounded-full
-```
+\`\`\`
 
 ---
 
 ## Shadows
 
-```
+\`\`\`
 shadow-sm:    0 1px 2px 0 rgb(0 0 0 / 0.05)
 shadow:       0 1px 3px 0 rgb(0 0 0 / 0.1)
 shadow-md:    0 4px 6px -1px rgb(0 0 0 / 0.1)
 shadow-lg:    0 10px 15px -3px rgb(0 0 0 / 0.1)
 shadow-xl:    0 20px 25px -5px rgb(0 0 0 / 0.1)
-```
+\`\`\`
 
 ### Shadow Usage
 
-```
+\`\`\`
 Cards:          shadow-sm
 Hover cards:    shadow-md
 Modals:         shadow-xl
 Dropdowns:      shadow-lg
 None by default (flat aesthetic)
-```
+\`\`\`
 
 ---
 
@@ -269,7 +269,7 @@ None by default (flat aesthetic)
 
 ### Primary Button
 
-```tsx
+\`\`\`tsx
 className="
   bg-foreground 
   text-background 
@@ -279,11 +279,11 @@ className="
   font-medium 
   transition-colors
 "
-```
+\`\`\`
 
 ### Secondary Button
 
-```tsx
+\`\`\`tsx
 className="
   bg-transparent 
   border border-foreground 
@@ -295,11 +295,11 @@ className="
   font-medium 
   transition-colors
 "
-```
+\`\`\`
 
 ### Ghost Button
 
-```tsx
+\`\`\`tsx
 className="
   bg-transparent 
   text-foreground 
@@ -309,15 +309,15 @@ className="
   font-medium 
   transition-colors
 "
-```
+\`\`\`
 
 ### Button Sizes
 
-```
+\`\`\`
 Small:    px-4 py-2 text-sm
 Default:  px-6 py-3 text-base
 Large:    px-8 py-4 text-lg
-```
+\`\`\`
 
 ---
 
@@ -325,7 +325,7 @@ Large:    px-8 py-4 text-lg
 
 ### Text Input
 
-```tsx
+\`\`\`tsx
 className="
   w-full 
   px-4 py-2 
@@ -337,11 +337,11 @@ className="
   focus:ring-2 
   focus:ring-ring
 "
-```
+\`\`\`
 
 ### Textarea
 
-```tsx
+\`\`\`tsx
 className="
   w-full 
   px-4 py-2 
@@ -354,7 +354,7 @@ className="
   focus:ring-2 
   focus:ring-ring
 "
-```
+\`\`\`
 
 ---
 
@@ -362,7 +362,7 @@ className="
 
 ### Standard Card
 
-```tsx
+\`\`\`tsx
 className="
   p-6 
   border border-border 
@@ -371,11 +371,11 @@ className="
   hover:shadow-md 
   transition-shadow
 "
-```
+\`\`\`
 
 ### Feature Card
 
-```tsx
+\`\`\`tsx
 className="
   p-8 
   border border-border 
@@ -383,7 +383,7 @@ className="
   bg-background 
   space-y-4
 "
-```
+\`\`\`
 
 ---
 
@@ -391,12 +391,12 @@ className="
 
 ### Size Scale
 
-```
+\`\`\`
 Small:    w-4 h-4  (16px)
 Default:  w-5 h-5  (20px)
 Medium:   w-6 h-6  (24px)
 Large:    w-8 h-8  (32px)
-```
+\`\`\`
 
 ### Icon Rules
 
@@ -421,12 +421,12 @@ Large:    w-8 h-8  (32px)
 
 ### Logo Usage
 
-```
+\`\`\`
 Light backgrounds:  Dark logo
 Dark backgrounds:   Light logo
 Minimum size:       120px wide (wordmark)
 Clear space:        Equal to height of logo
-```
+\`\`\`
 
 ### Logo Rules
 
@@ -449,18 +449,18 @@ Clear space:        Equal to height of logo
 
 ### Image Treatments
 
-```
+\`\`\`
 Border radius:  rounded-lg
 Aspect ratios:  16:9 (landscape), 1:1 (square), 4:5 (portrait)
 Filters:        None (keep images natural)
 Overlays:       Black overlay at 40% for text
-```
+\`\`\`
 
 ### Placeholder Images
 
-```
+\`\`\`
 /placeholder.svg?height=400&width=600&query=abstract+pattern
-```
+\`\`\`
 
 ---
 
@@ -468,15 +468,15 @@ Overlays:       Black overlay at 40% for text
 
 ### Transition Timing
 
-```
+\`\`\`
 Fast:     transition-all duration-150
 Default:  transition-all duration-200
 Slow:     transition-all duration-300
-```
+\`\`\`
 
 ### Hover States
 
-```tsx
+\`\`\`tsx
 // Buttons
 hover:bg-foreground/90
 
@@ -491,7 +491,7 @@ hover:scale-105
 
 // Opacity
 hover:opacity-80
-```
+\`\`\`
 
 ### Animation Rules
 
@@ -512,18 +512,18 @@ hover:opacity-80
 
 ### Focus States
 
-```tsx
+\`\`\`tsx
 focus:outline-none 
 focus:ring-2 
 focus:ring-ring 
 focus:ring-offset-2
-```
+\`\`\`
 
 ### Screen Reader Text
 
-```tsx
+\`\`\`tsx
 <span className="sr-only">Description for screen readers</span>
-```
+\`\`\`
 
 ### Semantic HTML
 
@@ -539,33 +539,33 @@ focus:ring-offset-2
 
 ### Hero Section
 
-```
+\`\`\`
 Full viewport height: min-h-screen
 Center content: flex items-center justify-center
 Large heading: text-5xl md:text-7xl font-bold
 Subheading: text-xl md:text-2xl text-muted-foreground
 CTA buttons: Primary + Secondary side by side
-```
+\`\`\`
 
 ### Feature Grid
 
-```
+\`\`\`
 Grid: grid-cols-1 md:grid-cols-2 lg:grid-cols-3
 Gap: gap-8
 Cards: p-6 border rounded-lg
 Icon: w-12 h-12 mb-4
 Heading: text-xl font-semibold mb-2
 Description: text-muted-foreground
-```
+\`\`\`
 
 ### Bento Grid
 
-```
+\`\`\`
 Grid: grid-cols-1 md:grid-cols-4 lg:grid-cols-6
 Auto rows: auto-rows-[200px]
 Varying spans: col-span-2, col-span-3, row-span-2
 Gaps: gap-4
-```
+\`\`\`
 
 ---
 
@@ -602,23 +602,23 @@ Gaps: gap-4
 
 ### Public Assets
 
-```
+\`\`\`
 /public
   /images           (Product screenshots, hero images)
   /icons            (Favicon, app icons)
   og-image.jpg      (Social sharing image)
   favicon.ico
   site.webmanifest
-```
+\`\`\`
 
 ### Component Organization
 
-```
+\`\`\`
 /components
   /ui               (Primitive components)
   site-header.tsx   (Global header)
   site-footer.tsx   (Global footer)
-```
+\`\`\`
 
 ---
 
@@ -626,7 +626,7 @@ Gaps: gap-4
 
 ### Color Tokens
 
-```css
+\`\`\`css
 /* Light mode */
 --background: #FAFAFA
 --foreground: #171717
@@ -634,7 +634,7 @@ Gaps: gap-4
 /* Dark mode */
 --background: #0A0A0A
 --foreground: #EDEDED
-```
+\`\`\`
 
 ### Dark Mode Rules
 
@@ -650,20 +650,20 @@ Gaps: gap-4
 
 ### 12-Column Grid
 
-```
+\`\`\`
 grid-cols-12
 col-span-6 (50%)
 col-span-4 (33%)
 col-span-3 (25%)
-```
+\`\`\`
 
 ### Asymmetric Layouts
 
-```
+\`\`\`
 grid-cols-3 (Left sidebar)
 grid-cols-[1fr_2fr] (2:1 ratio)
 grid-cols-[2fr_1fr] (1:2 ratio)
-```
+\`\`\`
 
 ---
 
@@ -671,7 +671,7 @@ grid-cols-[2fr_1fr] (1:2 ratio)
 
 ### Mobile First Approach
 
-```tsx
+\`\`\`tsx
 // Base (mobile)
 <div className="text-base p-4">
 
@@ -680,7 +680,7 @@ grid-cols-[2fr_1fr] (1:2 ratio)
 
 // Desktop
 <div className="text-base md:text-lg lg:text-xl p-4 md:p-6 lg:p-8">
-```
+\`\`\`
 
 ### Breakpoint Usage
 
@@ -696,16 +696,16 @@ grid-cols-[2fr_1fr] (1:2 ratio)
 
 ### Hidden Elements
 
-```tsx
+\`\`\`tsx
 <nav className="print:hidden">
 <footer className="print:hidden">
-```
+\`\`\`
 
 ### Print Optimization
 
-```tsx
+\`\`\`tsx
 <article className="print:text-black print:bg-white">
-```
+\`\`\`
 
 ---
 

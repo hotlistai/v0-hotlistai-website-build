@@ -40,13 +40,13 @@
 
 **Short description (750 characters max):**
 
-```
+\`\`\`
 HotlistAI Labs builds AI systems that run businesses on autopilot. We create orchestrated AI agents that handle strategy, product, growth, and operations—so founders can focus on what matters. Our lab incubates ideas, stress-tests them, and graduates the best into standalone products. Based on the belief that AI should work for you, not the other way around.
-```
+\`\`\`
 
 **From the business (long description):**
 
-```
+\`\`\`
 HotlistAI Labs is where people and products meet. We build multi-agent AI systems that feel simple, human, and conversational—with speed, clarity, and purpose.
 
 Our products remove bottlenecks, amplify talent, and give people leverage. Every tool we create is designed to deliver real work, not noise.
@@ -54,7 +54,7 @@ Our products remove bottlenecks, amplify talent, and give people leverage. Every
 We operate as a modern, minimalist software lab. Ideas enter, get stress-tested, and graduate as production-ready products that meet the Hotlist Standard: human-first, agent-powered, conversational, modular, and minimal.
 
 Founded by Johnny Apple.
-```
+\`\`\`
 
 **Services to list:**
 - AI Software Development
@@ -85,7 +85,7 @@ Founded by Johnny Apple.
 
 **About (2,000 characters max):**
 
-```
+\`\`\`
 HotlistAI Labs builds AI-powered systems that run businesses on autopilot.
 
 We create orchestrated multi-agent tools that handle strategy, product, growth, and operations—so founders and teams can focus on what actually matters.
@@ -113,7 +113,7 @@ Founded by Johnny Apple.
 
 Website: hotlistai.com
 Newsletter: hotlistai.substack.com
-```
+\`\`\`
 
 > **Industry:** Software Development
 
@@ -138,13 +138,13 @@ Newsletter: hotlistai.substack.com
 
 **Headline (220 characters):**
 
-```
+\`\`\`
 Founder @ HotlistAI Labs | Building AI systems that run businesses on autopilot | Real estate meets AI
-```
+\`\`\`
 
 **About:**
 
-```
+\`\`\`
 I build AI systems that run businesses on autopilot.
 
 I'm the founder of HotlistAI Labs, where we create orchestrated multi-agent tools that handle strategy, product, growth, and operations—so founders and teams can focus on what actually matters.
@@ -163,7 +163,7 @@ Everything we build follows the Hotlist Standard: human-first, agent-powered, co
 I write about AI, building in public, and what's actually working at hotlistai.substack.com.
 
 Let's connect if you're building in the AI space or want to explore what multi-agent systems could do for your business.
-```
+\`\`\`
 
 **Featured:**
 - Link to hotlistai.com
@@ -189,9 +189,9 @@ Let's connect if you're building in the AI space or want to explore what multi-a
 
 **Bio (160 characters):**
 
-```
+\`\`\`
 AI systems that run businesses on autopilot. Where people and products meet. Built by @johnnyapple
-```
+\`\`\`
 
 > **Location:** Building in public
 
@@ -238,9 +238,9 @@ AI systems that run businesses on autopilot. Where people and products meet. Bui
 
 **Bio (160 characters):**
 
-```
+\`\`\`
 Building AI that runs businesses on autopilot. Founder @hotlistai. Real estate → AI. Writing at hotlistai.substack.com
-```
+\`\`\`
 
 > **Website:** hotlistai.substack.com
 
@@ -263,11 +263,11 @@ Building AI that runs businesses on autopilot. Founder @hotlistai. Real estate �
 
 **Bio (150 characters):**
 
-```
+\`\`\`
 AI systems that run businesses on autopilot.
 Built by @johnnyapple
 ⬇️ See what we're building
-```
+\`\`\`
 
 > **Website:** hotlistai.com
 
@@ -298,9 +298,9 @@ Built by @johnnyapple
 
 **Hashtags (use 5-10 per post):**
 
-```
+\`\`\`
 #AI #SaaS #buildinpublic #startups #automation #artificialintelligence #founders #tech #software #entrepreneur
-```
+\`\`\`
 
 ---
 
@@ -314,9 +314,9 @@ Built by @johnnyapple
 
 **Bio (80 characters):**
 
-```
+\`\`\`
 Building AI that runs your business. Founded by Johnny 🍎
-```
+\`\`\`
 
 > **Website:** hotlistai.com
 
@@ -357,7 +357,7 @@ Building AI that runs your business. Founded by Johnny 🍎
 
 **Description:**
 
-```
+\`\`\`
 Building AI systems that run businesses on autopilot.
 
 HotlistAI Labs creates orchestrated multi-agent tools for founders, teams, and enterprises. We share how we build, what we're learning, and where AI is headed.
@@ -372,13 +372,13 @@ Website: hotlistai.com
 Newsletter: hotlistai.substack.com
 
 Founded by Johnny Apple.
-```
+\`\`\`
 
 **Channel keywords:**
 
-```
+\`\`\`
 AI, artificial intelligence, multi-agent systems, SaaS, startup, building in public, automation, real estate AI, developer tools
-```
+\`\`\`
 
 ### Content Strategy
 
@@ -412,19 +412,19 @@ AI, artificial intelligence, multi-agent systems, SaaS, startup, building in pub
 
 **About (255 characters):**
 
-```
+\`\`\`
 HotlistAI Labs builds AI-powered systems that run businesses on autopilot. We create orchestrated AI agents for strategy, product, growth, and ops. Founded by Johnny Apple.
-```
+\`\`\`
 
 **Short description:**
 
-```
+\`\`\`
 Where people and products meet.
-```
+\`\`\`
 
 **Long description:**
 
-```
+\`\`\`
 HotlistAI Labs builds AI systems that run businesses on autopilot.
 
 We create orchestrated multi-agent tools that handle strategy, product, growth, and operations—so founders and teams can focus on what actually matters.
@@ -439,7 +439,7 @@ Products:
 Website: hotlistai.com
 Newsletter: hotlistai.substack.com
 Email: info@hotlistai.com
-```
+\`\`\`
 
 > **Website:** https://hotlistai.com
 
@@ -462,9 +462,9 @@ Email: info@hotlistai.com
 
 **Short description:**
 
-```
+\`\`\`
 Building AI systems that run businesses on autopilot. Founder of HotlistAI Labs. Writing about what I'm building, what's working, and the future of AI-powered work.
-```
+\`\`\`
 
 **Logo:** Johnny Apple cartoon avatar
 
@@ -499,9 +499,9 @@ Building AI systems that run businesses on autopilot. Founder of HotlistAI Labs.
 
 **Tagline:**
 
-```
+\`\`\`
 Building AI systems that run businesses on autopilot
-```
+\`\`\`
 
 ### Launch Strategy
 - Create maker profile now
@@ -523,9 +523,9 @@ Building AI systems that run businesses on autopilot
 
 **Bio:**
 
-```
+\`\`\`
 AI systems that run businesses on autopilot. Where people and products meet.
-```
+\`\`\`
 
 > **Website:** https://hotlistai.com
 
@@ -548,7 +548,7 @@ AI systems that run businesses on autopilot. Where people and products meet.
 
 ### Channel Structure
 
-```
+\`\`\`
 📢 ANNOUNCEMENTS
   └── announcements
   └── product-updates
@@ -570,7 +570,7 @@ AI systems that run businesses on autopilot. Where people and products meet.
 💡 FEEDBACK
   └── feature-requests
   └── bug-reports
-```
+\`\`\`
 
 ### When to Launch
 - After you have 500+ combined followers
@@ -627,27 +627,27 @@ AI systems that run businesses on autopilot. Where people and products meet.
 
 **Super short (80 chars):**
 
-```
+\`\`\`
 Building AI that runs your business. Founder @johnnyapple
-```
+\`\`\`
 
 **Short (150 chars):**
 
-```
+\`\`\`
 AI systems that run businesses on autopilot. Built by @johnnyapple. Where people and products meet.
-```
+\`\`\`
 
 **Medium (255 chars):**
 
-```
+\`\`\`
 HotlistAI Labs builds AI-powered systems that run businesses on autopilot. We create orchestrated AI agents for strategy, product, growth, and ops. Founded by Johnny Apple.
-```
+\`\`\`
 
 **Tagline:**
 
-```
+\`\`\`
 Where people and products meet.
-```
+\`\`\`
 
 ---
 
