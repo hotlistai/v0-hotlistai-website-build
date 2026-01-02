@@ -27,6 +27,21 @@ ${message}
       text: emailBody,
     })
 
+    if (process.env.ZAPIER_WEBHOOK_URL) {
+      await fetch(process.env.ZAPIER_WEBHOOK_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name,
+          email,
+          company: company || "Not provided",
+          message,
+          source: "Contact Form",
+          timestamp: new Date().toISOString(),
+        }),
+      })
+    }
+
     return NextResponse.json({ success: true })
   } catch (error) {
     console.error("Contact form error:", error)
