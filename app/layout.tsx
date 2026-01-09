@@ -2,6 +2,7 @@ import type React from "react"
 import type { Metadata, Viewport } from "next"
 import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
+import Script from "next/script"
 import { ChatWidget } from "@/components/chat-widget"
 import "./globals.css"
 
@@ -163,7 +164,7 @@ export const metadata: Metadata = {
     // yandex: "your-yandex-verification-code",
   },
   category: "technology",
-    generator: 'v0.app'
+  generator: "v0.app",
 }
 
 export const viewport: Viewport = {
@@ -340,6 +341,13 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <head>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+        <Script
+          id="hs-script-loader"
+          src="//js-na2.hs-scripts.com/242682996.js"
+          strategy="afterInteractive"
+          async
+          defer
+        />
       </head>
       <body className={`font-sans antialiased ${_instrumentSerif.variable}`}>
         {children}
