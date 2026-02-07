@@ -52,15 +52,17 @@ function SubstackIcon({ className }: { className?: string }) {
 }
 
 const footerLinks = {
+  products: [
+    { name: "The Lab", href: "/lab" },
+    { name: "Hotlist Funnels", href: "/hotlist-funnels" },
+  ],
   company: [
     { name: "Ethos", href: "/ethos" },
-    { name: "Labs", href: "/labs" },
+    { name: "Who We Are", href: "/company" },
+    { name: "The Foundry", href: "/company#foundry" },
+    { name: "Press & Media", href: "/company#press" },
+    { name: "FAQ", href: "/faq" },
     { name: "Blog", href: "/blog" },
-    { name: "Press", href: "/press" },
-    { name: "FAQ", href: "/faq" }, // Added FAQ to footer
-  ],
-  resources: [
-    { name: "The Foundry", href: "/developers" },
     { name: "Contact", href: "/contact" },
   ],
   legal: [
@@ -74,9 +76,9 @@ export function SiteFooter() {
   return (
     <footer className="border-t border-border/40 bg-muted/20">
       <div className="max-w-6xl mx-auto px-4 md:px-6 py-16 md:py-20">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-12">
           {/* Brand */}
-          <div className="col-span-2 md:col-span-1">
+          <div className="col-span-2">
             <Link href="/" className="inline-block mb-4">
               <Image src="/logo-light.png" alt="HotlistAI" width={120} height={28} className="h-6 w-auto dark:hidden" />
               <Image
@@ -104,9 +106,26 @@ export function SiteFooter() {
             </div>
           </div>
 
+          {/* Products */}
+          <div>
+            <h3 className="font-medium text-sm mb-4">Products</h3>
+            <ul className="space-y-3">
+              {footerLinks.products.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-muted-foreground hover:text-foreground transition-all hover:translate-x-1 inline-block"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           {/* Company */}
           <div>
-            <h3 className="font-medium text-sm mb-4">Studio</h3>
+            <h3 className="font-medium text-sm mb-4">Company</h3>
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
@@ -131,23 +150,6 @@ export function SiteFooter() {
                         />
                       </svg>
                     )}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Resources */}
-          <div>
-            <h3 className="font-medium text-sm mb-4">Resources</h3>
-            <ul className="space-y-3">
-              {footerLinks.resources.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-muted-foreground hover:text-foreground transition-all hover:translate-x-1 inline-block"
-                  >
-                    {link.name}
                   </Link>
                 </li>
               ))}
