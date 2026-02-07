@@ -150,59 +150,33 @@ export function SiteHeader() {
       </div>
 
       {isOpen && (
-        <div className="md:hidden border-t border-border/20 bg-background/98 backdrop-blur-md animate-fade-in">
-          <nav className="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-1">
-            <Link
-              href="/ethos"
-              onClick={() => setIsOpen(false)}
-              className="block px-4 py-2.5 text-sm font-medium rounded-md hover:bg-muted/50 transition-colors"
-            >
-              Ethos
-            </Link>
-
-            <div className="px-4 pt-4 pb-1">
-              <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Products</span>
+        <div className="md:hidden fixed inset-0 top-14 bg-background z-40 animate-fade-in">
+          <nav className="flex flex-col justify-between h-full px-6 py-6">
+            <div className="flex flex-col gap-0.5">
+              {[
+                { name: "Ethos", href: "/ethos" },
+                { name: "The Lab", href: "/lab" },
+                { name: "Hotlist Funnels", href: "/hotlist-funnels" },
+                { name: "Who We Are", href: "/company" },
+                { name: "The Foundry", href: "/company#foundry" },
+                { name: "Press & Media", href: "/company#press" },
+                { name: "FAQ", href: "/faq" },
+                { name: "Blog", href: "/blog" },
+              ].map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  onClick={() => setIsOpen(false)}
+                  className="py-3 text-2xl font-medium text-foreground hover:opacity-60 transition-opacity"
+                >
+                  {item.name}
+                </Link>
+              ))}
             </div>
-            {productLinks.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                onClick={() => setIsOpen(false)}
-                className="block px-4 py-2.5 pl-6 text-sm font-medium rounded-md hover:bg-muted/50 transition-colors"
-              >
-                {item.name}
-                {item.description && (
-                  <span className="block text-xs text-muted-foreground mt-0.5">{item.description}</span>
-                )}
-              </Link>
-            ))}
-
-            <div className="px-4 pt-4 pb-1">
-              <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Company</span>
-            </div>
-            {companyLinks.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                onClick={() => setIsOpen(false)}
-                className="block px-4 py-2.5 pl-6 text-sm font-medium rounded-md hover:bg-muted/50 transition-colors"
-              >
-                {item.name}
-              </Link>
-            ))}
-
-            <Link
-              href="/blog"
-              onClick={() => setIsOpen(false)}
-              className="block px-4 py-2.5 text-sm font-medium rounded-md hover:bg-muted/50 transition-colors"
-            >
-              Blog
-            </Link>
-
             <Link
               href="/contact"
               onClick={() => setIsOpen(false)}
-              className="block mt-3 px-4 py-2.5 text-sm font-semibold text-center rounded-full bg-foreground text-background hover:opacity-90 transition-opacity"
+              className="block py-3.5 text-sm font-semibold text-center rounded-full bg-foreground text-background hover:opacity-90 transition-opacity"
             >
               Get in Touch
             </Link>
