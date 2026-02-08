@@ -2,97 +2,187 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { Menu, X } from "lucide-react"
-import { useState } from "react"
+import { Menu, X, ChevronDown } from "lucide-react"
+import { useState, useRef, useEffect } from "react"
 
-const navItems = [
-  { name: "The Lab", href: "/lab" },
-  { name: "Hotlist Funnels", href: "/hotlist-funnels" },
-  { name: "Ethos", href: "/ethos" },
-  { name: "The Foundry", href: "/developers" },
-  { name: "Company", href: "/press" },
-  { name: "Blog", href: "/blog" },
+const productLinks = [
+  { name: "The Lab", href: "/lab", description: "AI software products" },
+  { name: "Hotlist Funnels", href: "/hotlist-funnels", description: "High-velocity conversion systems" },
+]
+
+const companyLinks = [
+  { name: "Who We Are", href: "/company" },
+  { name: "The Foundry", href: "/company#foundry" },
+  { name: "Press & Media", href: "/company#press" },
   { name: "FAQ", href: "/faq" },
 ]
 
-export function SiteHeader() {
-  const [isOpen, setIsOpen] = useState(false)
+function Dropdown({
+  label,
+  items,
+  open,
+  onToggle,
+  onClose,
+}: {
+  label: string
+  items: { name: string; href: string; description?: string }[]
+  open: boolean
+  onToggle: () => void
+  onClose: () => void
+}) {
+  const ref = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    function handleClickOutside(e: MouseEvent) {
+      if (ref.current && !ref.current.contains(e.target as Node)) {
+        onClose()
+      }
+    }
+    if (open) {
+      document.addEventListener("mousedown", handleClickOutside)
+      return () => document.removeEventListener("mousedown", handleClickOutside)
+    }
+  }, [open, onClose])
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-xl supports-[backdrop-filter]:bg-background/60 animate-fade-in">
-      <div className="max-w-6xl mx-auto flex h-16 items-center justify-between px-4 md:px-6">
-        <Link href="/" className="flex items-center space-x-2 hover:scale-105 transition-transform active:scale-95">
+    <div ref={ref} className="relative">
+      <button
+        onClick={onToggle}
+        className="flex items-center gap-1 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+      >
+        {label}
+        <ChevronDown
+          className={`h-3.5 w-3.5 transition-transform duration-200 ${open ? "rotate-180" : ""}`}
+        />
+      </button>
+      {open && (
+        <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-56 rounded-xl border border-border/40 bg-background shadow-lg py-2 animate-fade-in">
+          {items.map((item) => (
+            <Link
+              key={item.name}
+              href={item.href}
+              onClick={onClose}
+              className="block px-4 py-2.5 hover:bg-muted/50 transition-colors"
+            >
+              <span className="text-sm font-medium">{item.name}</span>
+              {item.description && (
+                <span className="block text-xs text-muted-foreground mt-0.5">{item.description}</span>
+              )}
+            </Link>
+          ))}
+        </div>
+      )}
+    </div>
+  )
+}
+
+export function SiteHeader() {
+  const [isOpen, setIsOpen] = useState(false)
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null)
+
+  return (
+    <header className="fixed top-0 z-50 w-full border-b border-border/20 bg-background/95 backdrop-blur-md supports-[backdrop-filter]:bg-background/90">
+      <div className="max-w-7xl mx-auto flex h-14 items-center justify-between px-6 lg:px-8">
+        <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
           <Image
             src="/logo-light.png"
-            alt="HotlistAI"
-            width={140}
-            height={32}
-            className="h-7 w-auto dark:hidden"
+            alt="Hotlist AI"
+            width={120}
+            height={28}
+            className="h-6 w-auto dark:hidden"
             priority
           />
           <Image
             src="/logo-dark.png"
-            alt="HotlistAI"
-            width={140}
-            height={32}
-            className="h-7 w-auto hidden dark:block"
+            alt="Hotlist AI"
+            width={120}
+            height={28}
+            className="h-6 w-auto hidden dark:block"
             priority
           />
         </Link>
 
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-1">
-          {navItems.map((item) => (
-            <Link
-              key={item.name}
-              href={item.href}
-              className="relative px-4 py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground group"
-            >
-              <span className="relative z-10 flex items-center gap-1">{item.name}</span>
-              <span className="absolute inset-0 rounded-lg bg-muted opacity-0 group-hover:opacity-100 transition-opacity" />
-            </Link>
-          ))}
+        <nav className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
+          <Link
+            href="/ethos"
+            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Ethos
+          </Link>
+          <Dropdown
+            label="Products"
+            items={productLinks}
+            open={openDropdown === "products"}
+            onToggle={() => setOpenDropdown(openDropdown === "products" ? null : "products")}
+            onClose={() => setOpenDropdown(null)}
+          />
+          <Dropdown
+            label="Company"
+            items={companyLinks}
+            open={openDropdown === "company"}
+            onToggle={() => setOpenDropdown(openDropdown === "company" ? null : "company")}
+            onClose={() => setOpenDropdown(null)}
+          />
+          <Link
+            href="/blog"
+            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Blog
+          </Link>
         </nav>
 
         <div className="flex items-center gap-3">
-          <div className="hidden md:block">
-            <Link
-              href="/contact"
-              className="px-4 py-2 text-sm font-medium rounded-full bg-foreground text-background hover:bg-foreground/90 transition-all inline-block hover:scale-105 active:scale-95"
-            >
-              Request Access
-            </Link>
-          </div>
+          <Link
+            href="/contact"
+            className="hidden md:inline-flex px-5 py-2 text-sm font-semibold rounded-full bg-foreground text-background hover:opacity-90 transition-opacity"
+          >
+            Get in Touch
+          </Link>
 
-          {/* Mobile Menu Toggle */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-lg hover:bg-muted transition-colors active:scale-90"
+            className="md:hidden p-2 rounded-md hover:bg-muted/50 transition-colors"
+            aria-label="Toggle menu"
           >
             {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      <nav
-        className={`md:hidden overflow-hidden border-t border-border/40 transition-all duration-300 ${
-          isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-        }`}
-      >
-        <div className="max-w-6xl mx-auto px-4 py-4 flex flex-col gap-2">
-          {navItems.map((item) => (
+      {isOpen && (
+        <div className="md:hidden fixed inset-0 top-14 bg-background z-40 animate-fade-in">
+          <nav className="flex flex-col justify-between h-full px-6 py-6">
+            <div className="flex flex-col gap-0.5">
+              {[
+                { name: "Ethos", href: "/ethos" },
+                { name: "The Lab", href: "/lab" },
+                { name: "Hotlist Funnels", href: "/hotlist-funnels" },
+                { name: "Who We Are", href: "/company" },
+                { name: "The Foundry", href: "/company#foundry" },
+                { name: "Press & Media", href: "/company#press" },
+                { name: "FAQ", href: "/faq" },
+                { name: "Blog", href: "/blog" },
+              ].map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  onClick={() => setIsOpen(false)}
+                  className="py-3 text-2xl font-medium text-foreground hover:opacity-60 transition-opacity"
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </div>
             <Link
-              key={item.name}
-              href={item.href}
+              href="/contact"
               onClick={() => setIsOpen(false)}
-              className="block px-4 py-3 text-base font-medium rounded-lg hover:bg-muted transition-colors"
+              className="block py-3.5 text-sm font-semibold text-center rounded-full bg-foreground text-background hover:opacity-90 transition-opacity"
             >
-              {item.name}
+              Get in Touch
             </Link>
-          ))}
+          </nav>
         </div>
-      </nav>
+      )}
     </header>
   )
 }
