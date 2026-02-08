@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og"
 
 export const runtime = "edge"
 
-export const alt = "HotlistAI Labs - AI Systems That Run Businesses on Autopilot"
+export const alt = "Hotlist AI - AI-Powered Digital Counterparts & Lead Generation Systems"
 export const size = {
   width: 1200,
   height: 630,
@@ -50,41 +50,44 @@ export default async function Image() {
 
         <h1
           style={{
-            fontSize: 64,
+            fontSize: 56,
             fontWeight: 600,
             color: "#fafafa",
             textAlign: "center",
-            lineHeight: 1.1,
+            lineHeight: 1.15,
             margin: 0,
             marginBottom: 20,
           }}
         >
-          HotlistAI Labs
+          The AI Operating System for Digital Counterparts
         </h1>
 
         <p
           style={{
-            fontSize: 32,
+            fontSize: 28,
             color: "#a1a1a1",
             textAlign: "center",
             margin: 0,
             marginBottom: 40,
+            maxWidth: 800,
           }}
         >
-          AI systems that run businesses on autopilot.
+          AI software products + high-converting lead generation funnels for modern businesses.
         </p>
 
         <div
           style={{
             display: "flex",
             gap: 16,
-            fontSize: 20,
+            fontSize: 18,
             color: "#666666",
           }}
         >
           <span>@hotlistai</span>
-          <span>•</span>
+          <span>|</span>
           <span>hotlistai.com</span>
+          <span>|</span>
+          <span>Starting at $495/mo</span>
         </div>
       </div>
 

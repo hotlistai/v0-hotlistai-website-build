@@ -5,43 +5,6 @@ import { ArrowRight, Building, Mail, Zap } from "lucide-react"
 import Link from "next/link"
 import { useScrollAnimations } from "@/lib/scroll-animations"
 
-const DeploymentCard = ({
-  title,
-  tag,
-  description,
-  icon: Icon,
-  featured = false,
-}: {
-  title: string
-  tag: string
-  description: string
-  icon: any
-  featured?: boolean
-}) => (
-  <div
-    className={`group relative p-8 border border-border/50 bg-card hover:border-foreground/20 transition-all duration-300 hover:scale-[1.01] ${
-      featured ? "md:col-span-2" : ""
-    }`}
-  >
-    <div className="absolute top-6 right-6 flex items-center gap-2">
-      <span className="text-[10px] uppercase tracking-wider font-semibold text-muted-foreground border border-border/50 px-2 py-1 rounded-sm">
-        {tag}
-      </span>
-    </div>
-    <div className="mb-6">
-      <div className="w-12 h-12 bg-muted/50 border border-border/50 flex items-center justify-center rounded-lg group-hover:bg-muted transition-colors">
-        <Icon className="w-6 h-6 text-foreground" strokeWidth={1.5} />
-      </div>
-    </div>
-    <h3 className="font-serif text-3xl mb-3">{title}</h3>
-    <p className="text-muted-foreground leading-relaxed max-w-md">{description}</p>
-
-    <div className="mt-8 flex items-center gap-2 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-2 group-hover:translate-y-0">
-      View Deployment <ArrowRight className="w-4 h-4" />
-    </div>
-  </div>
-)
-
 export default function Home() {
   useScrollAnimations()
 
