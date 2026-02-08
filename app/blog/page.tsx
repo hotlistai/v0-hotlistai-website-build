@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import BlogPageClient from "./blog-client"
+import { getAllPosts, getFeaturedPost, getAllCategories } from "@/lib/blog"
 
 export const metadata: Metadata = {
   title: "Blog",
@@ -44,5 +45,15 @@ export const metadata: Metadata = {
 }
 
 export default function BlogPage() {
-  return <BlogPageClient />
+  const posts = getAllPosts()
+  const featuredPost = getFeaturedPost()
+  const categories = getAllCategories()
+
+  return (
+    <BlogPageClient
+      posts={posts}
+      categories={categories}
+      featuredPost={featuredPost}
+    />
+  )
 }

@@ -100,7 +100,7 @@ export const metadata: Metadata = {
     "workflow automation",
     "digital transformation",
   ],
-  authors: [{ name: "Johnny Apple", url: "https://hotlistai.substack.com" }],
+  authors: [{ name: "Johnny Apple", url: "https://hotlistai.com/blog" }],
   creator: "Hotlist AI",
   publisher: "Hotlist AI",
   formatDetection: {
@@ -233,7 +233,6 @@ const jsonLd = {
         "https://tiktok.com/@hotlistai",
         "https://facebook.com/hotlistai",
         "https://linkedin.com/company/hotlistai",
-        "https://hotlistai.substack.com",
         "https://youtube.com/@hotlistai",
         "https://threads.net/@hotlistai",
       ],
@@ -243,13 +242,13 @@ const jsonLd = {
         name: "Philip Pines",
         alternateName: "Johnny Apple",
         jobTitle: "Founder & CEO",
-        url: "https://hotlistai.substack.com",
+        url: "https://hotlistai.com/company",
         description:
           "Operator behind a company ranked #212 on the Inc. 5000 Fastest-Growing Companies list. Building AI-powered digital counterparts and lead generation systems.",
         sameAs: [
           "https://twitter.com/hotlistai",
           "https://linkedin.com/in/philippines",
-          "https://hotlistai.substack.com",
+          "https://hotlistai.com/blog",
         ],
         worksFor: { "@id": "https://hotlistai.com/#organization" },
         knowsAbout: [
