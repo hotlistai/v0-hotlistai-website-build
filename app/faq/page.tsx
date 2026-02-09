@@ -3,24 +3,48 @@ import { SiteFooter } from "@/components/site-footer"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "FAQ | Hotlist AI",
+  title: "FAQ",
   description:
-    "Frequently asked questions about Hotlist AI's digital counterparts, AI automation systems, lead generation funnels, and software products. Get answers about pricing, setup, and implementation.",
+    "Frequently asked questions about Hotlist AI's digital counterparts, AI automation systems, lead generation funnels, pricing, setup, and implementation. Get answers instantly.",
   keywords: [
+    "Hotlist AI FAQ",
     "AI automation FAQ",
     "digital counterpart questions",
-    "lead generation pricing",
-    "AI software setup",
+    "lead generation pricing FAQ",
+    "AI software setup guide",
     "Hotlist AI help",
     "AI implementation guide",
-    "custom AI solutions",
-    "AI funnel questions",
+    "custom AI solutions FAQ",
+    "Estate Mogul FAQ",
+    "LyftEmail FAQ",
+    "Hotlist Funnels pricing",
   ],
   openGraph: {
     title: "Frequently Asked Questions | Hotlist AI",
     description:
-      "Get answers about Hotlist AI's digital counterparts, lead generation systems, and AI automation products.",
+      "Get answers about Hotlist AI's digital counterparts, lead generation systems, pricing, and AI automation products.",
+    url: "https://hotlistai.com/faq",
+    siteName: "Hotlist AI",
     type: "website",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Hotlist AI FAQ",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "FAQ | Hotlist AI",
+    description:
+      "Get answers about Hotlist AI's digital counterparts, lead generation systems, and AI automation products.",
+    images: ["/og-image.jpg"],
+    creator: "@hotlistai",
+  },
+  alternates: {
+    canonical: "/faq",
   },
 }
 

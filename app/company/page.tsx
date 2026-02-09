@@ -6,24 +6,44 @@ import Link from "next/link"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Company | Hotlist AI",
+  title: "Company",
   description:
-    "Learn about Hotlist AI — who we are, our mission, our developer infrastructure, and how to reach us for press, partnerships, and media inquiries.",
+    "Hotlist AI is an AI venture studio building digital counterparts that multiply human potential. Led by an Inc. 5000 operator. Learn about our mission, developer infrastructure, and how to partner with us.",
   keywords: [
     "Hotlist AI company",
     "about Hotlist AI",
+    "AI venture studio",
     "AI company Texas",
-    "digital counterparts",
-    "Inc 5000",
-    "AI startup",
-    "developer API",
-    "press inquiries",
+    "digital counterparts company",
+    "Inc 5000 AI company",
+    "AI startup about",
+    "developer API infrastructure",
+    "press inquiries AI",
+    "The Foundry developer platform",
   ],
   openGraph: {
     title: "Company | Hotlist AI",
     description:
-      "Learn about Hotlist AI — who we are, our mission, our developer infrastructure, and how to reach us.",
+      "AI venture studio building digital counterparts that multiply human potential. Led by an Inc. 5000 operator.",
+    url: "https://hotlistai.com/company",
+    siteName: "Hotlist AI",
     type: "website",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Hotlist AI - About the Company",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Company | Hotlist AI",
+    description:
+      "AI venture studio building digital counterparts that multiply human potential. Led by an Inc. 5000 operator.",
+    images: ["/og-image.jpg"],
+    creator: "@hotlistai",
   },
   alternates: {
     canonical: "/company",
