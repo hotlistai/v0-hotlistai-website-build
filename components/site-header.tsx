@@ -4,16 +4,18 @@ import Link from "next/link"
 import Image from "next/image"
 import { Menu, X, ChevronDown } from "lucide-react"
 import { useState, useRef, useEffect } from "react"
+import { CalBookingButton } from "./cal-booking-button"
 
-const productLinks = [
-  { name: "The Lab", href: "/lab", description: "AI software products" },
-  { name: "Hotlist Funnels", href: "/hotlist-funnels", description: "High-velocity conversion systems" },
+const deploymentLinks = [
+  { name: "Growth Deployment", href: "/deployments#growth", description: "Acquisition throughput" },
+  { name: "Operations Deployment", href: "/deployments#operations", description: "Delivery throughput" },
+  { name: "Executive Execution", href: "/deployments#executive", description: "Decision throughput" },
 ]
 
 const companyLinks = [
-  { name: "Who We Are", href: "/company" },
-  { name: "The Foundry", href: "/company#foundry" },
-  { name: "Press & Media", href: "/company#press" },
+  { name: "How It Works", href: "/how-it-works" },
+  { name: "Governance", href: "/governance" },
+  { name: "About", href: "/company" },
   { name: "FAQ", href: "/faq" },
 ]
 
@@ -103,17 +105,11 @@ export function SiteHeader() {
         </Link>
 
         <nav className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
-          <Link
-            href="/ethos"
-            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-          >
-            Ethos
-          </Link>
           <Dropdown
-            label="Products"
-            items={productLinks}
-            open={openDropdown === "products"}
-            onToggle={() => setOpenDropdown(openDropdown === "products" ? null : "products")}
+            label="Deployments"
+            items={deploymentLinks}
+            open={openDropdown === "deployments"}
+            onToggle={() => setOpenDropdown(openDropdown === "deployments" ? null : "deployments")}
             onClose={() => setOpenDropdown(null)}
           />
           <Dropdown
@@ -132,12 +128,11 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <Link
-            href="/contact"
-            className="hidden md:inline-flex px-5 py-2 text-sm font-semibold rounded-full bg-foreground text-background hover:opacity-90 transition-opacity"
-          >
-            Get in Touch
-          </Link>
+          <div className="hidden md:block">
+            <CalBookingButton size="sm">
+              Request Audit
+            </CalBookingButton>
+          </div>
 
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -154,12 +149,10 @@ export function SiteHeader() {
           <nav className="flex flex-col justify-between h-full px-6 py-6">
             <div className="flex flex-col gap-0.5">
               {[
-                { name: "Ethos", href: "/ethos" },
-                { name: "The Lab", href: "/lab" },
-                { name: "Hotlist Funnels", href: "/hotlist-funnels" },
-                { name: "Who We Are", href: "/company" },
-                { name: "The Foundry", href: "/company#foundry" },
-                { name: "Press & Media", href: "/company#press" },
+                { name: "Deployments", href: "/deployments" },
+                { name: "How It Works", href: "/how-it-works" },
+                { name: "Governance", href: "/governance" },
+                { name: "About", href: "/company" },
                 { name: "FAQ", href: "/faq" },
                 { name: "Blog", href: "/blog" },
               ].map((item) => (
@@ -173,13 +166,18 @@ export function SiteHeader() {
                 </Link>
               ))}
             </div>
-            <Link
-              href="/contact"
-              onClick={() => setIsOpen(false)}
-              className="block py-3.5 text-sm font-semibold text-center rounded-full bg-foreground text-background hover:opacity-90 transition-opacity"
-            >
-              Get in Touch
-            </Link>
+            <div className="space-y-3">
+              <CalBookingButton size="md" className="w-full">
+                Request a System Audit
+              </CalBookingButton>
+              <Link
+                href="/contact"
+                onClick={() => setIsOpen(false)}
+                className="block py-3 text-sm text-center text-muted-foreground hover:text-foreground transition-colors"
+              >
+                Or send us a message
+              </Link>
+            </div>
           </nav>
         </div>
       )}
