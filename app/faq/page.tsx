@@ -1,45 +1,45 @@
+"use client"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
+import { CalBookingButton } from "@/components/cal-booking-button"
+import { useScrollAnimations } from "@/lib/scroll-animations"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "FAQ",
   description:
-    "Frequently asked questions about Hotlist AI's digital counterparts, AI automation systems, lead generation funnels, pricing, setup, and implementation. Get answers instantly.",
+    "Frequently asked questions about HotlistAI's Digital Workforce Infrastructure, deployment process, governance, pricing, and implementation.",
   keywords: [
-    "Hotlist AI FAQ",
-    "AI automation FAQ",
-    "digital counterpart questions",
-    "lead generation pricing FAQ",
-    "AI software setup guide",
-    "Hotlist AI help",
-    "AI implementation guide",
-    "custom AI solutions FAQ",
-    "Estate Mogul FAQ",
-    "LyftEmail FAQ",
-    "Hotlist Funnels pricing",
+    "HotlistAI FAQ",
+    "Digital Workforce Infrastructure FAQ",
+    "deployment questions",
+    "AI governance FAQ",
+    "workforce automation FAQ",
+    "Digital Counterparts FAQ",
+    "installation process",
+    "pricing FAQ",
   ],
   openGraph: {
-    title: "Frequently Asked Questions | Hotlist AI",
+    title: "Frequently Asked Questions | HotlistAI",
     description:
-      "Get answers about Hotlist AI's digital counterparts, lead generation systems, pricing, and AI automation products.",
+      "Get answers about HotlistAI's Digital Workforce Infrastructure, deployment process, governance, and pricing.",
     url: "https://hotlistai.com/faq",
-    siteName: "Hotlist AI",
+    siteName: "HotlistAI",
     type: "website",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Hotlist AI FAQ",
+        alt: "HotlistAI FAQ",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "FAQ | Hotlist AI",
+    title: "FAQ | HotlistAI",
     description:
-      "Get answers about Hotlist AI's digital counterparts, lead generation systems, and AI automation products.",
+      "Get answers about HotlistAI's Digital Workforce Infrastructure, deployment process, and governance.",
     images: ["/og-image.jpg"],
     creator: "@hotlistai",
   },
@@ -53,130 +53,162 @@ const faqs = [
     category: "General",
     questions: [
       {
-        question: "What is a digital counterpart?",
+        question: "What does HotlistAI do?",
         answer:
-          "A digital counterpart is an AI-powered agent that acts as an intelligent extension of you or your business. Unlike traditional tools that require constant input, digital counterparts understand context, make decisions, and handle complex workflows autonomously. They're built to think, act, and operate like a specialized team member.",
+          "HotlistAI is Digital Workforce Infrastructure. We deploy Digital Counterparts - autonomous role-holders that replace operational headcount across Growth, Operations, and Executive Execution. We do not sell tools. We install capacity.",
       },
       {
-        question: "How is Hotlist AI different from other AI companies?",
+        question: "What is a Digital Counterpart?",
         answer:
-          "We don't build generic AI tools. We build specialized intelligence systems designed for specific use cases. Every product goes through real-world testing and refinement before release. We're a venture studio, not a consultancy—we build, deploy, and actively maintain our products.",
+          "A Digital Counterpart is not a chatbot. It is an autonomous role-holder that owns outcomes. Unlike tools that require constant input, Digital Counterparts understand context, make decisions, and execute workflows independently - like an SDR, Ops Manager, or Chief of Staff would.",
       },
       {
-        question: "Who uses Hotlist AI products?",
+        question: "Is this just agents?",
         answer:
-          "Founders, operators, real estate professionals, law firms, solar companies, restaurant owners, and businesses that want to automate repetitive work and scale intelligently. Our systems are built for people who value speed, clarity, and results over complexity.",
-      },
-    ],
-  },
-  {
-    category: "Software Products",
-    questions: [
-      {
-        question: "What is Estate Mogul?",
-        answer:
-          "Estate Mogul is a digital boardroom for real estate professionals. It includes six specialized AI agents that manage assets, contracts, tenant relations, property analysis, and strategic decisions. Think of it as having an entire back-office team that never sleeps.",
+          "No. Agents are tools. We install role-holders inside workflows with governance and measurement. The difference: agents answer questions. Digital Counterparts own jobs, have boundaries, produce work, and are measured on throughput, cycle time, and margin.",
       },
       {
-        question: "How does LyftEmail work?",
+        question: "Who is HotlistAI built for?",
         answer:
-          "LyftEmail is communication intelligence for speed. It reads, categorizes, prioritizes, and drafts responses across your inbox. Inbox zero isn't a goal—it's the default. The system learns your tone, context, and preferences to handle email like you would, but faster.",
-      },
-      {
-        question: "What is PRIME?",
-        answer:
-          "PRIME is the operating system for your LLM. It transforms vague ideas into precision-built AI prompts. Instead of fighting with ChatGPT for 20 minutes, PRIME structures your thoughts, optimizes queries, and delivers world-class outputs on the first try.",
-      },
-      {
-        question: "Are these products available now?",
-        answer:
-          "Estate Mogul and LyftEmail are in active deployment. PRIME is in beta. Hotlist Video, Hotlist Voice, TalentVibing, HelloFinn, and Hotlist Pediatrics are coming soon. Join the waitlist to get early access when they launch.",
+          "Operators who feel coordination overhead and headcount bloat. COOs, founders, sales leaders, and service operators - people who own outcomes and hate inefficiency. If growth creates complexity and complexity demands headcount, we replace that with infrastructure.",
       },
     ],
   },
   {
-    category: "Custom Solutions",
+    category: "Deployments",
     questions: [
       {
-        question: "What are Custom Lead Generation Systems?",
+        question: "What deployment lanes do you offer?",
         answer:
-          "Done-for-you marketing funnels and automated lead qualification systems built for your industry. We design landing pages, run ad campaigns, integrate with your CRM, and deliver qualified leads directly to your pipeline. You focus on closing—we handle everything else.",
+          "Three lanes: Growth Deployment (acquisition throughput - replaces SDR headcount), Operations Deployment (delivery throughput - replaces Ops Manager overhead), and Executive Execution Deployment (decision throughput - replaces Chief of Staff work). You can deploy one lane or scale across all three.",
       },
       {
-        question: "How much do Custom Solutions cost?",
+        question: "How long does deployment take?",
         answer:
-          "Custom lead generation systems start at $2,500 setup + ongoing monthly management fees. Pricing depends on industry, ad spend, and complexity. Multi-location and enterprise solutions start at $5,000/month. Contact us for a custom quote.",
+          "7-14 days from System Audit to production. The process: Audit (2-3 days) → Deployment Plan (2-3 days) → Install & Test (5-7 days) → License & Monitor (ongoing). Repeatability is the product.",
       },
       {
-        question: "What industries do you support?",
+        question: "What happens during the System Audit?",
         answer:
-          "We currently build systems for real estate, solar installation, law firms, restaurants, contractors, blue collar recruiting, nonprofits, and fitness studios. If your industry isn't listed, reach out—we love building new verticals.",
+          "We map your workflows, identify bottlenecks, and calculate overhead cost. You get: workflow diagram with pain points, overhead cost calculation (hours + payroll), deployment recommendation, ROI projection (capacity vs. headcount), and risk assessment with governance needs.",
       },
       {
-        question: "How long does implementation take?",
+        question: "What does a deployment include?",
         answer:
-          "Custom solutions typically launch within 14-21 days. This includes discovery, funnel design, ad creative production, CRM integration, and campaign launch. Once live, we monitor, optimize, and scale continuously.",
+          "Role definition, workflow integration, approval gates, governance controls, observability dashboard, ongoing licensing, weekly optimization reviews, and quarterly strategic reviews. Everything is governed, measured, and repeatable.",
       },
       {
-        question: "Do I need to provide ad creative?",
+        question: "Can I start with one deployment and expand later?",
         answer:
-          "No. We handle all creative production—copywriting, images, video, and ad design. You approve the final assets before we launch. Our team has built hundreds of high-converting campaigns across multiple industries.",
-      },
-      {
-        question: "What CRMs do you integrate with?",
-        answer:
-          "We integrate with HubSpot, Salesforce, Pipedrive, Zoho, Follow Up Boss, kvCORE, and most major CRMs. If you use a custom system, we can connect via API or Zapier.",
+          "Yes. Land with one deployment. Expand by activating new counterparts and roles. The infrastructure supports multi-lane expansion without friction.",
       },
     ],
   },
   {
-    category: "Pricing & Access",
+    category: "Governance & Security",
     questions: [
       {
-        question: "How do I get access to The Lab products?",
+        question: "How are deployments governed?",
         answer:
-          "Request access through our contact form. Active deployment products (Estate Mogul, LyftEmail) are available immediately. Beta products require approval. Coming Soon products have waitlists you can join for early access.",
-      },
-      {
-        question: "Do you offer free trials?",
-        answer:
-          "Select products offer limited trial periods. Contact us to discuss trial availability for your use case.",
-      },
-      {
-        question: "Can I cancel anytime?",
-        answer:
-          "Yes. All subscriptions and custom solutions require 30 days notice for cancellation. No long-term contracts or lock-in periods.",
-      },
-    ],
-  },
-  {
-    category: "Technical",
-    questions: [
-      {
-        question: "What AI models do you use?",
-        answer:
-          "We use a combination of OpenAI, Anthropic, and custom-trained models depending on the use case. Our systems are model-agnostic—we select the best tool for the job and optimize for speed, accuracy, and cost.",
+          "Every deployment includes approval gates, audit trails, operating boundaries, and observability. Pre-action approval for outbound communication, contract generation, delegation, and data access. All actions are logged, timestamped, and attributed.",
       },
       {
         question: "Is my data secure?",
         answer:
-          "Yes. We follow enterprise-grade security practices including encryption at rest and in transit, SOC 2 compliance, and strict data retention policies. Your data is never used to train third-party models without explicit consent.",
+          "Yes. End-to-end encryption for data in transit and at rest. Role-based access control (RBAC). Data minimization - we only access what's needed. We do not train models on your proprietary data or share data across customer deployments. SOC 2 Type II compliance in progress.",
       },
       {
-        question: "Do you offer API access?",
+        question: "What are operating boundaries?",
         answer:
-          "API access is available for select products and enterprise clients. Contact us to discuss API documentation and implementation support.",
+          "Every Digital Counterpart operates within defined constraints: messaging tone and vocabulary, qualification criteria, approval escalation triggers, volume/rate limits, ICP fit requirements, and time-based operational windows. You set the rules. The system enforces them.",
       },
       {
-        question: "Can I white-label your products?",
+        question: "What does observability include?",
         answer:
-          "Enterprise white-label solutions are available for qualifying partners. This includes custom branding, dedicated infrastructure, and priority support. Reach out to discuss partnership opportunities.",
+          "Real-time dashboard with: live activity feed, performance metrics (throughput, cycle time, accuracy), approval queue, alert system for exceptions, and exportable audit logs. Full transparency into system health and outcomes.",
+      },
+    ],
+  },
+  {
+    category: "Pricing & Business Model",
+    questions: [
+      {
+        question: "How does pricing work?",
+        answer:
+          "You license ongoing capacity, not buy software. Pricing based on deployment lane and scale. We start with a System Audit (complimentary), then propose deployment plan with ROI projection and licensing cost. Monthly or annual licensing available. Cancel anytime with 30 days notice.",
+      },
+      {
+        question: "What does 'licensed capacity' mean?",
+        answer:
+          "Instead of paying headcount salaries, you license the capacity to replace them. A Digital Counterpart handles the throughput of multiple roles at a fraction of payroll cost. You pay for outcomes and uptime, not seats or subscriptions.",
+      },
+      {
+        question: "Is there a setup fee?",
+        answer:
+          "System Audit is complimentary. Installation includes discovery, deployment planning, technical setup, integration, testing, and go-live - typically included in first month licensing. No separate setup fee for standard deployments.",
+      },
+      {
+        question: "Do you offer free trials?",
+        answer:
+          "We offer shadow mode validation during Install & Test phase. The system runs in shadow mode (no live actions) to validate accuracy and governance before you approve go-live. This ensures production readiness before licensing begins.",
+      },
+    ],
+  },
+  {
+    category: "Technical & Integration",
+    questions: [
+      {
+        question: "What systems do you integrate with?",
+        answer:
+          "CRMs (HubSpot, Salesforce, Pipedrive, Zoho), email (Gmail, Outlook), calendars (Google, Microsoft), project management (Asana, Monday, ClickUp), and most business tools. Custom integrations available via API or Zapier.",
+      },
+      {
+        question: "Will big platforms replace this?",
+        answer:
+          "Platforms sell tools. We sell installs and outcomes. The last mile is where value is created. Platforms can't install governed systems into your specific workflows with your approval gates and operating boundaries. Infrastructure wins over features.",
+      },
+      {
+        question: "Is this too complex to manage?",
+        answer:
+          "We hide complexity. You get clarity: role → workflow → outcome → control. The back end can be brutal. The front end is calm. You see the observability dashboard, approve actions through gates, and monitor metrics. The machinery is invisible.",
+      },
+      {
+        question: "What AI models do you use?",
+        answer:
+          "We use best-in-class models from OpenAI, Anthropic, and others depending on the use case. Our systems are model-agnostic - we select the right tool for the job and optimize for speed, accuracy, cost, and governance.",
+      },
+    ],
+  },
+  {
+    category: "Support & SLA",
+    questions: [
+      {
+        question: "What uptime guarantees do you provide?",
+        answer:
+          "99.9% uptime SLA monitored 24/7 with automatic failover. Critical incidents acknowledged within 2 hours. Standard support requests acknowledged within 24 hours. Infrastructure means reliability.",
+      },
+      {
+        question: "What does ongoing support include?",
+        answer:
+          "Ongoing licensed capacity, real-time observability dashboard, performance monitoring and alerts, weekly optimization reviews, workflow refinement and tuning, integration expansion as needed, dedicated support channel, and quarterly strategic reviews.",
+      },
+      {
+        question: "Can I cancel anytime?",
+        answer:
+          "Yes. All licenses require 30 days notice for cancellation. No long-term contracts or lock-in periods. You can pause, scale down, or expand deployments as business needs change.",
+      },
+      {
+        question: "Do you offer enterprise white-label?",
+        answer:
+          "Enterprise white-label solutions available for qualifying partners. Includes custom branding, dedicated infrastructure, and priority support. Contact us to discuss partnership opportunities.",
       },
     ],
   },
 ]
 
 export default function FAQPage() {
+  useScrollAnimations()
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -198,7 +230,7 @@ export default function FAQPage() {
 
       <SiteHeader />
 
-      <main className="flex-1">
+      <main className="flex-1 pt-14">
         <article>
           {/* Hero */}
           <section className="py-20 md:py-24 px-4 md:px-6 border-b border-border/40">
@@ -207,8 +239,8 @@ export default function FAQPage() {
                 Frequently Asked Questions
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                Everything you need to know about Hotlist AI's digital counterparts, AI automation systems, and custom
-                lead generation solutions.
+                Everything you need to know about Digital Workforce Infrastructure, deployment process, governance, and
+                pricing.
               </p>
             </div>
           </section>
@@ -217,11 +249,14 @@ export default function FAQPage() {
           {faqs.map((category, categoryIndex) => (
             <section
               key={category.category}
-              className="py-16 md:py-20 px-4 md:px-6 border-b border-border/40"
+              className={`py-16 md:py-20 px-4 md:px-6 border-b border-border/40 ${categoryIndex % 2 === 1 ? "bg-muted/10" : ""}`}
               aria-labelledby={`category-${categoryIndex}`}
             >
               <div className="max-w-4xl mx-auto">
-                <h2 id={`category-${categoryIndex}`} className="font-serif text-3xl md:text-4xl mb-12">
+                <h2
+                  id={`category-${categoryIndex}`}
+                  className="font-serif text-3xl md:text-4xl mb-12 scroll-animate"
+                >
                   {category.category}
                 </h2>
 
@@ -229,7 +264,7 @@ export default function FAQPage() {
                   {category.questions.map((faq, faqIndex) => (
                     <div
                       key={faqIndex}
-                      className="pb-8 border-b border-border/30 last:border-0 last:pb-0"
+                      className={`pb-8 border-b border-border/30 last:border-0 last:pb-0 scroll-animate delay-${(faqIndex + 1) * 100}`}
                       itemScope
                       itemProp="mainEntity"
                       itemType="https://schema.org/Question"
@@ -251,17 +286,12 @@ export default function FAQPage() {
 
           {/* CTA */}
           <section className="py-20 md:py-24 px-4 md:px-6">
-            <div className="max-w-3xl mx-auto text-center">
+            <div className="max-w-3xl mx-auto text-center scroll-animate">
               <h2 className="font-serif text-3xl md:text-4xl mb-6">Still have questions?</h2>
               <p className="text-muted-foreground text-lg mb-8">
-                Reach out to our team and we'll get back to you within 24 hours.
+                Request a System Audit to discuss your specific workflows, governance needs, and deployment options.
               </p>
-              <a
-                href="/contact"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-foreground text-background rounded-full font-medium hover:scale-105 transition-transform active:scale-95"
-              >
-                Contact Us
-              </a>
+              <CalBookingButton size="lg">Request a System Audit</CalBookingButton>
             </div>
           </section>
         </article>
