@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next"
 import { getAllPosts, getAllCategories } from "@/lib/blog"
+import { getSeoProgrammaticUrls } from "@/lib/seo-taxonomy"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://hotlistai.com"
@@ -23,7 +24,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/legal", priority: 0.3, changeFreq: "yearly" as const },
   ]
 
-  const staticEntries: MetadataRoute.Sitemap = staticRoutes.map((route) => ({
+  const programmaticRoutes = getSeoProgrammaticUrls()
+    .filter((path) => !staticRoutes.some((route) => route.path === path))
+    .map((path) => ({ path, priority: 0.65, changeFreq: "weekly" as const }))
+
+  const staticEntries: MetadataRoute.Sitemap = [...staticRoutes, ...programmaticRoutes].map((route) => ({
     url: `${baseUrl}${route.path}`,
     lastModified: now,
     changeFrequency: route.changeFreq,

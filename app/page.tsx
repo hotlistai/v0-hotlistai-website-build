@@ -242,6 +242,39 @@ export default function Home() {
             </div>
           </section>
 
+          {/* Search Hub */}
+          <section className="py-20 border-t border-border/40" aria-labelledby="search-hubs-heading">
+            <div className="max-w-6xl mx-auto px-4 md:px-6">
+              <header className="text-center mb-12 scroll-animate">
+                <h2 id="search-hubs-heading" className="text-3xl md:text-4xl font-serif tracking-tight mb-3">
+                  Explore by Topic, Use Case, and Industry
+                </h2>
+                <p className="text-muted-foreground max-w-2xl mx-auto">
+                  Use the resource graph to move from strategy to implementation details with linked hubs.
+                </p>
+              </header>
+              <div className="grid md:grid-cols-3 gap-4">
+                {[
+                  { title: "Topic Hubs", href: "/learn", description: "Infrastructure, deployment, governance, and executive execution." },
+                  { title: "Use Cases", href: "/use-cases", description: "Workflow playbooks for growth, onboarding, support, and pipeline ops." },
+                  { title: "Industry Playbooks", href: "/industries", description: "Vertical pages for real estate, SaaS, agencies, and services." },
+                  { title: "Comparison Guides", href: "/compare", description: "Decision pages comparing operating models and alternatives." },
+                  { title: "Glossary", href: "/glossary", description: "Definitions and operational terminology for implementation clarity." },
+                  { title: "Resource Library", href: "/resources", description: "Central discovery page with linked cluster pathways." },
+                ].map((item, index) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className={`scroll-animate delay-${(index + 1) * 100} rounded-xl border border-border/30 bg-muted/20 p-5 hover:border-foreground/30 transition-colors`}
+                  >
+                    <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
+                    <p className="text-sm text-muted-foreground">{item.description}</p>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+
           {/* CTA Section */}
           <section className="py-24 px-4 md:px-6 border-t border-border/40" aria-labelledby="cta-heading">
             <div className="max-w-3xl mx-auto text-center scroll-animate">

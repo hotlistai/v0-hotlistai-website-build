@@ -1,14 +1,20 @@
-"use client"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { CalBookingButton } from "@/components/cal-booking-button"
 import { TrendingUp, Cog, Briefcase, CheckCircle, Shield, ArrowRight } from "lucide-react"
 import Link from "next/link"
-import { useScrollAnimations } from "@/lib/scroll-animations"
+import type { Metadata } from "next"
+import { buildMetadata } from "@/lib/seo"
+
+export const metadata: Metadata = buildMetadata({
+  title: "Deployment Lanes",
+  description:
+    "Deploy governed capacity across growth, operations, and executive execution with measurable workflow outcomes.",
+  path: "/deployments",
+  keywords: ["AI deployment lanes", "growth deployment", "operations deployment", "executive execution"],
+})
 
 export default function DeploymentsPage() {
-  useScrollAnimations()
-
   return (
     <div className="min-h-screen flex flex-col bg-background text-foreground">
       <SiteHeader />
@@ -410,6 +416,30 @@ export default function DeploymentsPage() {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 px-4 md:px-6 border-t border-border/40">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-serif tracking-tight mb-6">Related Guides</h2>
+            <div className="grid md:grid-cols-3 gap-4">
+              {[
+                { title: "Implementation Model", href: "/how-it-works" },
+                { title: "Topic Hubs", href: "/learn" },
+                { title: "Use Cases", href: "/use-cases" },
+                { title: "Industry Playbooks", href: "/industries" },
+                { title: "Comparison Guides", href: "/compare" },
+                { title: "Glossary", href: "/glossary" },
+              ].map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="rounded-lg border border-border/30 bg-muted/20 p-4 text-sm text-muted-foreground hover:text-foreground hover:border-foreground/30 transition-colors"
+                >
+                  {item.title}
+                </Link>
+              ))}
             </div>
           </div>
         </section>

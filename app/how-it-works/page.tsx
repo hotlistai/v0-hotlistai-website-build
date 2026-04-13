@@ -1,13 +1,19 @@
-"use client"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { CalBookingButton } from "@/components/cal-booking-button"
 import { Search, FileText, Settings, Activity, CheckCircle, Clock } from "lucide-react"
-import { useScrollAnimations } from "@/lib/scroll-animations"
+import type { Metadata } from "next"
+import { buildMetadata } from "@/lib/seo"
+
+export const metadata: Metadata = buildMetadata({
+  title: "How Installation Works",
+  description:
+    "Audit, plan, install, and monitor autonomous workflow systems in a governed 7–14 day deployment model.",
+  path: "/how-it-works",
+  keywords: ["AI deployment process", "workflow installation", "automation implementation model"],
+})
 
 export default function HowItWorksPage() {
-  useScrollAnimations()
-
   return (
     <div className="min-h-screen flex flex-col bg-background text-foreground">
       <SiteHeader />

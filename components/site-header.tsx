@@ -14,6 +14,11 @@ const deploymentLinks = [
 
 const companyLinks = [
   { name: "How It Works", href: "/how-it-works" },
+  { name: "Resources", href: "/resources" },
+  { name: "Use Cases", href: "/use-cases" },
+  { name: "Industries", href: "/industries" },
+  { name: "Comparisons", href: "/compare" },
+  { name: "Glossary", href: "/glossary" },
   { name: "Governance", href: "/governance" },
   { name: "About", href: "/company" },
   { name: "FAQ", href: "/faq" },
@@ -151,6 +156,11 @@ export function SiteHeader() {
               {[
                 { name: "Deployments", href: "/deployments" },
                 { name: "How It Works", href: "/how-it-works" },
+                { name: "Resources", href: "/resources" },
+                { name: "Use Cases", href: "/use-cases" },
+                { name: "Industries", href: "/industries" },
+                { name: "Comparisons", href: "/compare" },
+                { name: "Glossary", href: "/glossary" },
                 { name: "Governance", href: "/governance" },
                 { name: "About", href: "/company" },
                 { name: "FAQ", href: "/faq" },

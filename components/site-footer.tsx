@@ -46,8 +46,15 @@ const footerLinks = {
   products: [
     { name: "The Lab", href: "/lab" },
     { name: "Hotlist Funnels", href: "/hotlist-funnels" },
+    { name: "Deployments", href: "/deployments" },
   ],
   company: [
+    { name: "Resources", href: "/resources" },
+    { name: "Learn", href: "/learn" },
+    { name: "Use Cases", href: "/use-cases" },
+    { name: "Industries", href: "/industries" },
+    { name: "Comparisons", href: "/compare" },
+    { name: "Glossary", href: "/glossary" },
     { name: "Ethos", href: "/ethos" },
     { name: "Who We Are", href: "/company" },
     { name: "The Foundry", href: "/company#foundry" },
