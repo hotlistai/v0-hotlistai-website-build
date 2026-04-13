@@ -11,14 +11,16 @@ export function generateStaticParams() {
   return industryEntries.map((entry) => ({ slug: entry.slug }))
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const entry = getIndustryBySlug(params.slug)
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params
+  const entry = getIndustryBySlug(slug)
   if (!entry) return {}
   return buildMetadata({ title: entry.title, description: entry.summary, path: `/industries/${entry.slug}`, keywords: [entry.searchIntent, "industry AI operations", "vertical process automation"] })
 }
 
-export default function IndustryDetailPage({ params }: { params: { slug: string } }) {
-  const entry = getIndustryBySlug(params.slug)
+export default async function IndustryDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const entry = getIndustryBySlug(slug)
   if (!entry) notFound()
 
   const relatedLinks = entry.relatedUseCaseSlugs

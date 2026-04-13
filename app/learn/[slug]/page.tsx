@@ -11,8 +11,9 @@ export function generateStaticParams() {
   return hubEntries.map((entry) => ({ slug: entry.slug }))
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const hub = getHubBySlug(params.slug)
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params
+  const hub = getHubBySlug(slug)
   if (!hub) return {}
   return buildMetadata({
     title: hub.title,
@@ -22,8 +23,9 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   })
 }
 
-export default function LearnDetailPage({ params }: { params: { slug: string } }) {
-  const hub = getHubBySlug(params.slug)
+export default async function LearnDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const hub = getHubBySlug(slug)
   if (!hub) notFound()
 
   const breadcrumbJsonLd = buildBreadcrumbJsonLd([

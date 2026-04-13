@@ -11,14 +11,16 @@ export function generateStaticParams() {
   return glossaryEntries.map((entry) => ({ slug: entry.slug }))
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const entry = getGlossaryBySlug(params.slug)
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params
+  const entry = getGlossaryBySlug(slug)
   if (!entry) return {}
   return buildMetadata({ title: `${entry.term} Definition`, description: entry.shortDefinition, path: `/glossary/${entry.slug}`, keywords: [entry.term, "AI glossary", "operations definition"] })
 }
 
-export default function GlossaryDetailPage({ params }: { params: { slug: string } }) {
-  const entry = getGlossaryBySlug(params.slug)
+export default async function GlossaryDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const entry = getGlossaryBySlug(slug)
   if (!entry) notFound()
 
   const breadcrumbJsonLd = buildBreadcrumbJsonLd([

@@ -11,14 +11,16 @@ export function generateStaticParams() {
   return compareEntries.map((entry) => ({ slug: entry.slug }))
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const entry = getCompareBySlug(params.slug)
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params
+  const entry = getCompareBySlug(slug)
   if (!entry) return {}
   return buildMetadata({ title: entry.title, description: entry.summary, path: `/compare/${entry.slug}`, keywords: [entry.searchIntent, "AI infrastructure comparison", "operations model comparison"] })
 }
 
-export default function CompareDetailPage({ params }: { params: { slug: string } }) {
-  const entry = getCompareBySlug(params.slug)
+export default async function CompareDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const entry = getCompareBySlug(slug)
   if (!entry) notFound()
 
   const breadcrumbJsonLd = buildBreadcrumbJsonLd([

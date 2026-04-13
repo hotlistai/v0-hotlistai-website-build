@@ -11,14 +11,16 @@ export function generateStaticParams() {
   return useCaseEntries.map((entry) => ({ slug: entry.slug }))
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const entry = getUseCaseBySlug(params.slug)
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params
+  const entry = getUseCaseBySlug(slug)
   if (!entry) return {}
   return buildMetadata({ title: entry.title, description: entry.summary, path: `/use-cases/${entry.slug}`, keywords: [entry.searchIntent, "AI workflow implementation", "operations execution"] })
 }
 
-export default function UseCaseDetailPage({ params }: { params: { slug: string } }) {
-  const entry = getUseCaseBySlug(params.slug)
+export default async function UseCaseDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const entry = getUseCaseBySlug(slug)
   if (!entry) notFound()
 
   const links = [
