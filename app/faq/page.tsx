@@ -1,8 +1,6 @@
-"use client"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { CalBookingButton } from "@/components/cal-booking-button"
-import { useScrollAnimations } from "@/lib/scroll-animations"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -207,8 +205,6 @@ const faqs = [
 ]
 
 export default function FAQPage() {
-  useScrollAnimations()
-
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",

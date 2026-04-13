@@ -1,11 +1,9 @@
-"use client"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { CalBookingButton } from "@/components/cal-booking-button"
 import { Building2, Users, TrendingUp, Mail, Shield } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import { useScrollAnimations } from "@/lib/scroll-animations"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -52,8 +50,6 @@ export const metadata: Metadata = {
 }
 
 export default function CompanyPage() {
-  useScrollAnimations()
-
   return (
     <div className="min-h-screen flex flex-col bg-background text-foreground">
       <SiteHeader />
