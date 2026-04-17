@@ -134,6 +134,29 @@ export default function RootLayout({
         <meta name="format-detection" content="telephone=no" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         <Script id="hs-script-loader" src="//js-na2.hs-scripts.com/242682996.js" strategy="afterInteractive" async defer />
+        {/* Google Analytics */}
+        {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script
+              id="google-analytics"
+              strategy="afterInteractive"
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}', {
+                    page_path: window.location.pathname,
+                  });
+                `,
+              }}
+            />
+          </>
+        )}
       </head>
       <body className={`font-sans antialiased ${_geist.variable} ${_geistMono.variable} ${_instrumentSerif.variable}`}>
         {children}
