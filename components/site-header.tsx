@@ -170,7 +170,7 @@ export function SiteHeader() {
                   key={item.name}
                   href={item.href}
                   onClick={() => setIsOpen(false)}
-                  className="py-3 text-2xl font-medium text-foreground hover:opacity-60 transition-opacity"
+                  className="py-3 text-xl font-medium text-foreground hover:opacity-60 transition-opacity"
                 >
                   {item.name}
                 </Link>

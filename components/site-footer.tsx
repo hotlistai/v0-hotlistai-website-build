@@ -45,6 +45,7 @@ function FacebookIcon({ className }: { className?: string }) {
 const footerLinks = {
   products: [
     { name: "The Lab", href: "/lab" },
+    { name: "Labs", href: "/labs" },
     { name: "Hotlist Funnels", href: "/hotlist-funnels" },
     { name: "Deployments", href: "/deployments" },
   ],
@@ -58,7 +59,7 @@ const footerLinks = {
     { name: "Ethos", href: "/ethos" },
     { name: "Who We Are", href: "/company" },
     { name: "The Foundry", href: "/company#foundry" },
-    { name: "Press & Media", href: "/company#press" },
+    { name: "Press & Media", href: "/press" },
     { name: "FAQ", href: "/faq" },
     { name: "Blog", href: "/blog" },
     { name: "Contact", href: "/contact" },
@@ -129,25 +130,9 @@ export function SiteFooter() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    {...(link.external && { target: "_blank", rel: "noopener noreferrer" })}
-                    className="text-sm text-muted-foreground hover:text-foreground transition-all hover:translate-x-1 inline-flex items-center gap-1 group"
+                    className="text-sm text-muted-foreground hover:text-foreground transition-all hover:translate-x-1 inline-block"
                   >
                     {link.name}
-                    {link.external && (
-                      <svg
-                        className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                        />
-                      </svg>
-                    )}
                   </Link>
                 </li>
               ))}

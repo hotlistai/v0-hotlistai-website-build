@@ -47,9 +47,12 @@ const ProductCard = ({
     <h3 className="font-serif text-3xl mb-3">{title}</h3>
     <p className="text-muted-foreground leading-relaxed max-w-md">{description}</p>
 
-    <div className="mt-8 flex items-center gap-2 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-2 group-hover:translate-y-0">
+    <Link
+      href="/contact"
+      className="mt-8 flex items-center gap-2 text-sm font-medium opacity-0 group-hover:opacity-100 transition-all transform translate-y-2 group-hover:translate-y-0 hover:gap-3"
+    >
       Request Access <ArrowRight className="w-4 h-4" />
-    </div>
+    </Link>
   </div>
 )
 
