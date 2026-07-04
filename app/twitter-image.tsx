@@ -1,12 +1,8 @@
 import { ImageResponse } from "next/og"
 
 export const runtime = "edge"
-
-export const alt = "Hotlist AI - AI-Powered Digital Counterparts & Lead Generation Systems"
-export const size = {
-  width: 1200,
-  height: 630,
-}
+export const alt = "HotlistAI - Follow-up execution for real-estate teams"
+export const size = { width: 1200, height: 630 }
 export const contentType = "image/png"
 
 export default async function Image() {
@@ -17,94 +13,28 @@ export default async function Image() {
         width: "100%",
         display: "flex",
         flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
+        justifyContent: "space-between",
         backgroundColor: "#0a0a0a",
+        color: "#fafafa",
         fontFamily: "system-ui, sans-serif",
+        padding: 72,
       }}
     >
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          padding: "40px 80px",
-        }}
-      >
-        {/* Logo mark */}
-        <div
-          style={{
-            width: 80,
-            height: 80,
-            backgroundColor: "#fafafa",
-            borderRadius: 16,
-            marginBottom: 40,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <span style={{ color: "#0a0a0a", fontSize: 40, fontWeight: 700 }}>H</span>
-        </div>
-
-        <h1
-          style={{
-            fontSize: 56,
-            fontWeight: 600,
-            color: "#fafafa",
-            textAlign: "center",
-            lineHeight: 1.15,
-            margin: 0,
-            marginBottom: 20,
-          }}
-        >
-          The AI Operating System for Digital Counterparts
+      <div style={{ fontSize: 24, letterSpacing: 4, textTransform: "uppercase", color: "#a3a3a3" }}>HotlistAI</div>
+      <div>
+        <h1 style={{ fontSize: 74, lineHeight: 0.95, letterSpacing: -3, margin: 0, maxWidth: 940 }}>
+          Make your current CRM actually execute.
         </h1>
-
-        <p
-          style={{
-            fontSize: 28,
-            color: "#a1a1a1",
-            textAlign: "center",
-            margin: 0,
-            marginBottom: 40,
-            maxWidth: 800,
-          }}
-        >
-          AI software products + high-converting lead generation funnels for modern businesses.
+        <p style={{ fontSize: 30, lineHeight: 1.3, color: "#d4d4d4", marginTop: 32, maxWidth: 820 }}>
+          Find response, routing, nurture, stale-lead recovery, and accountability leaks before buying more leads.
         </p>
-
-        <div
-          style={{
-            display: "flex",
-            gap: 16,
-            fontSize: 18,
-            color: "#666666",
-          }}
-        >
-          <span>@hotlistai</span>
-          <span>|</span>
-          <span>hotlistai.com</span>
-          <span>|</span>
-          <span>Starting at $495/mo</span>
-        </div>
       </div>
-
-      {/* Bottom bar */}
-      <div
-        style={{
-          position: "absolute",
-          bottom: 0,
-          left: 0,
-          right: 0,
-          height: 8,
-          backgroundColor: "#fafafa",
-        }}
-      />
+      <div style={{ display: "flex", gap: 18, fontSize: 22, color: "#a3a3a3" }}>
+        <span>hotlistai.com</span>
+        <span>/</span>
+        <span>Book a Follow-Up Leak Audit</span>
+      </div>
     </div>,
-    {
-      ...size,
-    },
+    { ...size },
   )
 }

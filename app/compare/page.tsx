@@ -7,9 +7,9 @@ import { buildMetadata } from "@/lib/seo"
 
 export const metadata: Metadata = buildMetadata({
   title: "Comparison Guides",
-  description: "Comparison pages evaluating Hotlist AI against hiring, manual operations, trigger-only automation, and generic AI agent tools.",
+  description: "Comparison pages evaluating HotlistAI against buying more leads, CRM automation, ISA hiring, and database reactivation options.",
   path: "/compare",
-  keywords: ["Hotlist AI alternatives", "AI operations comparison", "manual ops vs AI systems"],
+  keywords: ["HotlistAI alternatives", "real estate CRM comparison", "AI ISA vs human ISA"],
 })
 
 export default function CompareIndexPage() {
@@ -21,7 +21,7 @@ export default function CompareIndexPage() {
           <header className="space-y-4">
             <p className="text-xs font-mono uppercase tracking-wider text-muted-foreground">Decision Layer</p>
             <h1 className="text-4xl md:text-5xl font-serif tracking-tight">Comparison Guides</h1>
-            <p className="text-lg text-muted-foreground max-w-3xl">Neutral comparison pages for buyers evaluating workflow infrastructure against other operating models.</p>
+            <p className="text-lg text-muted-foreground max-w-3xl">Neutral comparison pages for teams deciding whether to buy more leads, hire follow-up labor, or repair the CRM execution layer first.</p>
           </header>
           <section className="space-y-4">
             {compareEntries.map((entry) => (

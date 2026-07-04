@@ -6,8 +6,8 @@ import Script from "next/script"
 import { ChatWidget } from "@/components/chat-widget"
 import "./globals.css"
 
-const _geist = Geist({ subsets: ["latin"] })
-const _geistMono = Geist_Mono({ subsets: ["latin"] })
+const _geist = Geist({ subsets: ["latin"], variable: "--font-geist-sans" })
+const _geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-geist-mono" })
 const _instrumentSerif = Instrument_Serif({
   weight: ["400"],
   subsets: ["latin"],
@@ -16,11 +16,11 @@ const _instrumentSerif = Instrument_Serif({
 
 export const metadata: Metadata = {
   title: {
-    default: "HotlistAI | Digital Workforce Infrastructure",
+    default: "HotlistAI | Stop warm leads from dying inside your CRM.",
     template: "%s | HotlistAI",
   },
   description:
-    "Deploy Digital Counterparts - autonomous role-holders that replace operational headcount across Growth, Operations, and Executive Execution.",
+    "HotlistAI helps real-estate teams find and fix follow-up leaks inside the CRM they already use.",
   metadataBase: new URL("https://hotlistai.com"),
   alternates: { canonical: "/" },
   openGraph: {
@@ -28,17 +28,17 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://hotlistai.com",
     siteName: "HotlistAI",
-    title: "HotlistAI | Digital Workforce Infrastructure",
+    title: "HotlistAI | Stop warm leads from dying inside your CRM.",
     description:
-      "Deploy Digital Counterparts - autonomous role-holders that replace operational headcount across Growth, Operations, and Executive Execution.",
-    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "HotlistAI" }],
+      "HotlistAI helps real-estate teams find and fix follow-up leaks inside the CRM they already use.",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "HotlistAI follow-up leak audit" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "HotlistAI | Digital Workforce Infrastructure",
+    title: "HotlistAI | Stop warm leads from dying inside your CRM.",
     description:
-      "Deploy Digital Counterparts - autonomous role-holders that replace operational headcount across Growth, Operations, and Executive Execution.",
-    images: ["/og-image.jpg"],
+      "HotlistAI helps real-estate teams find and fix follow-up leaks inside the CRM they already use.",
+    images: ["/twitter-image"],
     creator: "@hotlistai",
     site: "@hotlistai",
   },

@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next"
-import { getAllPosts, getAllCategories } from "@/lib/blog"
+import { getAllPosts, getAllCategories, slugifyCategory } from "@/lib/blog"
 import { getSeoProgrammaticUrls } from "@/lib/seo-taxonomy"
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -8,17 +8,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Static routes
   const staticRoutes = [
-    { path: "", priority: 1.0, changeFreq: "daily" as const },
-    { path: "/lab", priority: 0.9, changeFreq: "weekly" as const },
-    { path: "/hotlist-funnels", priority: 0.9, changeFreq: "weekly" as const },
-    { path: "/labs", priority: 0.8, changeFreq: "weekly" as const },
-    { path: "/ethos", priority: 0.8, changeFreq: "monthly" as const },
+    { path: "", priority: 1.0, changeFreq: "weekly" as const },
+    { path: "/follow-up-leak-audit", priority: 0.95, changeFreq: "weekly" as const },
+    { path: "/sample-leak-report", priority: 0.9, changeFreq: "weekly" as const },
+    { path: "/follow-up-boss-automation-audit", priority: 0.9, changeFreq: "weekly" as const },
+    { path: "/follow-up-boss-cleanup", priority: 0.9, changeFreq: "weekly" as const },
     { path: "/company", priority: 0.8, changeFreq: "monthly" as const },
     { path: "/contact", priority: 0.8, changeFreq: "monthly" as const },
-    { path: "/blog", priority: 0.9, changeFreq: "daily" as const },
+    { path: "/resources", priority: 0.75, changeFreq: "weekly" as const },
+    { path: "/learn", priority: 0.75, changeFreq: "weekly" as const },
+    { path: "/use-cases", priority: 0.75, changeFreq: "weekly" as const },
+    { path: "/industries", priority: 0.7, changeFreq: "weekly" as const },
+    { path: "/compare", priority: 0.7, changeFreq: "weekly" as const },
+    { path: "/glossary", priority: 0.7, changeFreq: "weekly" as const },
+    { path: "/governance", priority: 0.6, changeFreq: "monthly" as const },
+    { path: "/blog", priority: 0.7, changeFreq: "weekly" as const },
     { path: "/faq", priority: 0.7, changeFreq: "weekly" as const },
-    { path: "/press", priority: 0.6, changeFreq: "monthly" as const },
-    { path: "/developers", priority: 0.6, changeFreq: "monthly" as const },
     { path: "/privacy", priority: 0.3, changeFreq: "yearly" as const },
     { path: "/terms", priority: 0.3, changeFreq: "yearly" as const },
     { path: "/legal", priority: 0.3, changeFreq: "yearly" as const },
@@ -47,7 +52,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Blog category routes
   const categories = getAllCategories()
   const categoryEntries: MetadataRoute.Sitemap = categories.map((category) => ({
-    url: `${baseUrl}/blog/category/${category.toLowerCase()}`,
+    url: `${baseUrl}/blog/category/${slugifyCategory(category)}`,
     lastModified: now,
     changeFrequency: "weekly" as const,
     priority: 0.7,

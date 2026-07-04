@@ -4,24 +4,20 @@ import Link from "next/link"
 import { ArrowLeft, ArrowRight } from "lucide-react"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
-import { getPostsByCategory, getAllCategories } from "@/lib/blog"
+import { getCategoryBySlug, getPostsByCategory, getAllCategories, slugifyCategory } from "@/lib/blog"
 
 const categoryDescriptions: Record<string, string> = {
-  philosophy:
-    "How we think about AI, software, and the future of work. Deep dives into the principles that guide everything we build at Hotlist AI.",
-  products:
-    "Behind-the-scenes looks at Estate Mogul, LyftEmail, PRIME, and every product in The Lab. How they work, why we built them, and what's next.",
-  culture:
-    "How we ship, how we think, and why speed matters more than perfection. The operational philosophy behind Hotlist AI.",
-  funnels:
-    "Lead generation strategy, conversion optimization, and industry-specific playbooks. How AI funnels generate more qualified leads at lower cost.",
-  technology:
-    "Technical deep dives into multi-agent systems, AI architecture, and the engineering behind our products.",
+  "follow-up-leaks": "Where real-estate leads lose momentum inside the CRM and how teams can repair the break.",
+  "crm-discipline": "Practical CRM cleanup, smart list, owner, stage, and accountability guidance for real-estate teams.",
+  "stale-lead-recovery": "How to segment and revive the leads your team already paid to acquire.",
+  "speed-to-lead": "How to improve first response, second touch, routing, and escalation discipline.",
+  nurture: "Human-aware nurture systems that automate busy work while preserving the agent relationship.",
+  "real-estate-systems": "Operating systems for routing, accountability, CRM trust, and follow-up execution.",
 }
 
 export async function generateStaticParams() {
   return getAllCategories().map((category) => ({
-    category: category.toLowerCase(),
+    category: slugifyCategory(category),
   }))
 }
 
@@ -31,7 +27,7 @@ export async function generateMetadata({
   params: Promise<{ category: string }>
 }): Promise<Metadata> {
   const { category } = await params
-  const formattedCategory = category.charAt(0).toUpperCase() + category.slice(1)
+  const formattedCategory = getCategoryBySlug(category) || category
   const description =
     categoryDescriptions[category] ||
     `Read the latest ${formattedCategory} articles from Hotlist AI.`
@@ -40,11 +36,10 @@ export async function generateMetadata({
     title: `${formattedCategory} Articles`,
     description,
     keywords: [
-      `${formattedCategory} AI articles`,
+      `${formattedCategory} articles`,
       "Hotlist AI blog",
-      `AI ${category}`,
-      "digital counterparts",
-      "AI automation",
+      "real estate CRM follow-up",
+      "Follow-Up Leak Audit",
     ],
     openGraph: {
       title: `${formattedCategory} | Hotlist AI Blog`,
@@ -71,11 +66,11 @@ export default async function CategoryPage({
   params: Promise<{ category: string }>
 }) {
   const { category } = await params
-  const formattedCategory = category.charAt(0).toUpperCase() + category.slice(1)
+  const formattedCategory = getCategoryBySlug(category) || category
   const posts = getPostsByCategory(formattedCategory)
   const allCategories = getAllCategories()
 
-  if (posts.length === 0 && !allCategories.map((c) => c.toLowerCase()).includes(category)) {
+  if (posts.length === 0 && !allCategories.map((c) => slugifyCategory(c)).includes(category)) {
     notFound()
   }
 
@@ -160,9 +155,9 @@ export default async function CategoryPage({
               {allCategories.map((cat) => (
                 <Link
                   key={cat}
-                  href={`/blog/category/${cat.toLowerCase()}`}
+                  href={`/blog/category/${slugifyCategory(cat)}`}
                   className={`px-4 py-2 text-sm font-medium rounded-full whitespace-nowrap transition-all ${
-                    cat.toLowerCase() === category
+                    slugifyCategory(cat) === category
                       ? "bg-foreground text-background"
                       : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
                   }`}

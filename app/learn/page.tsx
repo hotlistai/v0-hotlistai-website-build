@@ -6,10 +6,10 @@ import { hubEntries } from "@/lib/seo-taxonomy"
 import { buildMetadata } from "@/lib/seo"
 
 export const metadata: Metadata = buildMetadata({
-  title: "AI Workforce Topic Hubs",
-  description: "Pillar pages covering digital workforce infrastructure, AI operations systems, deployment, governance, and executive execution.",
+  title: "Real Estate Follow-Up Topic Hubs",
+  description: "Pillar pages covering real-estate CRM follow-up, Follow-Up Leak Audits, stale-lead recovery, speed to lead, and CRM reactivation.",
   path: "/learn",
-  keywords: ["AI workforce infrastructure", "AI deployment framework", "AI governance controls"],
+  keywords: ["real estate CRM follow-up", "Follow-Up Leak Audit", "stale lead recovery", "speed to lead"],
 })
 
 export default function LearnIndexPage() {
@@ -20,8 +20,8 @@ export default function LearnIndexPage() {
         <div className="max-w-5xl mx-auto space-y-10">
           <header className="space-y-4">
             <p className="text-xs font-mono uppercase tracking-wider text-muted-foreground">Pillar Pages</p>
-            <h1 className="text-4xl md:text-5xl font-serif tracking-tight">AI Workforce Topic Hubs</h1>
-            <p className="text-lg text-muted-foreground max-w-3xl">Start with a hub to understand the model, then move into tactical pages for use cases, industries, comparisons, and glossary definitions.</p>
+            <h1 className="text-4xl md:text-5xl font-serif tracking-tight">Real Estate Follow-Up Topic Hubs</h1>
+            <p className="text-lg text-muted-foreground max-w-3xl">Start with the bottleneck your team feels now, then move into tactical pages for routing, nurture, stale leads, comparisons, and definitions.</p>
           </header>
           <section className="space-y-4">
             {hubEntries.map((hub) => (

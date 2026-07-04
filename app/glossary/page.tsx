@@ -6,10 +6,10 @@ import { glossaryEntries } from "@/lib/seo-taxonomy"
 import { buildMetadata } from "@/lib/seo"
 
 export const metadata: Metadata = buildMetadata({
-  title: "AI Operations Glossary",
-  description: "Definitions for digital workforce terms: digital counterpart, workflow governance, cycle time, approval gates, and operational observability.",
+  title: "Real Estate CRM Follow-Up Glossary",
+  description: "Definitions for follow-up leaks, next actions, lead routing, speed to lead, CRM reactivation, and nurture discipline.",
   path: "/glossary",
-  keywords: ["AI operations glossary", "automation terminology", "digital workforce definitions"],
+  keywords: ["real estate CRM glossary", "follow-up leak", "speed to lead", "CRM reactivation"],
 })
 
 export default function GlossaryIndexPage() {
@@ -21,8 +21,8 @@ export default function GlossaryIndexPage() {
         <div className="max-w-5xl mx-auto space-y-10">
           <header className="space-y-4">
             <p className="text-xs font-mono uppercase tracking-wider text-muted-foreground">Glossary</p>
-            <h1 className="text-4xl md:text-5xl font-serif tracking-tight">AI Operations Glossary</h1>
-            <p className="text-lg text-muted-foreground max-w-3xl">Plain-language definitions to make implementation conversations clearer across teams.</p>
+            <h1 className="text-4xl md:text-5xl font-serif tracking-tight">Real Estate CRM Follow-Up Glossary</h1>
+            <p className="text-lg text-muted-foreground max-w-3xl">Plain-language definitions for the terms that decide whether leads keep moving or disappear inside the CRM.</p>
           </header>
           <section className="grid md:grid-cols-2 gap-4">
             {sorted.map((entry) => (

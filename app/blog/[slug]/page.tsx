@@ -4,7 +4,7 @@ import Link from "next/link"
 import { ArrowLeft, ArrowRight, Clock, Calendar } from "lucide-react"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
-import { getPostBySlug, getAllSlugs, getAllPosts, getRelatedPosts } from "@/lib/blog"
+import { getPostBySlug, getAllSlugs, getAllPosts, getRelatedPosts, slugifyCategory } from "@/lib/blog"
 
 export async function generateStaticParams() {
   return getAllSlugs().map((slug) => ({ slug }))
@@ -22,7 +22,7 @@ export async function generateMetadata({
   return {
     title: post.title,
     description: post.description,
-    keywords: [...post.tags, "Hotlist AI", "AI blog"],
+    keywords: [...post.tags, "HotlistAI", "real estate CRM follow-up"],
     authors: [{ name: post.author, url: "https://hotlistai.com/company" }],
     openGraph: {
       title: `${post.title} | Hotlist AI Blog`,
@@ -189,7 +189,7 @@ export default async function BlogPostPage({
           "@type": "ListItem",
           position: 3,
           name: post.category,
-          item: `https://hotlistai.com/blog/category/${post.category.toLowerCase()}`,
+          item: `https://hotlistai.com/blog/category/${slugifyCategory(post.category)}`,
         },
         {
           "@type": "ListItem",
@@ -233,7 +233,7 @@ export default async function BlogPostPage({
                 <li>/</li>
                 <li>
                   <Link
-                    href={`/blog/category/${post.category.toLowerCase()}`}
+                    href={`/blog/category/${slugifyCategory(post.category)}`}
                     className="hover:text-foreground transition-colors"
                   >
                     {post.category}
@@ -259,7 +259,7 @@ export default async function BlogPostPage({
             <header className="mb-12">
               <div className="flex items-center gap-3 mb-6">
                 <Link
-                  href={`/blog/category/${post.category.toLowerCase()}`}
+                  href={`/blog/category/${slugifyCategory(post.category)}`}
                   className="text-xs font-semibold uppercase tracking-wider text-muted-foreground border border-border/50 px-2.5 py-1 rounded-full hover:border-foreground/30 transition-colors"
                 >
                   {post.category}

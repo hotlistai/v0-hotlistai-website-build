@@ -10,24 +10,30 @@ export async function POST(request: Request) {
     const resend = new Resend(resendApiKey)
 
     const body = await request.json()
-    const { name, email, company, message } = body
+    const { name, email, teamName, crm, teamSize, leadSources, currentBottleneck, message } = body
 
     const emailBody = `
-New contact form submission from HotlistAI Labs website:
+New Follow-Up Leak Audit request from HotlistAI:
 
 Name: ${name}
 Email: ${email}
-Company: ${company || "Not provided"}
+Team / Brokerage: ${teamName || "Not provided"}
+Current CRM: ${crm || "Not provided"}
+Team Size: ${teamSize || "Not provided"}
+Lead Sources: ${leadSources || "Not provided"}
+
+Current Bottleneck:
+${currentBottleneck || "Not provided"}
 
 Message:
-${message}
+${message || "Not provided"}
     `.trim()
 
     await resend.emails.send({
-      from: "HotlistAI Labs <onboarding@resend.dev>",
+      from: "HotlistAI <onboarding@resend.dev>",
       to: "info@hotlistai.com",
       replyTo: email,
-      subject: `New contact from ${name}`,
+      subject: `Follow-Up Leak Audit request from ${name}`,
       text: emailBody,
     })
 
@@ -38,9 +44,13 @@ ${message}
         body: JSON.stringify({
           name,
           email,
-          company: company || "Not provided",
-          message,
-          source: "Contact Form",
+          teamName: teamName || "Not provided",
+          crm: crm || "Not provided",
+          teamSize: teamSize || "Not provided",
+          leadSources: leadSources || "Not provided",
+          currentBottleneck: currentBottleneck || "Not provided",
+          message: message || "Not provided",
+          source: "Follow-Up Leak Audit Form",
           timestamp: new Date().toISOString(),
         }),
       })

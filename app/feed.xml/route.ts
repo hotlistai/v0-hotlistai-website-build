@@ -29,10 +29,10 @@ export async function GET() {
   <channel>
     <title>Hotlist AI Blog</title>
     <link>${baseUrl}/blog</link>
-    <description>Insights on AI automation, digital counterparts, lead generation strategy, and the future of business intelligence from Hotlist AI.</description>
+    <description>Practical articles on real-estate CRM follow-up, stale lead recovery, speed to lead, nurture discipline, and team accountability from HotlistAI.</description>
     <language>en-us</language>
-    <managingEditor>info@hotlistai.com (Philip Pines)</managingEditor>
-    <webMaster>info@hotlistai.com (Hotlist AI)</webMaster>
+    <managingEditor>info@hotlistai.com (Johnny Apple)</managingEditor>
+    <webMaster>info@hotlistai.com (HotlistAI)</webMaster>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
     <atom:link href="${baseUrl}/feed.xml" rel="self" type="application/rss+xml" />
     <image>

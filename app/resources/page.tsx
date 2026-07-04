@@ -7,17 +7,17 @@ import { buildMetadata } from "@/lib/seo"
 export const metadata: Metadata = buildMetadata({
   title: "Resource Library",
   description:
-    "Search-focused resource center for AI workforce implementation: topic hubs, use cases, industry playbooks, comparisons, and glossary terms.",
+    "Search-focused resource center for real-estate CRM follow-up, stale lead recovery, routing, speed to lead, and nurture discipline.",
   path: "/resources",
-  keywords: ["AI resource library", "digital workforce guides", "AI operations playbooks", "automation glossary"],
+  keywords: ["real estate CRM resources", "follow-up leak audit", "stale lead recovery", "speed to lead"],
 })
 
 const collections = [
-  { title: "Topic Hubs", description: "Pillar pages that explain each core operating concept in plain language.", href: "/learn" },
-  { title: "Use Cases", description: "Workflow-level implementation pages for growth, operations, and executive execution.", href: "/use-cases" },
-  { title: "Industry Playbooks", description: "Industry-specific pages that map recurring bottlenecks to deployment patterns.", href: "/industries" },
-  { title: "Comparisons", description: "Decision pages comparing infrastructure deployment against common alternatives.", href: "/compare" },
-  { title: "Glossary", description: "Definitions, terms, and implementation language for AI workforce systems.", href: "/glossary" },
+  { title: "Topic Hubs", description: "Pillar pages for CRM follow-up, stale lead recovery, speed to lead, and reactivation.", href: "/learn" },
+  { title: "Use Cases", description: "Workflow-level pages for routing, nurture, cleanup, and accountability.", href: "/use-cases" },
+  { title: "Industry Playbooks", description: "Real-estate team and boutique brokerage follow-up patterns.", href: "/industries" },
+  { title: "Comparisons", description: "Decision pages comparing audit-first repair against more leads, CRMs, and ISA options.", href: "/compare" },
+  { title: "Glossary", description: "Definitions for follow-up leaks, next actions, routing, and CRM reactivation.", href: "/glossary" },
 ]
 
 export default function ResourcesPage() {
@@ -30,7 +30,7 @@ export default function ResourcesPage() {
             <p className="text-xs font-mono uppercase tracking-wider text-muted-foreground">Learning Center</p>
             <h1 className="text-4xl md:text-5xl font-serif tracking-tight">Resource Library</h1>
             <p className="text-lg text-muted-foreground max-w-3xl">
-              This library is organized for search clarity and implementation depth. Start with the hub that matches your current bottleneck, then branch into use cases, industry pages, comparisons, and definitions.
+              This library is organized around the places real-estate teams lose opportunity inside the CRM: response, routing, nurture, stale-lead recovery, and accountability.
             </p>
           </header>
           <section className="grid md:grid-cols-2 gap-5">

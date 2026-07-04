@@ -6,10 +6,10 @@ import { useCaseEntries } from "@/lib/seo-taxonomy"
 import { buildMetadata } from "@/lib/seo"
 
 export const metadata: Metadata = buildMetadata({
-  title: "AI Operations Use Cases",
-  description: "Workflow-level use case pages for AI SDR, onboarding, support routing, executive triage, and proposal operations.",
+  title: "Real Estate Follow-Up Use Cases",
+  description: "Workflow-level use case pages for lead routing, nurture discipline, stale-lead recovery, Follow Up Boss cleanup, and speed to lead.",
   path: "/use-cases",
-  keywords: ["AI workflow use cases", "AI SDR system", "operations automation examples"],
+  keywords: ["real estate follow-up use cases", "lead routing", "stale lead recovery"],
 })
 
 export default function UseCasesIndexPage() {
@@ -20,8 +20,8 @@ export default function UseCasesIndexPage() {
         <div className="max-w-5xl mx-auto space-y-10">
           <header className="space-y-4">
             <p className="text-xs font-mono uppercase tracking-wider text-muted-foreground">Use Case Library</p>
-            <h1 className="text-4xl md:text-5xl font-serif tracking-tight">AI Workflow Use Cases</h1>
-            <p className="text-lg text-muted-foreground max-w-3xl">Practical implementation pages focused on recurring workflows with measurable operational impact.</p>
+            <h1 className="text-4xl md:text-5xl font-serif tracking-tight">Real Estate Follow-Up Use Cases</h1>
+            <p className="text-lg text-muted-foreground max-w-3xl">Practical pages focused on recurring CRM workflows that decide whether warm leads keep moving.</p>
           </header>
           <section className="grid md:grid-cols-2 gap-5">
             {useCaseEntries.map((entry) => (

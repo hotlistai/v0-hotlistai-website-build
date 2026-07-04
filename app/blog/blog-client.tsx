@@ -5,7 +5,7 @@ import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { ArrowRight, Search, Rss, Clock } from "lucide-react"
 import { useState, useMemo } from "react"
-import type { BlogPost } from "@/lib/blog"
+import { slugifyCategory, type BlogPost } from "@/lib/blog"
 
 export default function BlogPageClient({
   posts,
@@ -56,8 +56,8 @@ export default function BlogPageClient({
                   Blog
                 </h1>
                 <p className="text-lg md:text-xl text-muted-foreground max-w-2xl">
-                  Thoughts on building AI systems, lead generation, and the future of business
-                  automation.
+                  Practical notes on CRM follow-up leaks, stale lead recovery, speed to lead,
+                  nurture discipline, and real-estate team accountability.
                 </p>
                 <p className="text-sm text-muted-foreground">
                   {totalPosts} articles across {categories.length} topics
@@ -98,7 +98,7 @@ export default function BlogPageClient({
                     Featured
                   </span>
                   <Link
-                    href={`/blog/category/${featuredPost.category.toLowerCase()}`}
+                    href={`/blog/category/${slugifyCategory(featuredPost.category)}`}
                     className="text-xs text-muted-foreground hover:text-foreground transition-colors"
                     onClick={(e) => e.stopPropagation()}
                   >
@@ -252,7 +252,7 @@ export default function BlogPageClient({
                   return (
                     <Link
                       key={cat}
-                      href={`/blog/category/${cat.toLowerCase()}`}
+                      href={`/blog/category/${slugifyCategory(cat)}`}
                       className="group p-5 rounded-xl border border-border/40 hover:border-border/60 hover:bg-muted/20 transition-all"
                     >
                       <h3 className="text-lg font-serif group-hover:text-foreground transition-colors">

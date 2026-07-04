@@ -2,21 +2,20 @@ import type { Metadata } from "next"
 import ContactPageClient from "./contact-client"
 
 export const metadata: Metadata = {
-  title: "Contact Us",
+  title: "Book a Follow-Up Leak Audit",
   description:
-    "Get in touch with Hotlist AI. Request a demo, discuss custom AI solutions, or explore lead generation partnerships. Response within 24 hours.",
+    "Book a Follow-Up Leak Audit with HotlistAI and find where your real-estate CRM follow-up is breaking.",
   keywords: [
-    "contact Hotlist AI",
-    "AI consultation",
-    "request demo",
-    "AI lead generation quote",
-    "custom AI solutions",
-    "business automation consultation",
+    "Follow-Up Leak Audit",
+    "real estate CRM audit",
+    "real estate follow up audit",
+    "Follow Up Boss audit",
+    "stale lead recovery",
   ],
   openGraph: {
-    title: "Contact Us | Hotlist AI",
+    title: "Book a Follow-Up Leak Audit | HotlistAI",
     description:
-      "Get in touch with Hotlist AI. Request a demo, discuss custom solutions, or explore partnerships. Response within 24 hours.",
+      "Find where response, routing, nurture, stale-lead recovery, and accountability break inside your current CRM.",
     url: "https://hotlistai.com/contact",
     siteName: "Hotlist AI",
     type: "website",
@@ -25,15 +24,15 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Contact Hotlist AI",
+        alt: "Book a Follow-Up Leak Audit with HotlistAI",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact Us | Hotlist AI",
+    title: "Book a Follow-Up Leak Audit | HotlistAI",
     description:
-      "Get in touch with Hotlist AI. Request a demo or discuss custom AI solutions.",
+      "Find where your real-estate CRM follow-up is leaking.",
     images: ["/og-image.jpg"],
     creator: "@hotlistai",
   },

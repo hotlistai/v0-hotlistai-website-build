@@ -1,7 +1,7 @@
 {
-  "name": "HotlistAI Labs",
+  "name": "HotlistAI",
   "short_name": "HotlistAI",
-  "description": "AI systems that run businesses on autopilot. Where people and products meet.",
+  "description": "Follow-up execution for real-estate teams. Stop warm leads from dying inside your CRM.",
   "start_url": "/",
   "id": "/",
   "display": "standalone",
@@ -48,17 +48,17 @@
   "screenshots": [],
   "shortcuts": [
     {
-      "name": "Contact Us",
-      "short_name": "Contact",
-      "description": "Get in touch with HotlistAI Labs",
+      "name": "Book a Follow-Up Leak Audit",
+      "short_name": "Audit",
+      "description": "Find where your real-estate CRM follow-up is leaking",
       "url": "/contact",
       "icons": [{ "src": "/icon-light.png", "sizes": "192x192" }]
     },
     {
-      "name": "Explore Labs",
-      "short_name": "Labs",
-      "description": "See what we're building",
-      "url": "/labs",
+      "name": "See a Sample Leak Report",
+      "short_name": "Sample",
+      "description": "Preview the Follow-Up Leak Scorecard and 30-Day Fix Plan",
+      "url": "/sample-leak-report",
       "icons": [{ "src": "/icon-light.png", "sizes": "192x192" }]
     }
   ],

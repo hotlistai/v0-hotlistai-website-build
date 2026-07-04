@@ -7,9 +7,9 @@ import { buildMetadata } from "@/lib/seo"
 
 export const metadata: Metadata = buildMetadata({
   title: "Industry Playbooks",
-  description: "Industry-specific AI operations pages for real estate, B2B SaaS, agencies, consulting, and professional services teams.",
+  description: "Real-estate follow-up playbooks for 5-25 agent teams and boutique brokerages with active lead flow.",
   path: "/industries",
-  keywords: ["AI industry playbooks", "AI operations by industry", "workflow automation by vertical"],
+  keywords: ["real estate team follow-up", "boutique brokerage CRM", "real estate CRM audit"],
 })
 
 export default function IndustriesIndexPage() {
@@ -21,7 +21,7 @@ export default function IndustriesIndexPage() {
           <header className="space-y-4">
             <p className="text-xs font-mono uppercase tracking-wider text-muted-foreground">Industry Library</p>
             <h1 className="text-4xl md:text-5xl font-serif tracking-tight">Industry Playbooks</h1>
-            <p className="text-lg text-muted-foreground max-w-3xl">Vertical pages mapping recurring operational constraints to practical deployment patterns.</p>
+            <p className="text-lg text-muted-foreground max-w-3xl">Playbooks for teams that already have lead flow but need cleaner CRM execution, routing, and accountability.</p>
           </header>
           <section className="grid md:grid-cols-2 gap-5">
             {industryEntries.map((entry) => (

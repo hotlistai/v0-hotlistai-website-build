@@ -1,12 +1,11 @@
 "use client"
 
 import type React from "react"
-
-import { SiteHeader } from "@/components/site-header"
-import { SiteFooter } from "@/components/site-footer"
 import { motion } from "framer-motion"
-import { useState } from "react"
 import { ArrowRight, Check } from "lucide-react"
+import { useState } from "react"
+import { SiteFooter } from "@/components/site-footer"
+import { SiteHeader } from "@/components/site-header"
 
 export default function ContactPageClient() {
   const [submitted, setSubmitted] = useState(false)
@@ -22,7 +21,11 @@ export default function ContactPageClient() {
     const data = {
       name: formData.get("name"),
       email: formData.get("email"),
-      company: formData.get("company"),
+      teamName: formData.get("teamName"),
+      crm: formData.get("crm"),
+      teamSize: formData.get("teamSize"),
+      leadSources: formData.get("leadSources"),
+      currentBottleneck: formData.get("currentBottleneck"),
       message: formData.get("message"),
     }
 
@@ -46,18 +49,24 @@ export default function ContactPageClient() {
     <div className="min-h-screen flex flex-col bg-background text-foreground">
       <SiteHeader />
 
-      <main className="flex-1">
-        <section className="py-20 md:py-32 px-4 md:px-6" aria-label="Contact form">
-          <div className="max-w-xl mx-auto">
+      <main className="flex-1 pt-14">
+        <section className="py-20 md:py-32 px-4 md:px-6" aria-label="Follow-Up Leak Audit form">
+          <div className="max-w-2xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
               className="space-y-6 mb-12"
             >
-              <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight">Get in touch</h1>
-              <p className="text-lg text-muted-foreground">
-                Have a question or want to work together? We'd love to hear from you.
+              <p className="text-xs font-mono text-muted-foreground tracking-wider uppercase">
+                Book a Follow-Up Leak Audit
+              </p>
+              <h1 className="text-5xl sm:text-6xl font-serif tracking-tight leading-[0.95]">
+                Bring the current bottleneck.
+              </h1>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Tell us what current CRM you use, where leads are coming from, and where follow-up feels weakest. We will look
+                for the response, routing, nurture, stale-lead recovery, and accountability leaks.
               </p>
             </motion.div>
 
@@ -77,8 +86,10 @@ export default function ContactPageClient() {
                 >
                   <Check className="h-6 w-6" aria-hidden="true" />
                 </motion.div>
-                <h2 className="text-xl font-semibold mb-2">Message sent</h2>
-                <p className="text-muted-foreground">We'll get back to you as soon as possible.</p>
+                <h2 className="text-xl font-semibold mb-2">Audit request sent</h2>
+                <p className="text-muted-foreground">
+                  We will review the details and follow up with the best next step.
+                </p>
               </motion.div>
             ) : (
               <motion.form
@@ -99,62 +110,26 @@ export default function ContactPageClient() {
                   </motion.div>
                 )}
                 <div className="grid sm:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <label htmlFor="name" className="text-sm font-medium">
-                      Name
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      required
-                      autoComplete="name"
-                      className="w-full px-4 py-3 rounded-xl bg-muted/30 border border-border/50 focus:border-foreground/30 focus:outline-none focus:ring-2 focus:ring-foreground/10 transition-all"
-                      placeholder="Your name"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <label htmlFor="email" className="text-sm font-medium">
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      required
-                      autoComplete="email"
-                      className="w-full px-4 py-3 rounded-xl bg-muted/30 border border-border/50 focus:border-foreground/30 focus:outline-none focus:ring-2 focus:ring-foreground/10 transition-all"
-                      placeholder="you@company.com"
-                    />
-                  </div>
+                  <Field id="name" label="Name" autoComplete="name" placeholder="Your name" required />
+                  <Field id="email" label="Email" type="email" autoComplete="email" placeholder="you@team.com" required />
                 </div>
-                <div className="space-y-2">
-                  <label htmlFor="company" className="text-sm font-medium">
-                    Company
-                    <span className="text-muted-foreground ml-1">(optional)</span>
-                  </label>
-                  <input
-                    type="text"
-                    id="company"
-                    name="company"
-                    autoComplete="organization"
-                    className="w-full px-4 py-3 rounded-xl bg-muted/30 border border-border/50 focus:border-foreground/30 focus:outline-none focus:ring-2 focus:ring-foreground/10 transition-all"
-                    placeholder="Your company"
-                  />
+                <Field id="teamName" label="Team or brokerage" autoComplete="organization" placeholder="Team name" />
+                <div className="grid sm:grid-cols-2 gap-6">
+                  <Field id="crm" label="Current CRM" placeholder="Follow Up Boss, Lofty, kvCORE..." required />
+                  <Field id="teamSize" label="Team size" placeholder="5-25 agents, boutique office..." />
                 </div>
-                <div className="space-y-2">
-                  <label htmlFor="message" className="text-sm font-medium">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    required
-                    rows={5}
-                    className="w-full px-4 py-3 rounded-xl bg-muted/30 border border-border/50 focus:border-foreground/30 focus:outline-none focus:ring-2 focus:ring-foreground/10 transition-all resize-none"
-                    placeholder="Tell us about your project..."
-                  />
-                </div>
+                <Field id="leadSources" label="Main lead sources" placeholder="Zillow, Google, referrals, website..." />
+                <TextArea
+                  id="currentBottleneck"
+                  label="Current bottleneck"
+                  placeholder="Where are leads getting missed, delayed, or forgotten?"
+                  required
+                />
+                <TextArea
+                  id="message"
+                  label="Anything else?"
+                  placeholder="Share context that would help us understand your current follow-up system."
+                />
                 <motion.button
                   type="submit"
                   disabled={isSubmitting}
@@ -167,34 +142,85 @@ export default function ContactPageClient() {
                       animate={{ rotate: 360 }}
                       transition={{ duration: 1, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
                       className="w-5 h-5 border-2 border-background/30 border-t-background rounded-full"
-                      aria-label="Sending message"
+                      aria-label="Sending audit request"
                     />
                   ) : (
                     <>
-                      Send Message
+                      Book a Follow-Up Leak Audit
                       <ArrowRight className="h-4 w-4" aria-hidden="true" />
                     </>
                   )}
                 </motion.button>
               </motion.form>
             )}
-
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.4 }}
-              className="mt-8 text-center text-sm text-muted-foreground"
-            >
-              Or email us directly at{" "}
-              <a href="mailto:info@hotlistai.com" className="text-foreground hover:underline">
-                info@hotlistai.com
-              </a>
-            </motion.div>
           </div>
         </section>
       </main>
 
       <SiteFooter />
+    </div>
+  )
+}
+
+function Field({
+  id,
+  label,
+  type = "text",
+  autoComplete,
+  placeholder,
+  required = false,
+}: {
+  id: string
+  label: string
+  type?: string
+  autoComplete?: string
+  placeholder: string
+  required?: boolean
+}) {
+  return (
+    <div className="space-y-2">
+      <label htmlFor={id} className="text-sm font-medium">
+        {label}
+        {!required && <span className="text-muted-foreground ml-1">(optional)</span>}
+      </label>
+      <input
+        type={type}
+        id={id}
+        name={id}
+        required={required}
+        autoComplete={autoComplete}
+        className="w-full px-4 py-3 rounded-xl bg-muted/30 border border-border/50 focus:border-foreground/30 focus:outline-none focus:ring-2 focus:ring-foreground/10 transition-all"
+        placeholder={placeholder}
+      />
+    </div>
+  )
+}
+
+function TextArea({
+  id,
+  label,
+  placeholder,
+  required = false,
+}: {
+  id: string
+  label: string
+  placeholder: string
+  required?: boolean
+}) {
+  return (
+    <div className="space-y-2">
+      <label htmlFor={id} className="text-sm font-medium">
+        {label}
+        {!required && <span className="text-muted-foreground ml-1">(optional)</span>}
+      </label>
+      <textarea
+        id={id}
+        name={id}
+        required={required}
+        rows={5}
+        className="w-full px-4 py-3 rounded-xl bg-muted/30 border border-border/50 focus:border-foreground/30 focus:outline-none focus:ring-2 focus:ring-foreground/10 transition-all resize-none"
+        placeholder={placeholder}
+      />
     </div>
   )
 }

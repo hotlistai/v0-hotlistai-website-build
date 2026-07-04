@@ -3,27 +3,21 @@ import BlogPageClient from "./blog-client"
 import { getAllPosts, getFeaturedPost, getAllCategories } from "@/lib/blog"
 
 export const metadata: Metadata = {
-  title: "Blog — AI Automation, Digital Counterparts & Lead Generation Insights",
+  title: "Blog — Real Estate Follow-Up Leaks, CRM Discipline & Stale Lead Recovery",
   description:
-    "Insights on AI automation, digital counterparts, lead generation strategy, multi-agent systems, and the future of business intelligence. Read the latest from Hotlist AI.",
+    "Practical articles on real-estate CRM follow-up, stale lead recovery, speed to lead, nurture discipline, and team accountability from HotlistAI.",
   keywords: [
-    "AI blog",
-    "AI automation insights",
-    "digital counterparts blog",
-    "lead generation strategy",
-    "business AI articles",
-    "AI startup blog",
-    "multi-agent systems",
-    "AI for real estate",
-    "AI for solar companies",
-    "AI for law firms",
-    "conversion optimization",
-    "AI lead generation",
+    "real estate CRM follow up",
+    "Follow-Up Leak Audit",
+    "stale lead recovery",
+    "speed to lead",
+    "Follow Up Boss cleanup",
+    "real estate nurture",
   ],
   openGraph: {
-    title: "Blog | Hotlist AI — AI Automation & Lead Generation Insights",
+    title: "Blog | HotlistAI — Real Estate Follow-Up Systems",
     description:
-      "Insights on AI automation, digital counterparts, and the future of business intelligence.",
+      "Practical articles on CRM follow-up leaks, stale lead recovery, and real-estate team accountability.",
     url: "https://hotlistai.com/blog",
     siteName: "Hotlist AI",
     type: "website",
@@ -38,9 +32,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Blog | Hotlist AI",
+    title: "Blog | HotlistAI",
     description:
-      "Insights on AI automation, digital counterparts, and the future of business intelligence.",
+      "Practical articles on CRM follow-up leaks, stale lead recovery, and real-estate team accountability.",
     images: ["/og-image.jpg"],
     creator: "@hotlistai",
   },
@@ -60,7 +54,7 @@ export default function BlogPage() {
     "@id": "https://hotlistai.com/blog",
     name: "Hotlist AI Blog",
     description:
-      "Insights on AI automation, digital counterparts, lead generation strategy, and the future of business intelligence.",
+      "Practical articles on real-estate CRM follow-up, stale lead recovery, speed to lead, nurture discipline, and team accountability.",
     url: "https://hotlistai.com/blog",
     publisher: {
       "@type": "Organization",

@@ -6,7 +6,8 @@
     "build": "next build",
     "dev": "next dev",
     "lint": "eslint .",
-    "start": "next start"
+    "start": "next start",
+    "verify:positioning": "node scripts/verify-hotlistai-positioning.mjs"
   },
   "dependencies": {
     "@emotion/is-prop-valid": "latest",
