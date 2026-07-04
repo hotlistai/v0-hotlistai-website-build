@@ -1,7 +1,10 @@
 import Script from "next/script"
 
-const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
-const gtmId = process.env.NEXT_PUBLIC_GTM_ID
+const rawGaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
+const rawGtmId = process.env.NEXT_PUBLIC_GTM_ID
+
+const gaMeasurementId = rawGaMeasurementId?.startsWith("G-") ? rawGaMeasurementId : undefined
+const gtmId = rawGtmId?.startsWith("GTM-") ? rawGtmId : undefined
 
 export function GoogleMarketingTags() {
   return (

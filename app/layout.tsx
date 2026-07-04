@@ -16,7 +16,10 @@ const _instrumentSerif = Instrument_Serif({
   variable: "--font-serif",
 })
 
-const googleSiteVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || process.env.GOOGLE_SITE_VERIFICATION
+const rawGoogleSiteVerification =
+  process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || process.env.GOOGLE_SITE_VERIFICATION
+const googleSiteVerification =
+  rawGoogleSiteVerification && !rawGoogleSiteVerification.includes("<") ? rawGoogleSiteVerification : undefined
 
 export const metadata: Metadata = {
   title: {
