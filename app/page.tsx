@@ -70,6 +70,8 @@ const brokerageLogos = [
   { name: "Berkshire Hathaway HomeServices", src: "/brokerages/berkshire-hathaway-homeservices.png" },
 ]
 
+const brokerageLogoLoop = [...brokerageLogos, ...brokerageLogos]
+
 export default function Home() {
   useScrollAnimations()
 
@@ -161,47 +163,6 @@ export default function Home() {
             </div>
           </section>
 
-          <section
-            className="border-b border-border/40 bg-muted/10 px-4 py-9 md:px-6"
-            aria-labelledby="brokerage-experience-heading"
-          >
-            <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[0.7fr_1.3fr] lg:items-center">
-              <div className="scroll-animate">
-                <p
-                  id="brokerage-experience-heading"
-                  className="text-xs font-mono uppercase tracking-[0.28em] text-muted-foreground"
-                >
-                  Real Estate Team Experience
-                </p>
-                <p className="mt-3 max-w-sm text-sm leading-relaxed text-muted-foreground">
-                  Experience inside the workflows of real-estate teams affiliated with leading brokerages.
-                </p>
-              </div>
-              <div>
-                <div className="grid grid-cols-2 items-center gap-x-8 gap-y-6 md:grid-cols-4">
-                  {brokerageLogos.map((logo, index) => (
-                    <div
-                      key={logo.name}
-                      className={`scroll-animate delay-${(index + 1) * 100} relative h-12 opacity-45 grayscale brightness-0 invert transition-opacity duration-300 hover:opacity-75`}
-                    >
-                      <Image
-                        src={logo.src}
-                        alt={logo.name}
-                        fill
-                        sizes="(min-width: 1024px) 220px, (min-width: 768px) 25vw, 45vw"
-                        className="object-contain"
-                      />
-                    </div>
-                  ))}
-                </div>
-                <p className="scroll-animate delay-300 mt-6 text-[11px] leading-relaxed text-muted-foreground/70">
-                  Brokerage logos reference team/operator affiliations and workflow experience, not official corporate
-                  endorsements or partnerships.
-                </p>
-              </div>
-            </div>
-          </section>
-
           <section className="py-20 border-y border-border/40 bg-muted/10" aria-labelledby="leads-die-heading">
             <div className="max-w-6xl mx-auto px-4 md:px-6 grid lg:grid-cols-[0.9fr_1.1fr] gap-12 items-start">
               <div className="scroll-animate">
@@ -220,6 +181,50 @@ export default function Home() {
                   >
                     <CheckCircle2 className="h-5 w-5 mb-4 text-foreground" strokeWidth={1.5} />
                     <p className="text-muted-foreground leading-relaxed">{point}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section
+            className="overflow-hidden border-b border-border/40 bg-background py-12"
+            aria-labelledby="brokerage-experience-heading"
+          >
+            <div className="mx-auto mb-8 flex max-w-6xl flex-col gap-4 px-4 md:px-6 lg:flex-row lg:items-end lg:justify-between">
+              <div className="scroll-animate max-w-2xl">
+                <p
+                  id="brokerage-experience-heading"
+                  className="text-xs font-mono uppercase tracking-[0.28em] text-muted-foreground"
+                >
+                  Real Estate Team Experience
+                </p>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                  Experience inside the workflows of real-estate teams affiliated with leading brokerages.
+                </p>
+              </div>
+              <p className="scroll-animate delay-100 max-w-md text-[11px] leading-relaxed text-muted-foreground/65">
+                Brokerage logos reference team/operator affiliations and workflow experience, not official corporate
+                endorsements or partnerships.
+              </p>
+            </div>
+            <div className="relative">
+              <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-background to-transparent" />
+              <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-background to-transparent" />
+              <div className="brokerage-marquee flex w-max items-center gap-10">
+                {brokerageLogoLoop.map((logo, index) => (
+                  <div
+                    key={`${logo.name}-${index}`}
+                    className="relative h-16 w-[260px] shrink-0 opacity-50 grayscale transition-opacity duration-300 hover:opacity-80"
+                    aria-hidden={index >= brokerageLogos.length}
+                  >
+                    <Image
+                      src={logo.src}
+                      alt={index < brokerageLogos.length ? logo.name : ""}
+                      fill
+                      sizes="260px"
+                      className="object-contain"
+                    />
                   </div>
                 ))}
               </div>
