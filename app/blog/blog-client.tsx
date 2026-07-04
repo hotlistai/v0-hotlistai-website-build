@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import Link from "next/link"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
@@ -93,6 +94,15 @@ export default function BlogPageClient({
                 href={`/blog/${featuredPost.slug}`}
                 className="group block mb-12 p-8 md:p-12 rounded-2xl border border-border/40 bg-card hover:border-border/60 hover:bg-muted/20 transition-all"
               >
+                <div className="relative mb-8 aspect-[1200/630] overflow-hidden rounded-2xl border border-border/40 bg-foreground">
+                  <Image
+                    src="/visuals/blog-thumbnail-crm-leak-series.png"
+                    alt=""
+                    fill
+                    sizes="(min-width: 1024px) 896px, 100vw"
+                    className="object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+                  />
+                </div>
                 <div className="flex items-center gap-3 mb-4">
                   <span className="text-xs font-semibold uppercase tracking-wider text-foreground bg-foreground/10 px-2.5 py-1 rounded-full">
                     Featured
@@ -180,6 +190,15 @@ export default function BlogPageClient({
                   href={`/blog/${post.slug}`}
                   className="group block p-6 md:p-8 rounded-2xl border border-border/40 bg-card hover:border-border/60 hover:bg-muted/20 transition-all"
                 >
+                  <div className="relative mb-6 aspect-[1200/630] overflow-hidden rounded-xl border border-border/40 bg-foreground">
+                    <Image
+                      src="/visuals/blog-thumbnail-crm-leak-series.png"
+                      alt=""
+                      fill
+                      sizes="(min-width: 768px) 50vw, 100vw"
+                      className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                    />
+                  </div>
                   <div className="flex items-center gap-3 mb-4">
                     <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
                       {post.category}

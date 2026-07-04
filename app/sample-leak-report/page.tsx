@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Image from "next/image"
 import { BarChart3, ClipboardList, FileText, Gauge, TimerReset } from "lucide-react"
 import { CalBookingButton } from "@/components/cal-booking-button"
 import { SiteFooter } from "@/components/site-footer"
@@ -38,16 +39,28 @@ export default function SampleLeakReportPage() {
 
       <main className="flex-1 pt-14">
         <section className="py-24 md:py-32 px-4 md:px-6 border-b border-border/40">
-          <div className="max-w-5xl mx-auto">
-            <p className="text-xs font-mono text-muted-foreground tracking-wider uppercase mb-6">Sample Leak Report</p>
-            <h1 className="text-5xl md:text-7xl font-serif tracking-tight leading-[0.95] mb-8 max-w-4xl">
-              See what the audit actually gives you.
-            </h1>
-            <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mb-10">
-              The report is designed to make Response, routing, nurture, stale-lead recovery, and accountability visible
-              enough to fix.
-            </p>
-            <CalBookingButton size="lg">Book a Follow-Up Leak Audit</CalBookingButton>
+          <div className="max-w-6xl mx-auto grid lg:grid-cols-[0.9fr_1.1fr] gap-12 items-center">
+            <div>
+              <p className="text-xs font-mono text-muted-foreground tracking-wider uppercase mb-6">Sample Leak Report</p>
+              <h1 className="text-5xl md:text-7xl font-serif tracking-tight leading-[0.95] mb-8 max-w-4xl">
+                See what the audit actually gives you.
+              </h1>
+              <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mb-10">
+                The report is designed to make Response, routing, nurture, stale-lead recovery, and accountability visible
+                enough to fix.
+              </p>
+              <CalBookingButton size="lg">Book a Follow-Up Leak Audit</CalBookingButton>
+            </div>
+            <div className="relative aspect-[3/2] overflow-hidden rounded-3xl border border-border/40 bg-muted/20 shadow-2xl shadow-foreground/10">
+              <Image
+                src="/visuals/sample-leak-report-document-stack.png"
+                alt="Abstract CRM Execution Report document stack"
+                fill
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                className="object-cover"
+                priority
+              />
+            </div>
           </div>
         </section>
 

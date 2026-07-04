@@ -55,11 +55,12 @@ export default function CompanyPage() {
               <h2 className="text-4xl md:text-5xl font-serif tracking-tight mb-8">Meet Johnny Apple.</h2>
               <div className="overflow-hidden rounded-2xl border border-border/40 bg-background">
                 <Image
-                  src="/johnny-apple-headshot-formal.png"
+                  src="/ja-profile-headshot-2026-vertical.jpeg"
                   alt="Johnny Apple"
-                  width={720}
-                  height={900}
-                  className="w-full h-auto grayscale"
+                  width={914}
+                  height={1142}
+                  sizes="(min-width: 1024px) 40vw, 100vw"
+                  className="h-auto w-full grayscale"
                   priority
                 />
               </div>

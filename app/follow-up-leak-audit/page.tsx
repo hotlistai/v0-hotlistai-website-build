@@ -1,7 +1,9 @@
 import type { Metadata } from "next"
+import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, CheckCircle2, ClipboardCheck, Database, Gauge, Route } from "lucide-react"
+import { ArrowRight, CheckCircle2, Database } from "lucide-react"
 import { CalBookingButton } from "@/components/cal-booking-button"
+import { ExecutionReportIcon, InstallPrioritiesIcon, LeakScorecardIcon } from "@/components/hotlist-icons"
 import { SiteFooter } from "@/components/site-footer"
 import { SiteHeader } from "@/components/site-header"
 
@@ -23,17 +25,17 @@ const auditReviews = [
 
 const outputs = [
   {
-    icon: Gauge,
+    icon: LeakScorecardIcon,
     title: "Follow-Up Leak Scorecard",
     description: "A plain-language score showing where the current CRM workflow is leaking opportunity.",
   },
   {
-    icon: ClipboardCheck,
+    icon: ExecutionReportIcon,
     title: "CRM Execution Report + 30-Day Fix Plan",
     description: "The practical next steps, ordered by impact, complexity, and speed to recovery.",
   },
   {
-    icon: Route,
+    icon: InstallPrioritiesIcon,
     title: "Install priorities",
     description: "What HotlistAI would fix first if the leak is worth turning into an implementation.",
   },
@@ -46,25 +48,37 @@ export default function FollowUpLeakAuditPage() {
 
       <main className="flex-1 pt-14">
         <section className="py-24 md:py-32 px-4 md:px-6 border-b border-border/40">
-          <div className="max-w-5xl mx-auto">
-            <p className="text-xs font-mono text-muted-foreground tracking-wider uppercase mb-6">
-              Follow-Up Leak Audit
-            </p>
-            <h1 className="text-5xl md:text-7xl font-serif tracking-tight leading-[0.95] max-w-4xl mb-8">
-              Find where warm leads are leaking before you buy more.
-            </h1>
-            <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mb-10">
-              We find where response, routing, nurture, stale-lead recovery, and agent accountability break inside your
-              current CRM, then show the first fixes that would make the system actually execute.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3">
-              <CalBookingButton size="lg">Book a Follow-Up Leak Audit</CalBookingButton>
-              <Link
-                href="/sample-leak-report"
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-border/60 px-10 py-5 text-lg font-medium hover:border-foreground/40 transition-colors"
-              >
-                See a Sample Leak Report <ArrowRight className="h-4 w-4" aria-hidden="true" />
-              </Link>
+          <div className="max-w-6xl mx-auto grid lg:grid-cols-[0.95fr_1.05fr] gap-12 items-center">
+            <div>
+              <p className="text-xs font-mono text-muted-foreground tracking-wider uppercase mb-6">
+                Follow-Up Leak Audit
+              </p>
+              <h1 className="text-5xl md:text-7xl font-serif tracking-tight leading-[0.95] max-w-4xl mb-8">
+                Find where warm leads are leaking before you buy more.
+              </h1>
+              <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mb-10">
+                We find where response, routing, nurture, stale-lead recovery, and agent accountability break inside your
+                current CRM, then show the first fixes that would make the system actually execute.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <CalBookingButton size="lg">Book a Follow-Up Leak Audit</CalBookingButton>
+                <Link
+                  href="/sample-leak-report"
+                  className="inline-flex items-center justify-center gap-2 rounded-full border border-border/60 px-10 py-5 text-lg font-medium hover:border-foreground/40 transition-colors"
+                >
+                  See a Sample Leak Report <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                </Link>
+              </div>
+            </div>
+            <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-border/40 bg-foreground shadow-2xl shadow-foreground/10">
+              <Image
+                src="/visuals/follow-up-leak-audit-scorecard.png"
+                alt="Abstract Follow-Up Leak Scorecard report"
+                fill
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                className="object-cover"
+                priority
+              />
             </div>
           </div>
         </section>

@@ -1,8 +1,15 @@
 "use client"
 
+import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, CheckCircle2, Clock, Database, Radar, Route, ShieldCheck, Users } from "lucide-react"
+import { ArrowRight, CheckCircle2, Clock, Users } from "lucide-react"
 import { CalBookingButton } from "@/components/cal-booking-button"
+import {
+  HumanHandoffIcon,
+  LeadLeakVisibilityIcon,
+  RoutingAccountabilityIcon,
+  StaleLeadRecoveryIcon,
+} from "@/components/hotlist-icons"
 import { SiteFooter } from "@/components/site-footer"
 import { SiteHeader } from "@/components/site-header"
 import { useScrollAnimations } from "@/lib/scroll-animations"
@@ -16,22 +23,22 @@ const painPoints = [
 
 const installs = [
   {
-    icon: Radar,
+    icon: LeadLeakVisibilityIcon,
     title: "Lead leak visibility",
     description: "A clear view of where response, routing, nurture, and ownership break inside the current CRM.",
   },
   {
-    icon: Route,
+    icon: RoutingAccountabilityIcon,
     title: "Routing and accountability",
     description: "Rules, reminders, and escalation paths so every lead gets a next action and a responsible owner.",
   },
   {
-    icon: Database,
+    icon: StaleLeadRecoveryIcon,
     title: "Stale lead recovery",
     description: "Segments and reactivation workflows for the contacts your team already paid to acquire.",
   },
   {
-    icon: ShieldCheck,
+    icon: HumanHandoffIcon,
     title: "Human handoff controls",
     description: "Automation for busy work, with clear moments where an agent should step in personally.",
   },
@@ -54,6 +61,16 @@ export default function Home() {
         <article>
           <section className="relative min-h-[92vh] flex items-center px-4 md:px-6 pt-20" aria-labelledby="hero-heading">
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
+              <Image
+                src="/visuals/hotlist-hero-crm-routing-background.png"
+                alt=""
+                fill
+                sizes="100vw"
+                className="object-cover object-center opacity-80"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-background/15" />
+              <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-transparent to-background/80" />
               <div className="absolute -top-24 right-[-10%] h-[520px] w-[520px] rounded-full border border-border/50 bg-muted/30 blur-3xl" />
               <div className="absolute bottom-10 left-[-8%] h-[420px] w-[420px] rounded-full bg-foreground/[0.04] blur-3xl" />
             </div>
@@ -121,6 +138,15 @@ export default function Home() {
                   Fix follow-up before you buy more leads.
                 </h2>
               </header>
+              <div className="relative mb-6 aspect-[16/9] overflow-hidden rounded-3xl border border-border/40 bg-foreground scroll-animate">
+                <Image
+                  src="/visuals/before-after-crm-execution-layer.png"
+                  alt="Abstract before and after CRM execution layer"
+                  fill
+                  sizes="(min-width: 1152px) 1152px, 100vw"
+                  className="object-cover"
+                />
+              </div>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="rounded-2xl border border-border/40 bg-muted/20 p-6 md:p-8 scroll-animate">
                   <h3 className="text-2xl font-serif mb-6">Before HotlistAI</h3>
@@ -266,8 +292,18 @@ export default function Home() {
             </div>
           </section>
 
-          <section className="py-24 px-4 md:px-6 border-t border-border/40 bg-foreground text-background" aria-labelledby="cta-heading">
-            <div className="max-w-4xl mx-auto text-center scroll-animate">
+          <section className="relative overflow-hidden py-24 px-4 md:px-6 border-t border-border/40 bg-foreground text-background" aria-labelledby="cta-heading">
+            <div className="absolute inset-0 pointer-events-none">
+              <Image
+                src="/visuals/final-cta-lead-flow-dark.png"
+                alt=""
+                fill
+                sizes="100vw"
+                className="object-cover opacity-65"
+              />
+              <div className="absolute inset-0 bg-foreground/55" />
+            </div>
+            <div className="relative z-10 max-w-4xl mx-auto text-center scroll-animate">
               <Users className="h-8 w-8 mx-auto mb-6 text-background/70" strokeWidth={1.5} />
               <h2 id="cta-heading" className="text-4xl md:text-6xl font-serif tracking-tight mb-6">
                 Before you spend more money on leads, find out where your current follow-up is leaking.
