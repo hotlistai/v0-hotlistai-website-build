@@ -63,6 +63,13 @@ const platformLogos = [
   { name: "Zoho CRM", src: "/integrations/zoho-crm.png" },
 ]
 
+const brokerageLogos = [
+  { name: "Keller Williams", src: "/brokerages/keller-williams.png" },
+  { name: "Monument Realty", src: "/brokerages/monument-realty.png" },
+  { name: "Compass", src: "/brokerages/compass.png" },
+  { name: "Berkshire Hathaway HomeServices", src: "/brokerages/berkshire-hathaway-homeservices.png" },
+]
+
 export default function Home() {
   useScrollAnimations()
 
@@ -150,6 +157,47 @@ export default function Home() {
                     />
                   </div>
                 ))}
+              </div>
+            </div>
+          </section>
+
+          <section
+            className="border-b border-border/40 bg-muted/10 px-4 py-9 md:px-6"
+            aria-labelledby="brokerage-experience-heading"
+          >
+            <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[0.7fr_1.3fr] lg:items-center">
+              <div className="scroll-animate">
+                <p
+                  id="brokerage-experience-heading"
+                  className="text-xs font-mono uppercase tracking-[0.28em] text-muted-foreground"
+                >
+                  Real Estate Team Experience
+                </p>
+                <p className="mt-3 max-w-sm text-sm leading-relaxed text-muted-foreground">
+                  Experience inside the workflows of real-estate teams affiliated with leading brokerages.
+                </p>
+              </div>
+              <div>
+                <div className="grid grid-cols-2 items-center gap-x-8 gap-y-6 md:grid-cols-4">
+                  {brokerageLogos.map((logo, index) => (
+                    <div
+                      key={logo.name}
+                      className={`scroll-animate delay-${(index + 1) * 100} relative h-12 opacity-45 grayscale brightness-0 invert transition-opacity duration-300 hover:opacity-75`}
+                    >
+                      <Image
+                        src={logo.src}
+                        alt={logo.name}
+                        fill
+                        sizes="(min-width: 1024px) 220px, (min-width: 768px) 25vw, 45vw"
+                        className="object-contain"
+                      />
+                    </div>
+                  ))}
+                </div>
+                <p className="scroll-animate delay-300 mt-6 text-[11px] leading-relaxed text-muted-foreground/70">
+                  Brokerage logos reference team/operator affiliations and workflow experience, not official corporate
+                  endorsements or partnerships.
+                </p>
               </div>
             </div>
           </section>
