@@ -50,6 +50,19 @@ const steps = [
   "If the leak is worth fixing, HotlistAI installs the execution layer around your current CRM.",
 ]
 
+const platformLogos = [
+  { name: "Follow Up Boss", src: "/integrations/follow-up-boss.png" },
+  { name: "Lofty", src: "/integrations/lofty.png" },
+  { name: "BoldTrail", src: "/integrations/boldtrail.png" },
+  { name: "CINC", src: "/integrations/cinc.png" },
+  { name: "Ylopo", src: "/integrations/ylopo.png" },
+  { name: "HubSpot", src: "/integrations/hubspot.png" },
+  { name: "Pipedrive", src: "/integrations/pipedrive.png" },
+  { name: "Sierra Interactive", src: "/integrations/sierra-interactive.png" },
+  { name: "Slack", src: "/integrations/slack.png" },
+  { name: "Zoho CRM", src: "/integrations/zoho-crm.png" },
+]
+
 export default function Home() {
   useScrollAnimations()
 
@@ -102,6 +115,41 @@ export default function Home() {
                 <p className="text-sm text-muted-foreground animate-fade-in-up delay-300">
                   Before you buy more leads, find out where your current ones are leaking.
                 </p>
+              </div>
+            </div>
+          </section>
+
+          <section
+            className="border-y border-border/40 bg-background px-4 py-10 md:px-6"
+            aria-labelledby="platform-expertise-heading"
+          >
+            <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[0.7fr_1.3fr] lg:items-center">
+              <div className="scroll-animate">
+                <p
+                  id="platform-expertise-heading"
+                  className="text-xs font-mono uppercase tracking-[0.28em] text-muted-foreground"
+                >
+                  Platform Expertise
+                </p>
+                <p className="mt-3 max-w-sm text-sm leading-relaxed text-muted-foreground">
+                  Built around the CRMs, lead sources, and team tools real-estate operators already use.
+                </p>
+              </div>
+              <div className="grid grid-cols-2 items-center gap-x-8 gap-y-6 sm:grid-cols-3 lg:grid-cols-5">
+                {platformLogos.map((logo, index) => (
+                  <div
+                    key={logo.name}
+                    className={`scroll-animate delay-${(index % 5) * 100} relative h-9 opacity-40 grayscale transition-opacity duration-300 hover:opacity-70`}
+                  >
+                    <Image
+                      src={logo.src}
+                      alt={logo.name}
+                      fill
+                      sizes="(min-width: 1024px) 160px, (min-width: 640px) 30vw, 45vw"
+                      className="object-contain"
+                    />
+                  </div>
+                ))}
               </div>
             </div>
           </section>
