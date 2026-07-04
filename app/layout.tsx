@@ -2,8 +2,10 @@ import type React from "react"
 import type { Metadata, Viewport } from "next"
 import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import Script from "next/script"
 import { ChatWidget } from "@/components/chat-widget"
+import { GoogleMarketingTags } from "@/components/google-marketing-tags"
 import "./globals.css"
 
 const _geist = Geist({ subsets: ["latin"], variable: "--font-geist-sans" })
@@ -13,6 +15,8 @@ const _instrumentSerif = Instrument_Serif({
   subsets: ["latin"],
   variable: "--font-serif",
 })
+
+const googleSiteVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || process.env.GOOGLE_SITE_VERIFICATION
 
 export const metadata: Metadata = {
   title: {
@@ -51,6 +55,11 @@ export const metadata: Metadata = {
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
   },
   manifest: "/site.webmanifest",
+  verification: googleSiteVerification
+    ? {
+        google: googleSiteVerification,
+      }
+    : undefined,
   robots: {
     index: true,
     follow: true,
@@ -138,7 +147,9 @@ export default function RootLayout({
       <body className={`font-sans antialiased ${_geist.variable} ${_geistMono.variable} ${_instrumentSerif.variable}`}>
         {children}
         <ChatWidget />
+        <GoogleMarketingTags />
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   )

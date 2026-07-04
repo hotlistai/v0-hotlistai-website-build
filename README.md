@@ -7,14 +7,37 @@
 
 ## Overview
 
-This repository will stay in sync with your deployed chats on [v0.app](https://v0.app).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.app](https://v0.app).
+Production website for HotlistAI's real-estate Follow-Up Leak Audit offer.
+
+Current public wedge:
+
+> Stop warm leads from dying inside your CRM.
+
+HotlistAI helps real-estate teams find and fix follow-up leaks inside the CRM they already use.
 
 ## Deployment
 
-Your project is live at:
+Production domain:
 
-**[https://vercel.com/hotlist-ai/v0-hotlist-ai-labs-website](https://vercel.com/hotlist-ai/v0-hotlist-ai-labs-website)**
+**[https://hotlistai.com](https://hotlistai.com)**
+
+Vercel project:
+
+**[https://vercel.com/hotlist-ai/v0-hotlistai-website-build](https://vercel.com/hotlist-ai/v0-hotlistai-website-build)**
+
+## Analytics And Search
+
+The site renders Vercel Analytics and Vercel Speed Insights by default.
+
+Optional Google tags are environment-driven:
+
+- `NEXT_PUBLIC_GA_MEASUREMENT_ID`
+- `NEXT_PUBLIC_GTM_ID`
+- `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION`
+
+If `NEXT_PUBLIC_GTM_ID` is present, GTM owns Google tags and direct GA4 is skipped to avoid double-counted pageviews.
+
+See `docs/launch-analytics-and-profiles.md` for the launch checklist.
 
 ## Build your app
 
