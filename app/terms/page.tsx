@@ -1,7 +1,7 @@
 "use client"
 
-import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
+import { SiteHeader } from "@/components/site-header"
 import { motion } from "framer-motion"
 
 export default function TermsPage() {
@@ -18,11 +18,11 @@ export default function TermsPage() {
               transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
               className="space-y-6 mb-12"
             >
-              <p className="text-sm text-muted-foreground">Last updated: December 10, 2025</p>
+              <p className="text-sm text-muted-foreground">Last updated: July 5, 2026</p>
               <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight">Terms of Service</h1>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                HotlistAI respects your privacy and operates with clarity. Here you'll find transparent policies on how
-                we collect, use, and protect your information.
+                These terms govern your use of hotlistai.com and HotlistAI services, including audit requests, CRM
+                follow-up diagnostics, implementation work, and related business communications.
               </p>
             </motion.div>
 
@@ -36,201 +36,248 @@ export default function TermsPage() {
                 <section className="space-y-4">
                   <h2 className="text-xl font-semibold text-foreground">1. Agreement to Terms</h2>
                   <p>
-                    These Terms of Service ("Terms") constitute a legally binding agreement between you and HotlistAI
-                    Labs, LLC ("HotlistAI," "we," "us," or "our") governing your access to and use of the hotlistai.com
-                    website and any related services (collectively, the "Services").
+                    These Terms of Service ("Terms") are an agreement between you and Hotlist AI LLC ("HotlistAI,"
+                    "we," "us," or "our"). They govern your access to and use of hotlistai.com, our forms, booking
+                    flows, reports, communications, and related services (collectively, the "Services").
                   </p>
                   <p>
-                    By accessing or using our Services, you agree to be bound by these Terms. If you disagree with any
-                    part of these Terms, you may not access our Services.
+                    By accessing the site, booking a call, submitting information, requesting an audit, or using our
+                    Services, you agree to these Terms. If you do not agree, do not use the Services.
+                  </p>
+                  <p>
+                    Paid client work may also be governed by a proposal, statement of work, order form, invoice,
+                    master services agreement, or other written agreement. If there is a conflict, the signed written
+                    agreement controls for that specific engagement.
                   </p>
                 </section>
 
                 <section className="space-y-4">
-                  <h2 className="text-xl font-semibold text-foreground">2. Eligibility</h2>
+                  <h2 className="text-xl font-semibold text-foreground">2. What HotlistAI Provides</h2>
                   <p>
-                    You must be at least 18 years old to use our Services. By using our Services, you represent and
-                    warrant that you meet this age requirement and have the legal capacity to enter into these Terms.
+                    HotlistAI provides CRM follow-up audits, lead-flow diagnostics, business process review, stale-lead
+                    recovery planning, routing and accountability recommendations, workflow implementation, automation
+                    support, reporting, and related consulting or technical services.
+                  </p>
+                  <p>
+                    Unless a written agreement says otherwise, HotlistAI is not a CRM provider, real-estate brokerage,
+                    advertising platform, payment processor, law firm, accounting firm, or financial advisor. Our work
+                    is designed to improve operational clarity and execution, not to guarantee sales, appointments,
+                    closings, revenue, rankings, or specific business outcomes.
                   </p>
                 </section>
 
                 <section className="space-y-4">
-                  <h2 className="text-xl font-semibold text-foreground">3. Account Registration</h2>
+                  <h2 className="text-xl font-semibold text-foreground">3. Eligibility and Authority</h2>
                   <p>
-                    To access certain features of our Services, you may be required to create an account. You agree to:
+                    You must be at least 18 years old to use the Services. If you use the Services on behalf of a
+                    company, team, brokerage, or organization, you represent that you have authority to do so and to
+                    share the information, access, and materials you provide.
                   </p>
+                </section>
+
+                <section className="space-y-4">
+                  <h2 className="text-xl font-semibold text-foreground">4. Client Responsibilities</h2>
+                  <p>You agree to:</p>
                   <ul className="list-disc pl-6 space-y-2">
                     <li>Provide accurate, current, and complete information</li>
-                    <li>Maintain and update your information as necessary</li>
-                    <li>Keep your password secure and confidential</li>
-                    <li>Accept responsibility for all activities under your account</li>
-                    <li>Notify us immediately of any unauthorized access</li>
+                    <li>Make sure you have permission to share CRM, lead, client, agent, or business data with us</li>
+                    <li>Maintain appropriate access controls and permissions inside your own systems</li>
+                    <li>Review recommendations, reports, automations, and changes before relying on them operationally</li>
+                    <li>Comply with applicable laws, platform rules, brokerage policies, MLS rules, privacy duties, and communication laws</li>
+                    <li>Back up important data before authorizing imports, cleanup, configuration changes, or workflow changes</li>
                   </ul>
-                  <p className="mt-4">
-                    We reserve the right to suspend or terminate accounts that violate these Terms.
+                </section>
+
+                <section className="space-y-4">
+                  <h2 className="text-xl font-semibold text-foreground">5. CRM Access, Data, and Third-Party Platforms</h2>
+                  <p>
+                    Many HotlistAI services depend on third-party tools, including CRMs, lead sources, calendars,
+                    email systems, analytics tools, automation tools, communication platforms, and payment providers.
+                    You are responsible for your accounts with those providers and for complying with their terms.
+                  </p>
+                  <p>
+                    If you authorize us to access or configure a third-party system, you remain responsible for the
+                    accuracy, legality, backup, retention, and use of your data. We are not responsible for outages,
+                    changes, limitations, billing issues, API restrictions, data loss, or policy decisions made by
+                    third-party platforms.
                   </p>
                 </section>
 
                 <section className="space-y-4">
-                  <h2 className="text-xl font-semibold text-foreground">4. Acceptable Use</h2>
-                  <p>You agree not to use our Services to:</p>
+                  <h2 className="text-xl font-semibold text-foreground">6. Acceptable Use</h2>
+                  <p>You may not use the Services to:</p>
                   <ul className="list-disc pl-6 space-y-2">
-                    <li>Violate any applicable laws, regulations, or third-party rights</li>
-                    <li>Upload or transmit malicious code, viruses, or harmful content</li>
-                    <li>Attempt to gain unauthorized access to our systems or networks</li>
-                    <li>Interfere with or disrupt the integrity or performance of our Services</li>
-                    <li>Engage in any form of automated data collection without permission</li>
-                    <li>Reverse engineer, decompile, or attempt to extract source code</li>
-                    <li>Use our Services to harass, abuse, or harm others</li>
-                    <li>Impersonate any person or entity</li>
-                    <li>Send spam or unsolicited communications</li>
-                    <li>Engage in any fraudulent or deceptive practices</li>
+                    <li>Violate laws, regulations, platform rules, intellectual property rights, or privacy rights</li>
+                    <li>Send spam, unlawful marketing, deceptive messages, or communications without proper consent</li>
+                    <li>Upload malicious code, interfere with systems, or attempt unauthorized access</li>
+                    <li>Misrepresent your identity, authority, brokerage affiliation, or relationship with another party</li>
+                    <li>Provide data you are not authorized to provide</li>
+                    <li>Use the Services to harass, discriminate, defraud, or harm others</li>
+                    <li>Scrape, copy, reverse engineer, or misuse the site or our materials without permission</li>
                   </ul>
                 </section>
 
                 <section className="space-y-4">
-                  <h2 className="text-xl font-semibold text-foreground">5. Intellectual Property</h2>
+                  <h2 className="text-xl font-semibold text-foreground">7. Audits, Reports, and Recommendations</h2>
                   <p>
-                    <strong className="text-foreground">Our Content:</strong> The Services and all content, features,
-                    and functionality (including but not limited to software, text, graphics, logos, and designs) are
-                    owned by HotlistAI Labs and are protected by copyright, trademark, and other intellectual property
-                    laws.
+                    Audits, scorecards, reports, implementation plans, scripts, workflow diagrams, and recommendations
+                    are based on information available at the time of review. They may be incomplete if information is
+                    missing, inaccurate, stale, or inaccessible.
                   </p>
                   <p>
-                    <strong className="text-foreground">Your Content:</strong> You retain ownership of content you
-                    submit through our Services. By submitting content, you grant us a worldwide, non-exclusive,
-                    royalty-free license to use, reproduce, modify, and display such content in connection with
-                    providing our Services.
-                  </p>
-                  <p>
-                    <strong className="text-foreground">Feedback:</strong> Any feedback, suggestions, or ideas you
-                    provide about our Services may be used by us without any obligation to you.
+                    You are responsible for reviewing deliverables before acting on them. HotlistAI does not guarantee
+                    that every follow-up gap, compliance issue, CRM problem, or business risk will be discovered.
                   </p>
                 </section>
 
                 <section className="space-y-4">
-                  <h2 className="text-xl font-semibold text-foreground">6. Payment Terms</h2>
+                  <h2 className="text-xl font-semibold text-foreground">8. AI and Automation</h2>
                   <p>
-                    If you purchase paid Services, you agree to pay all applicable fees. All fees are non-refundable
-                    unless otherwise stated. We reserve the right to change our pricing with reasonable notice.
+                    We may use AI-assisted tools and automation to analyze workflows, summarize data, draft content,
+                    generate recommendations, support implementation, or improve internal operations. AI-assisted
+                    output may contain errors and should be reviewed by a human before use.
                   </p>
-                  <ul className="list-disc pl-6 space-y-2">
-                    <li>Payment is due at the time of purchase or as otherwise specified</li>
-                    <li>You are responsible for all taxes associated with your purchase</li>
-                    <li>Failure to pay may result in suspension or termination of Services</li>
-                  </ul>
-                </section>
-
-                <section className="space-y-4">
-                  <h2 className="text-xl font-semibold text-foreground">7. Third-Party Services</h2>
                   <p>
-                    Our Services may integrate with or contain links to third-party services. We are not responsible for
-                    the content, policies, or practices of any third-party services. Your use of third-party services is
-                    at your own risk.
+                    You are responsible for approving outbound communications, automations, audience selections,
+                    compliance language, and operational changes before they are used in your business.
                   </p>
                 </section>
 
                 <section className="space-y-4">
-                  <h2 className="text-xl font-semibold text-foreground">8. Disclaimer of Warranties</h2>
+                  <h2 className="text-xl font-semibold text-foreground">9. Fees and Payment</h2>
                   <p>
-                    THE SERVICES ARE PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR
-                    IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
-                    PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
+                    Fees, payment timing, deposits, subscriptions, implementation costs, expenses, cancellation terms,
+                    and refund rules will be described in the applicable proposal, invoice, checkout flow, or written
+                    agreement. Unless stated otherwise in writing, fees are due when invoiced and are non-refundable
+                    once work has begun.
                   </p>
                   <p>
-                    We do not warrant that the Services will be uninterrupted, error-free, or secure, or that any
-                    defects will be corrected.
-                  </p>
-                </section>
-
-                <section className="space-y-4">
-                  <h2 className="text-xl font-semibold text-foreground">9. Limitation of Liability</h2>
-                  <p>
-                    TO THE MAXIMUM EXTENT PERMITTED BY LAW, HOTLISTAI LABS SHALL NOT BE LIABLE FOR ANY INDIRECT,
-                    INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF
-                    PROFITS, DATA, USE, OR GOODWILL, ARISING OUT OF OR RELATED TO YOUR USE OF OUR SERVICES.
-                  </p>
-                  <p>
-                    IN NO EVENT SHALL OUR TOTAL LIABILITY EXCEED THE AMOUNT YOU PAID US IN THE TWELVE (12) MONTHS
-                    PRECEDING THE CLAIM, OR ONE HUNDRED DOLLARS ($100), WHICHEVER IS GREATER.
+                    Late or failed payment may result in paused work, suspended access, delayed deliverables, or
+                    termination of Services.
                   </p>
                 </section>
 
                 <section className="space-y-4">
-                  <h2 className="text-xl font-semibold text-foreground">10. Indemnification</h2>
+                  <h2 className="text-xl font-semibold text-foreground">10. Intellectual Property</h2>
                   <p>
-                    You agree to indemnify, defend, and hold harmless HotlistAI Labs and its officers, directors,
-                    employees, and agents from any claims, damages, losses, liabilities, and expenses (including
-                    attorneys' fees) arising from your use of our Services or violation of these Terms.
+                    <strong className="text-foreground">Our materials:</strong> The website, brand, copy, frameworks,
+                    templates, designs, code, reports, processes, and other materials we create or provide are owned by
+                    HotlistAI or its licensors unless a written agreement says otherwise.
+                  </p>
+                  <p>
+                    <strong className="text-foreground">Your materials:</strong> You retain ownership of data,
+                    content, exports, screenshots, documents, and materials you provide to us. You grant us the rights
+                    needed to use those materials to provide, support, secure, and improve the Services.
+                  </p>
+                  <p>
+                    <strong className="text-foreground">Client deliverables:</strong> Your right to use deliverables
+                    from a paid engagement is governed by the applicable written agreement. If no written agreement
+                    says otherwise, you may use final deliverables internally for your business after full payment.
+                  </p>
+                  <p>
+                    <strong className="text-foreground">Feedback:</strong> We may use feedback, suggestions, and ideas
+                    you provide without restriction or obligation.
                   </p>
                 </section>
 
                 <section className="space-y-4">
-                  <h2 className="text-xl font-semibold text-foreground">11. Termination</h2>
+                  <h2 className="text-xl font-semibold text-foreground">11. Confidentiality</h2>
                   <p>
-                    We may terminate or suspend your access to our Services immediately, without prior notice, for any
-                    reason, including breach of these Terms. Upon termination, your right to use the Services will cease
-                    immediately.
-                  </p>
-                  <p>
-                    You may terminate your account at any time by contacting us. Provisions that by their nature should
-                    survive termination shall survive, including intellectual property, warranty disclaimers, indemnity,
-                    and limitations of liability.
+                    We understand that CRM data, lead records, sales processes, and internal workflows may be
+                    confidential. We will use reasonable care to protect non-public client information and use it only
+                    for the purposes of providing Services, unless disclosure is required by law or authorized by you.
+                    Additional confidentiality terms may be included in a written agreement.
                   </p>
                 </section>
 
                 <section className="space-y-4">
-                  <h2 className="text-xl font-semibold text-foreground">12. Governing Law</h2>
+                  <h2 className="text-xl font-semibold text-foreground">12. No Guarantees</h2>
                   <p>
-                    These Terms shall be governed by and construed in accordance with the laws of the State of Delaware,
-                    without regard to its conflict of law provisions. Any disputes arising under these Terms shall be
-                    resolved in the state or federal courts located in Delaware.
+                    We do not guarantee specific outcomes, including revenue, appointments, response rates, lead
+                    conversion, search rankings, ad performance, CRM adoption, compliance results, or platform uptime.
+                    Business outcomes depend on many factors outside our control, including your team, market,
+                    database quality, offer, response behavior, lead sources, platform limitations, and follow-through.
                   </p>
                 </section>
 
                 <section className="space-y-4">
-                  <h2 className="text-xl font-semibold text-foreground">13. Changes to Terms</h2>
+                  <h2 className="text-xl font-semibold text-foreground">13. Disclaimer of Warranties</h2>
                   <p>
-                    We reserve the right to modify these Terms at any time. We will provide notice of material changes
-                    by posting the updated Terms on our website and updating the "Last updated" date. Your continued use
-                    of the Services after changes constitutes acceptance of the modified Terms.
+                    THE SERVICES ARE PROVIDED "AS IS" AND "AS AVAILABLE." TO THE MAXIMUM EXTENT PERMITTED BY LAW,
+                    HOTLISTAI DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING WARRANTIES OF MERCHANTABILITY,
+                    FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, ACCURACY, AVAILABILITY, AND RELIABILITY.
                   </p>
                 </section>
 
                 <section className="space-y-4">
-                  <h2 className="text-xl font-semibold text-foreground">14. Severability</h2>
+                  <h2 className="text-xl font-semibold text-foreground">14. Limitation of Liability</h2>
                   <p>
-                    If any provision of these Terms is found to be unenforceable, the remaining provisions will continue
-                    in full force and effect.
+                    TO THE MAXIMUM EXTENT PERMITTED BY LAW, HOTLISTAI WILL NOT BE LIABLE FOR INDIRECT, INCIDENTAL,
+                    SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES, OR FOR LOST PROFITS, LOST REVENUE, LOST
+                    DATA, LOST GOODWILL, BUSINESS INTERRUPTION, OR COSTS OF SUBSTITUTE SERVICES.
+                  </p>
+                  <p>
+                    TO THE MAXIMUM EXTENT PERMITTED BY LAW, OUR TOTAL LIABILITY FOR ANY CLAIM RELATED TO THE SERVICES
+                    WILL NOT EXCEED THE AMOUNT YOU PAID HOTLISTAI FOR THE SERVICES GIVING RISE TO THE CLAIM DURING THE
+                    THREE (3) MONTHS BEFORE THE EVENT GIVING RISE TO LIABILITY, OR ONE HUNDRED DOLLARS ($100), WHICHEVER
+                    IS GREATER.
                   </p>
                 </section>
 
                 <section className="space-y-4">
-                  <h2 className="text-xl font-semibold text-foreground">15. Entire Agreement</h2>
+                  <h2 className="text-xl font-semibold text-foreground">15. Indemnification</h2>
                   <p>
-                    These Terms, together with our Privacy Policy, constitute the entire agreement between you and
-                    HotlistAI Labs regarding the Services and supersede all prior agreements.
+                    You agree to defend, indemnify, and hold harmless HotlistAI and its owners, officers, contractors,
+                    employees, agents, and affiliates from claims, damages, liabilities, losses, costs, and expenses
+                    arising from your use of the Services, your data or materials, your violation of these Terms, your
+                    violation of law or third-party rights, or your use of third-party platforms.
                   </p>
                 </section>
 
                 <section className="space-y-4">
-                  <h2 className="text-xl font-semibold text-foreground">16. Contact Us</h2>
+                  <h2 className="text-xl font-semibold text-foreground">16. Termination</h2>
                   <p>
-                    Questions? Reach our legal team at{" "}
+                    We may suspend or terminate access to the Services if you violate these Terms, fail to pay, misuse
+                    the Services, create security risk, or if continued service is impractical or unlawful. Sections
+                    that by their nature should survive termination will survive, including payment obligations,
+                    intellectual property, confidentiality, disclaimers, limitations of liability, and indemnity.
+                  </p>
+                </section>
+
+                <section className="space-y-4">
+                  <h2 className="text-xl font-semibold text-foreground">17. Governing Law</h2>
+                  <p>
+                    Unless a written agreement says otherwise, these Terms are governed by the laws of the State of
+                    Texas, without regard to conflict-of-law rules. You and HotlistAI agree to resolve disputes in the
+                    state or federal courts located in Texas, unless another venue is required by law or agreed in
+                    writing.
+                  </p>
+                </section>
+
+                <section className="space-y-4">
+                  <h2 className="text-xl font-semibold text-foreground">18. Changes to Terms</h2>
+                  <p>
+                    We may update these Terms from time to time. The updated version will be posted on this page with a
+                    new "Last updated" date. Continued use of the site or Services after an update means you accept the
+                    updated Terms.
+                  </p>
+                </section>
+
+                <section className="space-y-4">
+                  <h2 className="text-xl font-semibold text-foreground">19. Contact Us</h2>
+                  <p>
+                    Questions about these Terms can be sent to{" "}
                     <a href="mailto:legal@hotlistai.com" className="text-foreground underline">
                       legal@hotlistai.com
                     </a>
                     .
                   </p>
                   <p>
-                    <strong className="text-foreground">HotlistAI Labs, LLC</strong>
+                    <strong className="text-foreground">Hotlist AI LLC</strong>
                     <br />
-                    Email:{" "}
-                    <a href="mailto:legal@hotlistai.com" className="text-foreground underline">
-                      legal@hotlistai.com
-                    </a>
+                    Website: hotlistai.com
                     <br />
-                    General Inquiries:{" "}
+                    General inquiries:{" "}
                     <a href="mailto:info@hotlistai.com" className="text-foreground underline">
                       info@hotlistai.com
                     </a>

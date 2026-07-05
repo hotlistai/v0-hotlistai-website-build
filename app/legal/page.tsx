@@ -45,8 +45,8 @@ export default function LegalPage() {
               </motion.div>
               <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight">Legal</h1>
               <p className="text-lg text-muted-foreground">
-                HotlistAI respects your privacy and operates with clarity. Here you'll find transparent policies on how
-                we collect, use, and protect your information.
+                Legal policies for HotlistAI, including how Hotlist AI LLC handles privacy, service terms, brand
+                assets, and business communications.
               </p>
             </motion.div>
 
@@ -101,8 +101,8 @@ export default function LegalPage() {
                     <h2 className="font-semibold mb-2">Trademark & Copyright</h2>
                     <p className="text-sm text-muted-foreground">
                       HotlistAI, the HotlistAI logo, and all related names, logos, product and service names, designs,
-                      and slogans are trademarks of HotlistAI Labs, LLC. All content on this site is protected by
-                      copyright.
+                      and slogans are trademarks or brand assets of Hotlist AI LLC. All content on this site is
+                      protected by copyright.
                     </p>
                   </div>
                 </div>
