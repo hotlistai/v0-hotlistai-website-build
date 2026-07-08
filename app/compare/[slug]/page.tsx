@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params
   const entry = getCompareBySlug(slug)
   if (!entry) return {}
-  return buildMetadata({ title: entry.title, description: entry.summary, path: `/compare/${entry.slug}`, keywords: [entry.searchIntent, "HotlistAI comparison", "real estate follow-up"] })
+  return buildMetadata({ title: entry.title, description: entry.summary, path: `/compare/${entry.slug}`, keywords: [entry.searchIntent, "Hotlist comparison", "real estate follow-up"] })
 }
 
 export default async function CompareDetailPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -48,7 +48,7 @@ export default async function CompareDetailPage({ params }: { params: Promise<{ 
               <ul className="space-y-2 text-sm text-muted-foreground">{entry.evaluatedOptions.map((item) => <li key={item}>• {item}</li>)}</ul>
             </div>
             <div className="rounded-xl border border-border/30 bg-muted/20 p-6">
-              <h2 className="text-xl font-semibold mb-3">When HotlistAI Fits</h2>
+              <h2 className="text-xl font-semibold mb-3">When Hotlist Fits</h2>
               <ul className="space-y-2 text-sm text-muted-foreground">{entry.whenHotlistFits.map((item) => <li key={item}>• {item}</li>)}</ul>
             </div>
           </section>

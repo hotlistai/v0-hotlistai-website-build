@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og"
 
 export const runtime = "edge"
-export const alt = "HotlistAI - Your Agent Tech Concierge"
+export const alt = "Hotlist - Your Agent Tech Concierge"
 export const size = { width: 1200, height: 630 }
 export const contentType = "image/png"
 
@@ -20,7 +20,7 @@ export default async function Image() {
         padding: 72,
       }}
     >
-      <div style={{ fontSize: 24, letterSpacing: 4, textTransform: "uppercase", color: "#737373" }}>HotlistAI</div>
+      <div style={{ fontSize: 24, letterSpacing: 4, textTransform: "uppercase", color: "#737373" }}>Hotlist</div>
       <div>
         <h1 style={{ fontSize: 74, lineHeight: 0.95, letterSpacing: -3, margin: 0, maxWidth: 940 }}>
           Your Agent Tech Concierge.

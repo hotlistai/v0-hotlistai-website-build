@@ -7,9 +7,9 @@ import { buildMetadata } from "@/lib/seo"
 
 export const metadata: Metadata = buildMetadata({
   title: "Comparison Guides",
-  description: "Comparison pages evaluating HotlistAI against buying more leads, CRM automation, ISA hiring, and database reactivation options.",
+  description: "Comparison pages evaluating Hotlist against buying more leads, CRM automation, ISA hiring, and database reactivation options.",
   path: "/compare",
-  keywords: ["HotlistAI alternatives", "real estate CRM comparison", "AI ISA vs human ISA"],
+  keywords: ["Hotlist alternatives", "real estate CRM comparison", "AI ISA vs human ISA"],
 })
 
 export default function CompareIndexPage() {

@@ -21,7 +21,7 @@ export default function PressPageClient() {
             >
               <h1 id="press-heading" className="text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tight">Press</h1>
               <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-                HotlistAI Labs is the engine behind a new generation of AI-powered business tools. We build with
+                Hotlist Labs is the engine behind a new generation of AI-powered business tools. We build with
                 clarity, ship with speed, and measure by real outcomes.
               </p>
             </motion.div>
@@ -94,10 +94,10 @@ export default function PressPageClient() {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="mt-16 pt-16 border-t border-border/40"
             >
-              <h2 className="text-2xl font-semibold tracking-tight mb-6">About HotlistAI Labs</h2>
+              <h2 className="text-2xl font-semibold tracking-tight mb-6">About Hotlist Labs</h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  HotlistAI Labs builds beautifully simple intelligence systems that create clarity, speed, and real
+                  Hotlist Labs builds beautifully simple intelligence systems that create clarity, speed, and real
                   leverage. We don't build tools — we build digital counterparts.
                 </p>
                 <p>

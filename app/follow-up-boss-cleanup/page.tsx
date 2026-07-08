@@ -11,14 +11,14 @@ export const metadata: Metadata = {
     "Clean up Follow Up Boss duplicates, tags, stages, daily lists, and old contacts — so your team can trust one clear list of who needs attention today.",
   alternates: { canonical: "/follow-up-boss-cleanup" },
   openGraph: {
-    title: "Follow Up Boss Cleanup for Real Estate Teams | HotlistAI",
+    title: "Follow Up Boss Cleanup for Real Estate Teams | Hotlist",
     description:
       "Real CRM cleanup for Follow Up Boss teams — not cosmetic tidying. Fix the data so follow-up actually works.",
-    url: "https://hotlistai.com/follow-up-boss-cleanup",
-    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "HotlistAI Lead Follow-Up Audit" }],
+    url: "https://hotlistengine.com/follow-up-boss-cleanup",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Hotlist Lead Follow-Up Audit" }],
   },
   twitter: {
-    title: "Follow Up Boss Cleanup for Real Estate Teams | HotlistAI",
+    title: "Follow Up Boss Cleanup for Real Estate Teams | Hotlist",
     description:
       "Real CRM cleanup for Follow Up Boss teams — not cosmetic tidying. Fix the data so follow-up actually works.",
     images: ["/twitter-image"],
@@ -105,7 +105,7 @@ export default function FollowUpBossCleanupPage() {
               <UsersRound className="h-7 w-7 mb-6 text-muted-foreground" strokeWidth={1.5} />
               <h2 className="text-3xl font-serif mb-4">Independent guidance</h2>
               <p className="text-muted-foreground leading-relaxed">
-                HotlistAI is not affiliated with, sponsored by, or endorsed by Follow Up Boss. We help teams make their
+                Hotlist is not affiliated with, sponsored by, or endorsed by Follow Up Boss. We help teams make their
                 current CRM easier to trust and use every day.
               </p>
             </div>

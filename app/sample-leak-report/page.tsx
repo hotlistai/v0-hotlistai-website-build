@@ -108,7 +108,7 @@ export default function SampleLeakReportPage() {
               <TimerReset className="h-8 w-8 mb-8 text-background/70" strokeWidth={1.5} />
               <h3 className="text-3xl md:text-4xl font-serif tracking-tight mb-5">What happens after the audit</h3>
               <p className="text-background/75 leading-relaxed mb-8">
-                If the gaps are costing you deals, HotlistAI fixes the system, installs simple processes, and stays on
+                If the gaps are costing you deals, Hotlist fixes the system, installs simple processes, and stays on
                 monthly as your Tech Concierge — so follow-up keeps working without you managing the tech.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">

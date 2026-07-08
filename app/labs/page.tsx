@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Where ideas become working systems. Hotlist Labs is where ideas are created, tested, shaped, and prepared for launch through deep reasoning and expert agent collaboration.",
   openGraph: {
-    title: "Labs | HotlistAI Labs",
+    title: "Labs | Hotlist Labs",
     description:
       "Where ideas become working systems. Hotlist Labs is where ideas are created, tested, shaped, and prepared for launch.",
   },

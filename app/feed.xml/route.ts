@@ -2,7 +2,7 @@ import { getAllPosts } from "@/lib/blog"
 
 export async function GET() {
   const posts = getAllPosts()
-  const baseUrl = "https://hotlistai.com"
+  const baseUrl = "https://hotlistengine.com"
 
   const rssItems = posts
     .map(
@@ -27,17 +27,17 @@ export async function GET() {
   xmlns:dc="http://purl.org/dc/elements/1.1/"
 >
   <channel>
-    <title>Hotlist AI Blog</title>
+    <title>Hotlist Blog</title>
     <link>${baseUrl}/blog</link>
-    <description>Practical articles on follow-up gaps, stale lead recovery, speed to lead, nurture discipline, and team accountability from your Agent Tech Concierge at HotlistAI.</description>
+    <description>Practical articles on follow-up gaps, stale lead recovery, speed to lead, nurture discipline, and team accountability from your Agent Tech Concierge at Hotlist.</description>
     <language>en-us</language>
     <managingEditor>info@hotlistai.com (Johnny Apple)</managingEditor>
-    <webMaster>info@hotlistai.com (HotlistAI)</webMaster>
+    <webMaster>info@hotlistai.com (Hotlist)</webMaster>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
     <atom:link href="${baseUrl}/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>${baseUrl}/logo-light.png</url>
-      <title>Hotlist AI Blog</title>
+      <title>Hotlist Blog</title>
       <link>${baseUrl}/blog</link>
     </image>
     ${rssItems}

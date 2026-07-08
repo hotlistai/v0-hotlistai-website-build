@@ -9,7 +9,7 @@ import { buildMetadata } from "@/lib/seo"
 export const metadata: Metadata = buildMetadata({
   title: "How Your Tech Concierge Works",
   description:
-    "Audit your follow-up, fix what is broken, and stay supported monthly. HotlistAI's three-step Agent Tech Concierge path for real estate teams.",
+    "Audit your follow-up, fix what is broken, and stay supported monthly. Hotlist's three-step Agent Tech Concierge path for real estate teams.",
   path: "/how-it-works",
   keywords: [
     "agent tech concierge",

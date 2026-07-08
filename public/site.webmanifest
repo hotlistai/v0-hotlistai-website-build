@@ -1,6 +1,6 @@
 {
-  "name": "HotlistAI",
-  "short_name": "HotlistAI",
+  "name": "Hotlist",
+  "short_name": "Hotlist",
   "description": "Agent Tech Concierge for real estate teams. Audit follow-up, fix what is broken, and keep it running.",
   "start_url": "/",
   "id": "/",
@@ -15,25 +15,25 @@
   "categories": ["business", "productivity", "utilities"],
   "icons": [
     {
-      "src": "/icon-light.png",
+      "src": "/favicon.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/icon-light.png",
+      "src": "/favicon.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/icon-dark.png",
+      "src": "/favicon.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "/icon-dark.png",
+      "src": "/favicon.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
@@ -52,14 +52,14 @@
       "short_name": "Audit",
       "description": "Find where your team's follow-up is breaking",
       "url": "/contact",
-      "icons": [{ "src": "/icon-light.png", "sizes": "192x192" }]
+      "icons": [{ "src": "/favicon.png", "sizes": "192x192" }]
     },
     {
       "name": "See a Sample Audit Report",
       "short_name": "Sample",
       "description": "Preview the Follow-Up Scorecard and 30-Day Fix Plan",
       "url": "/sample-leak-report",
-      "icons": [{ "src": "/icon-light.png", "sizes": "192x192" }]
+      "icons": [{ "src": "/favicon.png", "sizes": "192x192" }]
     }
   ],
   "related_applications": [],

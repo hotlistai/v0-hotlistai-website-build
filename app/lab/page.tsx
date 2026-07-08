@@ -27,8 +27,8 @@ export const metadata: Metadata = {
     title: "The Lab | AI Software Products | Hotlist AI",
     description:
       "Specialized AI agents and intelligent automation tools. Production-ready systems actively deployed across industries.",
-    url: "https://hotlistai.com/lab",
-    siteName: "Hotlist AI",
+    url: "https://hotlistengine.com/lab",
+    siteName: "Hotlist",
     type: "website",
     images: [
       {

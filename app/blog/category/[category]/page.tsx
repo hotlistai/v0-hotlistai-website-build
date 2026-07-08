@@ -42,15 +42,15 @@ export async function generateMetadata({
       "Lead Follow-Up Audit",
     ],
     openGraph: {
-      title: `${formattedCategory} | Hotlist AI Blog`,
+      title: `${formattedCategory} | Hotlist Blog`,
       description,
-      url: `https://hotlistai.com/blog/category/${category}`,
-      siteName: "Hotlist AI",
+      url: `https://hotlistengine.com/blog/category/${category}`,
+      siteName: "Hotlist",
       type: "website",
     },
     twitter: {
       card: "summary_large_image",
-      title: `${formattedCategory} | Hotlist AI Blog`,
+      title: `${formattedCategory} | Hotlist Blog`,
       description,
       creator: "@hotlistai",
     },
@@ -81,18 +81,18 @@ export default async function CategoryPage({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    name: `${formattedCategory} Articles — Hotlist AI Blog`,
+    name: `${formattedCategory} Articles — Hotlist Blog`,
     description,
-    url: `https://hotlistai.com/blog/category/${category}`,
+    url: `https://hotlistengine.com/blog/category/${category}`,
     isPartOf: {
       "@type": "Blog",
-      name: "Hotlist AI Blog",
-      url: "https://hotlistai.com/blog",
+      name: "Hotlist Blog",
+      url: "https://hotlistengine.com/blog",
     },
     publisher: {
       "@type": "Organization",
-      name: "Hotlist AI",
-      url: "https://hotlistai.com",
+      name: "Hotlist",
+      url: "https://hotlistengine.com",
     },
   }
 

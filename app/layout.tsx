@@ -23,26 +23,26 @@ const googleSiteVerification =
 
 export const metadata: Metadata = {
   title: {
-    default: "HotlistAI | Your Agent Tech Concierge",
-    template: "%s | HotlistAI",
+    default: "Hotlist | Your Agent Tech Concierge",
+    template: "%s | Hotlist",
   },
   description:
-    "HotlistAI audits your follow-up, fixes what is broken, and manages it ongoing — so your real estate team stops losing warm leads and closes more deals with less tech stress.",
-  metadataBase: new URL("https://hotlistai.com"),
+    "Hotlist audits your follow-up, fixes what is broken, and manages it ongoing — so your real estate team stops losing warm leads and closes more deals with less tech stress.",
+  metadataBase: new URL("https://hotlistengine.com"),
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://hotlistai.com",
-    siteName: "HotlistAI",
-    title: "HotlistAI | Your Agent Tech Concierge",
+    url: "https://hotlistengine.com",
+    siteName: "Hotlist",
+    title: "Hotlist | Your Agent Tech Concierge",
     description:
       "Audit your follow-up, fix what is broken, and stay supported monthly. Lead Follow-Up Audits and Tech Concierge for real estate teams.",
-    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "HotlistAI Agent Tech Concierge" }],
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Hotlist Agent Tech Concierge" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "HotlistAI | Your Agent Tech Concierge",
+    title: "Hotlist | Your Agent Tech Concierge",
     description:
       "Audit your follow-up, fix what is broken, and stay supported monthly. Lead Follow-Up Audits and Tech Concierge for real estate teams.",
     images: ["/twitter-image"],
@@ -51,11 +51,10 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/icon-light.png", type: "image/png", media: "(prefers-color-scheme: light)" },
-      { url: "/icon-dark.png", type: "image/png", media: "(prefers-color-scheme: dark)" },
+      { url: "/favicon.png", sizes: "any", type: "image/png" },
+      { url: "/icon-light-32x32.png", type: "image/png", sizes: "32x32" },
     ],
-    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
   },
   manifest: "/site.webmanifest",
   verification: googleSiteVerification
@@ -92,13 +91,13 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "https://hotlistai.com/#organization",
-      name: "HotlistAI",
-      alternateName: "Hotlist AI",
+      "@id": "https://hotlistengine.com/#organization",
+      name: "Hotlist",
+      alternateName: "Hotlist Engine",
       description:
         "Agent Tech Concierge for real estate teams. Lead Follow-Up Audits, follow-up system implementation, and ongoing Tech Concierge support.",
-      url: "https://hotlistai.com",
-      logo: "https://hotlistai.com/logo-light.png",
+      url: "https://hotlistengine.com",
+      logo: "https://hotlistengine.com/logo.png",
       contactPoint: [
         {
           "@type": "ContactPoint",
@@ -115,16 +114,16 @@ const jsonLd = {
     },
     {
       "@type": "WebSite",
-      "@id": "https://hotlistai.com/#website",
-      url: "https://hotlistai.com",
-      name: "HotlistAI",
-      publisher: { "@id": "https://hotlistai.com/#organization" },
+      "@id": "https://hotlistengine.com/#website",
+      url: "https://hotlistengine.com",
+      name: "Hotlist",
+      publisher: { "@id": "https://hotlistengine.com/#organization" },
       inLanguage: "en-US",
       potentialAction: {
         "@type": "SearchAction",
         target: {
           "@type": "EntryPoint",
-          urlTemplate: "https://hotlistai.com/blog?query={search_term_string}",
+          urlTemplate: "https://hotlistengine.com/blog?query={search_term_string}",
         },
         "query-input": "required name=search_term_string",
       },
@@ -140,7 +139,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        <link rel="alternate" type="application/rss+xml" title="Hotlist AI Blog" href="/feed.xml" />
+        <link rel="alternate" type="application/rss+xml" title="Hotlist Blog" href="/feed.xml" />
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="dns-prefetch" href="//js-na2.hs-scripts.com" />
         <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />

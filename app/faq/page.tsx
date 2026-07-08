@@ -6,15 +6,15 @@ import { SiteHeader } from "@/components/site-header"
 export const metadata: Metadata = {
   title: "FAQ",
   description:
-    "Questions about HotlistAI's Lead Follow-Up Audit, Tech Concierge support, sample audit report, and follow-up implementation for real estate teams.",
+    "Questions about Hotlist's Lead Follow-Up Audit, Tech Concierge support, sample audit report, and follow-up implementation for real estate teams.",
   alternates: { canonical: "/faq" },
 }
 
 const faqs = [
   {
-    question: "What does HotlistAI do?",
+    question: "What does Hotlist do?",
     answer:
-      "HotlistAI is the Agent Tech Concierge for real estate teams. We audit your follow-up, fix what is broken inside the CRM you already use, and manage it ongoing so warm leads stop slipping away.",
+      "Hotlist is the Agent Tech Concierge for real estate teams. We audit your follow-up, fix what is broken inside the CRM you already use, and manage it ongoing so warm leads stop slipping away.",
   },
   {
     question: "What is a Lead Follow-Up Audit?",
@@ -32,12 +32,12 @@ const faqs = [
       "Your Tech Concierge is the person who keeps your follow-up system working — fixing what breaks, updating reminders and lists, and handling the tech so you can focus on closings.",
   },
   {
-    question: "Is HotlistAI another CRM?",
+    question: "Is Hotlist another CRM?",
     answer:
       "No. We make the CRM you already have easier to run. No rip-and-replace required.",
   },
   {
-    question: "Do I need to be technical to work with HotlistAI?",
+    question: "Do I need to be technical to work with Hotlist?",
     answer:
       "No. Everything is explained in plain language. If you can describe where follow-up feels weakest, we can help.",
   },

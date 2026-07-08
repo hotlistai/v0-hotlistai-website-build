@@ -21,7 +21,7 @@ export async function POST(request: Request) {
         email,
         message,
         timestamp: new Date().toISOString(),
-        source: "hotlistai.com",
+        source: "hotlistengine.com",
       }),
     })
 

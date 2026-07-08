@@ -10,7 +10,7 @@ type IndexNowBody = {
 export async function POST(request: Request) {
   try {
     const key = process.env.INDEXNOW_KEY
-    const host = process.env.INDEXNOW_HOST || "hotlistai.com"
+    const host = process.env.INDEXNOW_HOST || "hotlistengine.com"
     const keyLocation = process.env.INDEXNOW_KEY_LOCATION || `https://${host}/indexnow-key.txt`
 
     if (!key) {

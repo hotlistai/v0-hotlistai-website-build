@@ -40,7 +40,7 @@ const outputs = [
     icon: InstallPrioritiesIcon,
     title: "Implementation roadmap",
     description:
-      "If the gaps are worth fixing, we show exactly what HotlistAI would set up first — and what ongoing Tech Concierge support would look like.",
+      "If the gaps are worth fixing, we show exactly what Hotlist would set up first — and what ongoing Tech Concierge support would look like.",
   },
 ]
 

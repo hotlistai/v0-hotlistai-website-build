@@ -5,7 +5,7 @@ import { getAllPosts, getFeaturedPost, getAllCategories } from "@/lib/blog"
 export const metadata: Metadata = {
   title: "Blog — Real Estate Follow-Up Gaps, CRM Discipline & Stale Lead Recovery",
   description:
-    "Practical articles on follow-up gaps, stale lead recovery, speed to lead, nurture discipline, and team accountability from your Agent Tech Concierge at HotlistAI.",
+    "Practical articles on follow-up gaps, stale lead recovery, speed to lead, nurture discipline, and team accountability from your Agent Tech Concierge at Hotlist.",
   keywords: [
     "real estate CRM follow up",
     "Lead Follow-Up Audit",
@@ -15,24 +15,24 @@ export const metadata: Metadata = {
     "real estate nurture",
   ],
   openGraph: {
-    title: "Blog | HotlistAI — Real Estate Follow-Up Systems",
+    title: "Blog | Hotlist — Real Estate Follow-Up Systems",
     description:
       "Practical articles on follow-up gaps, stale lead recovery, and real-estate team accountability.",
-    url: "https://hotlistai.com/blog",
-    siteName: "Hotlist AI",
+    url: "https://hotlistengine.com/blog",
+    siteName: "Hotlist",
     type: "website",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Hotlist AI Blog",
+        alt: "Hotlist Blog",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Blog | HotlistAI",
+    title: "Blog | Hotlist",
     description:
       "Practical articles on follow-up gaps, stale lead recovery, and real-estate team accountability.",
     images: ["/og-image.jpg"],
@@ -51,18 +51,18 @@ export default function BlogPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Blog",
-    "@id": "https://hotlistai.com/blog",
-    name: "Hotlist AI Blog",
+    "@id": "https://hotlistengine.com/blog",
+    name: "Hotlist Blog",
     description:
       "Practical articles on follow-up gaps, stale lead recovery, speed to lead, nurture discipline, and team accountability.",
-    url: "https://hotlistai.com/blog",
+    url: "https://hotlistengine.com/blog",
     publisher: {
       "@type": "Organization",
-      name: "Hotlist AI",
-      url: "https://hotlistai.com",
+      name: "Hotlist",
+      url: "https://hotlistengine.com",
       logo: {
         "@type": "ImageObject",
-        url: "https://hotlistai.com/logo-light.png",
+        url: "https://hotlistengine.com/logo-light.png",
       },
     },
     blogPost: posts.map((post) => ({
@@ -70,7 +70,7 @@ export default function BlogPage() {
       headline: post.title,
       description: post.description,
       datePublished: post.date,
-      url: `https://hotlistai.com/blog/${post.slug}`,
+      url: `https://hotlistengine.com/blog/${post.slug}`,
       author: {
         "@type": "Person",
         name: post.author,

@@ -13,7 +13,7 @@ export async function POST(request: Request) {
     const { name, email, teamName, crm, teamSize, leadSources, currentBottleneck, message } = body
 
     const emailBody = `
-New Lead Follow-Up Audit request from HotlistAI:
+New Lead Follow-Up Audit request from Hotlist:
 
 Name: ${name}
 Email: ${email}
@@ -30,7 +30,7 @@ ${message || "Not provided"}
     `.trim()
 
     await resend.emails.send({
-      from: "HotlistAI <onboarding@resend.dev>",
+      from: "Hotlist <onboarding@resend.dev>",
       to: "info@hotlistai.com",
       replyTo: email,
       subject: `Lead Follow-Up Audit request from ${name}`,

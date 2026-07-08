@@ -220,7 +220,7 @@ export const industryEntries: IndustryEntry[] = [
 export const compareEntries: CompareEntry[] = [
   {
     slug: "hotlistai-vs-buying-more-leads",
-    title: "HotlistAI vs Buying More Leads",
+    title: "Hotlist vs Buying More Leads",
     searchIntent: "buy more real estate leads or fix follow up",
     summary:
       "Compare spending more on acquisition with repairing follow-up gaps inside the current CRM.",
@@ -237,11 +237,11 @@ export const compareEntries: CompareEntry[] = [
   },
   {
     slug: "hotlistai-vs-crm-automation",
-    title: "HotlistAI vs CRM Automation",
+    title: "Hotlist vs CRM Automation",
     searchIntent: "real estate crm automation vs follow up system",
     summary:
       "CRM automation can trigger tasks, but teams still need clear ownership, recovery, and accountability to keep follow-up running.",
-    evaluatedOptions: ["Native CRM automations", "Generic workflow tools", "HotlistAI Tech Concierge"],
+    evaluatedOptions: ["Native CRM automations", "Generic workflow tools", "Hotlist Tech Concierge"],
     whenHotlistFits: [
       "Automations exist but leads still slip",
       "Lead lists are not turning into action",
@@ -275,7 +275,7 @@ export const compareEntries: CompareEntry[] = [
     searchIntent: "follow up boss cleanup",
     summary:
       "Compare living with a messy CRM against cleaning tags, stages, stale leads, lead lists, and overdue follow-up.",
-    evaluatedOptions: ["Manual cleanup", "Ignoring old data", "HotlistAI cleanup audit"],
+    evaluatedOptions: ["Manual cleanup", "Ignoring old data", "Hotlist cleanup audit"],
     whenHotlistFits: [
       "The CRM has too many stale or confusing records",
       "Agents do not know which list to trust",

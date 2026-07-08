@@ -21,7 +21,7 @@ export default function TermsPage() {
               <p className="text-sm text-muted-foreground">Last updated: July 5, 2026</p>
               <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight">Terms of Service</h1>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                These terms govern your use of hotlistai.com and HotlistAI services, including audit requests, CRM
+                These terms govern your use of hotlistengine.com and Hotlist services, including audit requests, CRM
                 follow-up diagnostics, implementation work, and related business communications.
               </p>
             </motion.div>
@@ -36,8 +36,8 @@ export default function TermsPage() {
                 <section className="space-y-4">
                   <h2 className="text-xl font-semibold text-foreground">1. Agreement to Terms</h2>
                   <p>
-                    These Terms of Service ("Terms") are an agreement between you and Hotlist AI LLC ("HotlistAI,"
-                    "we," "us," or "our"). They govern your access to and use of hotlistai.com, our forms, booking
+                    These Terms of Service ("Terms") are an agreement between you and Hotlist AI LLC ("Hotlist,"
+                    "we," "us," or "our"). They govern your access to and use of hotlistengine.com, our forms, booking
                     flows, reports, communications, and related services (collectively, the "Services").
                   </p>
                   <p>
@@ -52,14 +52,14 @@ export default function TermsPage() {
                 </section>
 
                 <section className="space-y-4">
-                  <h2 className="text-xl font-semibold text-foreground">2. What HotlistAI Provides</h2>
+                  <h2 className="text-xl font-semibold text-foreground">2. What Hotlist Provides</h2>
                   <p>
-                    HotlistAI provides CRM follow-up audits, lead-flow diagnostics, business process review, stale-lead
+                    Hotlist provides CRM follow-up audits, lead-flow diagnostics, business process review, stale-lead
                     recovery planning, routing and accountability recommendations, workflow implementation, automation
                     support, reporting, and related consulting or technical services.
                   </p>
                   <p>
-                    Unless a written agreement says otherwise, HotlistAI is not a CRM provider, real-estate brokerage,
+                    Unless a written agreement says otherwise, Hotlist is not a CRM provider, real-estate brokerage,
                     advertising platform, payment processor, law firm, accounting firm, or financial advisor. Our work
                     is designed to improve operational clarity and execution, not to guarantee sales, appointments,
                     closings, revenue, rankings, or specific business outcomes.
@@ -91,7 +91,7 @@ export default function TermsPage() {
                 <section className="space-y-4">
                   <h2 className="text-xl font-semibold text-foreground">5. CRM Access, Data, and Third-Party Platforms</h2>
                   <p>
-                    Many HotlistAI services depend on third-party tools, including CRMs, lead sources, calendars,
+                    Many Hotlist services depend on third-party tools, including CRMs, lead sources, calendars,
                     email systems, analytics tools, automation tools, communication platforms, and payment providers.
                     You are responsible for your accounts with those providers and for complying with their terms.
                   </p>
@@ -125,7 +125,7 @@ export default function TermsPage() {
                     missing, inaccurate, stale, or inaccessible.
                   </p>
                   <p>
-                    You are responsible for reviewing deliverables before acting on them. HotlistAI does not guarantee
+                    You are responsible for reviewing deliverables before acting on them. Hotlist does not guarantee
                     that every follow-up gap, compliance issue, CRM problem, or business risk will be discovered.
                   </p>
                 </section>
@@ -162,7 +162,7 @@ export default function TermsPage() {
                   <p>
                     <strong className="text-foreground">Our materials:</strong> The website, brand, copy, frameworks,
                     templates, designs, code, reports, processes, and other materials we create or provide are owned by
-                    HotlistAI or its licensors unless a written agreement says otherwise.
+                    Hotlist or its licensors unless a written agreement says otherwise.
                   </p>
                   <p>
                     <strong className="text-foreground">Your materials:</strong> You retain ownership of data,
@@ -227,7 +227,7 @@ export default function TermsPage() {
                 <section className="space-y-4">
                   <h2 className="text-xl font-semibold text-foreground">15. Indemnification</h2>
                   <p>
-                    You agree to defend, indemnify, and hold harmless HotlistAI and its owners, officers, contractors,
+                    You agree to defend, indemnify, and hold harmless Hotlist and its owners, officers, contractors,
                     employees, agents, and affiliates from claims, damages, liabilities, losses, costs, and expenses
                     arising from your use of the Services, your data or materials, your violation of these Terms, your
                     violation of law or third-party rights, or your use of third-party platforms.
@@ -248,7 +248,7 @@ export default function TermsPage() {
                   <h2 className="text-xl font-semibold text-foreground">17. Governing Law</h2>
                   <p>
                     Unless a written agreement says otherwise, these Terms are governed by the laws of the State of
-                    Texas, without regard to conflict-of-law rules. You and HotlistAI agree to resolve disputes in the
+                    Texas, without regard to conflict-of-law rules. You and Hotlist agree to resolve disputes in the
                     state or federal courts located in Texas, unless another venue is required by law or agreed in
                     writing.
                   </p>
@@ -275,7 +275,7 @@ export default function TermsPage() {
                   <p>
                     <strong className="text-foreground">Hotlist AI LLC</strong>
                     <br />
-                    Website: hotlistai.com
+                    Website: hotlistengine.com
                     <br />
                     General inquiries:{" "}
                     <a href="mailto:info@hotlistai.com" className="text-foreground underline">

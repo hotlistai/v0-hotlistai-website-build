@@ -7,7 +7,7 @@ import { SiteHeader } from "@/components/site-header"
 export const metadata: Metadata = {
   title: "About",
   description:
-    "HotlistAI is the Agent Tech Concierge for real estate teams — built by Johnny Apple to audit follow-up, fix what is broken, and keep systems running.",
+    "Hotlist is the Agent Tech Concierge for real estate teams — built by Johnny Apple to audit follow-up, fix what is broken, and keep systems running.",
   alternates: { canonical: "/company" },
 }
 

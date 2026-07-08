@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 
-const SITE_URL = "https://hotlistai.com"
-const SITE_NAME = "HotlistAI"
+const SITE_URL = "https://hotlistengine.com"
+const SITE_NAME = "Hotlist"
 
 export function absoluteUrl(path: string) {
   if (!path) return SITE_URL

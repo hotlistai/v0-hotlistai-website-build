@@ -133,7 +133,7 @@ export default function Home() {
                   Your Agent Tech Concierge for follow-up that actually happens.
                 </h1>
                 <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl leading-relaxed animate-fade-in-up delay-200">
-                  HotlistAI audits where your team is losing warm leads, installs a simple follow-up system inside the
+                  Hotlist audits where your team is losing warm leads, installs a simple follow-up system inside the
                   CRM you already use, and manages it ongoing — so you close more deals with less tech overwhelm.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3 items-start sm:items-center pt-2 animate-fade-in-up delay-300">
@@ -272,7 +272,7 @@ export default function Home() {
               </div>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="rounded-2xl border border-border/40 bg-muted/20 p-6 md:p-8 scroll-animate">
-                  <h3 className="text-2xl font-serif mb-6">Before HotlistAI</h3>
+                  <h3 className="text-2xl font-serif mb-6">Before Hotlist</h3>
                   <ul className="space-y-4 text-muted-foreground">
                     <li>Tasks pile up with no clear owner.</li>
                     <li>Response depends on who is disciplined that day.</li>
@@ -281,7 +281,7 @@ export default function Home() {
                   </ul>
                 </div>
                 <div className="rounded-2xl border border-foreground/20 bg-foreground text-background p-6 md:p-8 scroll-animate delay-100">
-                  <h3 className="text-2xl font-serif mb-6">After HotlistAI</h3>
+                  <h3 className="text-2xl font-serif mb-6">After Hotlist</h3>
                   <ul className="space-y-4 text-background/80">
                     <li>Every lead has a clear next step and owner.</li>
                     <li>Fast response without sounding robotic.</li>
@@ -432,7 +432,7 @@ export default function Home() {
                   teams — including work with Keller Williams, Monument Realty, Compass, and Berkshire Hathaway.
                 </p>
                 <p>
-                  HotlistAI exists for the team lead who knows there is money sitting in the CRM but needs a trusted
+                  Hotlist exists for the team lead who knows there is money sitting in the CRM but needs a trusted
                   partner to make the system simple enough that agents actually use it.
                 </p>
               </div>

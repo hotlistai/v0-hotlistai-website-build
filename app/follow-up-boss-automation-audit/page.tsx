@@ -11,14 +11,14 @@ export const metadata: Metadata = {
     "Find the Follow Up Boss automations your team thinks are working — action plans, daily lists, routing, and reminders that quietly stopped firing.",
   alternates: { canonical: "/follow-up-boss-automation-audit" },
   openGraph: {
-    title: "Follow Up Boss Automation Audit | HotlistAI",
+    title: "Follow Up Boss Automation Audit | Hotlist",
     description:
       "A specialized Lead Follow-Up Audit for Follow Up Boss teams. Find broken automations before they cost you deals.",
-    url: "https://hotlistai.com/follow-up-boss-automation-audit",
-    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "HotlistAI Lead Follow-Up Audit" }],
+    url: "https://hotlistengine.com/follow-up-boss-automation-audit",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Hotlist Lead Follow-Up Audit" }],
   },
   twitter: {
-    title: "Follow Up Boss Automation Audit | HotlistAI",
+    title: "Follow Up Boss Automation Audit | Hotlist",
     description:
       "A specialized Lead Follow-Up Audit for Follow Up Boss teams. Find broken automations before they cost you deals.",
     images: ["/twitter-image"],
@@ -38,7 +38,7 @@ const faqItems = [
   {
     question: "Is this affiliated with Follow Up Boss?",
     answer:
-      "No. HotlistAI is independent and is not affiliated with, sponsored by, or endorsed by Follow Up Boss. We review the workflow your team already runs.",
+      "No. Hotlist is independent and is not affiliated with, sponsored by, or endorsed by Follow Up Boss. We review the workflow your team already runs.",
   },
   {
     question: "Is this different from the Lead Follow-Up Audit?",
@@ -144,7 +144,7 @@ export default function FollowUpBossAutomationAuditPage() {
               <ShieldCheck className="h-7 w-7 mb-6 text-muted-foreground" strokeWidth={1.5} />
               <h2 className="text-3xl font-serif mb-4">Independent review</h2>
               <p className="text-muted-foreground leading-relaxed">
-                HotlistAI is not affiliated with, sponsored by, or endorsed by Follow Up Boss. We help your team trust
+                Hotlist is not affiliated with, sponsored by, or endorsed by Follow Up Boss. We help your team trust
                 and actually use the system they already pay for.
               </p>
             </div>

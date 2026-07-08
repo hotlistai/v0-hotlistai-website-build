@@ -17,8 +17,8 @@ export const metadata: Metadata = {
     title: "Press & Media | Hotlist AI",
     description:
       "Press inquiries, media resources, and brand assets for Hotlist AI. AI-powered digital counterparts and lead generation systems.",
-    url: "https://hotlistai.com/press",
-    siteName: "Hotlist AI",
+    url: "https://hotlistengine.com/press",
+    siteName: "Hotlist",
     type: "website",
     images: [
       {

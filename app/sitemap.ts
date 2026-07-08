@@ -3,7 +3,7 @@ import { getAllPosts, getAllCategories, slugifyCategory } from "@/lib/blog"
 import { getSeoProgrammaticUrls } from "@/lib/seo-taxonomy"
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://hotlistai.com"
+  const baseUrl = "https://hotlistengine.com"
   const now = new Date().toISOString()
 
   // Static routes

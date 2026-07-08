@@ -8,7 +8,7 @@ import { SiteHeader } from "@/components/site-header"
 export const metadata: Metadata = {
   title: "Our Standards",
   description:
-    "How HotlistAI keeps real-estate follow-up respectful, human-aware, and visible — without blasting databases or removing agents from the relationship.",
+    "How Hotlist keeps real-estate follow-up respectful, human-aware, and visible — without blasting databases or removing agents from the relationship.",
   alternates: { canonical: "/governance" },
 }
 

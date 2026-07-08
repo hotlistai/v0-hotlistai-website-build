@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og"
 
 export const runtime = "edge"
-export const alt = "HotlistAI - Agent Tech Concierge for real estate teams"
+export const alt = "Hotlist - Agent Tech Concierge for real estate teams"
 export const size = { width: 1200, height: 630 }
 export const contentType = "image/png"
 
@@ -20,7 +20,7 @@ export default async function Image() {
         padding: 72,
       }}
     >
-      <div style={{ fontSize: 24, letterSpacing: 4, textTransform: "uppercase", color: "#a3a3a3" }}>HotlistAI</div>
+      <div style={{ fontSize: 24, letterSpacing: 4, textTransform: "uppercase", color: "#a3a3a3" }}>Hotlist</div>
       <div>
         <h1 style={{ fontSize: 74, lineHeight: 0.95, letterSpacing: -3, margin: 0, maxWidth: 940 }}>
           Follow-up that actually happens.
@@ -30,7 +30,7 @@ export default async function Image() {
         </p>
       </div>
       <div style={{ display: "flex", gap: 18, fontSize: 22, color: "#a3a3a3" }}>
-        <span>hotlistai.com</span>
+        <span>hotlistengine.com</span>
         <span>/</span>
         <span>Book Your Lead Follow-Up Audit</span>
       </div>

@@ -21,7 +21,7 @@ export default function PrivacyPage() {
               <p className="text-sm text-muted-foreground">Last updated: July 5, 2026</p>
               <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight">Privacy Policy</h1>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                This policy explains how Hotlist AI LLC collects and uses information when you visit hotlistai.com,
+                This policy explains how Hotlist AI LLC collects and uses information when you visit hotlistengine.com,
                 book a call, request an audit, or work with us on CRM follow-up systems.
               </p>
             </motion.div>
@@ -36,7 +36,7 @@ export default function PrivacyPage() {
                 <section className="space-y-4">
                   <h2 className="text-xl font-semibold text-foreground">1. Who We Are</h2>
                   <p>
-                    Hotlist AI LLC ("HotlistAI," "we," "us," or "our") provides CRM follow-up audits, lead-flow
+                    Hotlist AI LLC ("Hotlist," "we," "us," or "our") provides CRM follow-up audits, lead-flow
                     diagnostics, workflow strategy, automation support, reporting, and related implementation services
                     for real-estate teams and other business operators.
                   </p>
@@ -93,7 +93,7 @@ export default function PrivacyPage() {
                 <section className="space-y-4">
                   <h2 className="text-xl font-semibold text-foreground">4. AI, Automation, and Operational Data</h2>
                   <p>
-                    Some HotlistAI work may involve AI-assisted analysis, workflow automation, or third-party AI tools.
+                    Some Hotlist work may involve AI-assisted analysis, workflow automation, or third-party AI tools.
                     We use these tools to support human review, summarize operational patterns, draft recommendations,
                     and help build systems. We do not intend to use client-provided CRM or lead data to train public AI
                     models.
@@ -207,7 +207,7 @@ export default function PrivacyPage() {
                 <section className="space-y-4">
                   <h2 className="text-xl font-semibold text-foreground">12. International Visitors</h2>
                   <p>
-                    HotlistAI is based in the United States. If you access the site or services from outside the United
+                    Hotlist is based in the United States. If you access the site or services from outside the United
                     States, your information may be processed in the United States or other countries where our service
                     providers operate.
                   </p>
@@ -238,7 +238,7 @@ export default function PrivacyPage() {
                   <p>
                     <strong className="text-foreground">Hotlist AI LLC</strong>
                     <br />
-                    Website: hotlistai.com
+                    Website: hotlistengine.com
                     <br />
                     General inquiries:{" "}
                     <a href="mailto:info@hotlistai.com" className="text-foreground underline">

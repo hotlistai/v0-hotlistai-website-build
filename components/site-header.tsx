@@ -21,19 +21,11 @@ export function SiteHeader() {
       <div className="max-w-7xl mx-auto flex h-14 items-center justify-between px-6 lg:px-8">
         <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
           <Image
-            src="/logo-light.png"
-            alt="HotlistAI"
-            width={120}
-            height={28}
-            className="h-6 w-auto dark:hidden"
-            priority
-          />
-          <Image
-            src="/logo-dark.png"
-            alt="HotlistAI"
-            width={120}
-            height={28}
-            className="h-6 w-auto hidden dark:block"
+            src="/logo.png"
+            alt="Hotlist"
+            width={170}
+            height={40}
+            className="h-7 w-auto"
             priority
           />
         </Link>

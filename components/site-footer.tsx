@@ -35,17 +35,10 @@ export function SiteFooter() {
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-12">
           <div className="col-span-2">
             <Link href="/" className="inline-block mb-4">
-              <Image src="/logo-light.png" alt="HotlistAI" width={120} height={28} className="h-6 w-auto dark:hidden" />
-              <Image
-                src="/logo-dark.png"
-                alt="HotlistAI"
-                width={120}
-                height={28}
-                className="h-6 w-auto hidden dark:block"
-              />
+              <Image src="/logo.png" alt="Hotlist" width={170} height={40} className="h-7 w-auto" />
             </Link>
             <p className="text-sm text-muted-foreground max-w-sm">
-              HotlistAI is the Agent Tech Concierge for real estate teams. We audit follow-up, fix what is broken, and
+              Hotlist is the Agent Tech Concierge for real estate teams. We audit follow-up, fix what is broken, and
               keep it running.
             </p>
           </div>
@@ -56,7 +49,7 @@ export function SiteFooter() {
         </div>
 
         <div className="mt-16 pt-8 border-t border-border/40 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-          <p>© 2026 HotlistAI. All rights reserved.</p>
+          <p>© 2026 Hotlist. All rights reserved.</p>
           <p>Agent Tech Concierge for real-estate teams.</p>
         </div>
       </div>
