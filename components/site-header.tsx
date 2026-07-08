@@ -7,10 +7,10 @@ import { useState } from "react"
 import { CalBookingButton } from "./cal-booking-button"
 
 const navLinks = [
-  { name: "Audit", href: "/follow-up-leak-audit" },
+  { name: "Lead Follow-Up Audit", href: "/follow-up-leak-audit" },
+  { name: "How It Works", href: "/how-it-works" },
   { name: "About", href: "/company" },
   { name: "Contact", href: "/contact" },
-  { name: "Blog", href: "/blog" },
 ]
 
 export function SiteHeader() {
@@ -38,7 +38,7 @@ export function SiteHeader() {
           />
         </Link>
 
-        <nav className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
+        <nav className="hidden lg:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
           {navLinks.map((item) => (
             <Link
               key={item.href}
@@ -52,12 +52,12 @@ export function SiteHeader() {
 
         <div className="flex items-center gap-3">
           <div className="hidden md:block">
-            <CalBookingButton size="sm">Book a Follow-Up Leak Audit</CalBookingButton>
+            <CalBookingButton size="sm">Book Your Lead Follow-Up Audit</CalBookingButton>
           </div>
 
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-md hover:bg-muted/50 transition-colors"
+            className="lg:hidden p-2 rounded-md hover:bg-muted/50 transition-colors"
             aria-label="Toggle menu"
           >
             {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -66,7 +66,7 @@ export function SiteHeader() {
       </div>
 
       {isOpen && (
-        <div className="md:hidden fixed inset-0 top-14 bg-background z-40 animate-fade-in">
+        <div className="lg:hidden fixed inset-0 top-14 bg-background z-40 animate-fade-in">
           <nav className="flex flex-col justify-between h-full px-6 py-6">
             <div className="flex flex-col gap-0.5">
               {navLinks.map((item) => (
@@ -82,14 +82,14 @@ export function SiteHeader() {
             </div>
             <div className="space-y-3">
               <CalBookingButton size="md" className="w-full">
-                Book a Follow-Up Leak Audit
+                Book Your Lead Follow-Up Audit
               </CalBookingButton>
               <Link
                 href="/sample-leak-report"
                 onClick={() => setIsOpen(false)}
                 className="block py-3 text-sm text-center text-muted-foreground hover:text-foreground transition-colors"
               >
-                See a Sample Leak Report
+                See a Sample Audit Report
               </Link>
             </div>
           </nav>

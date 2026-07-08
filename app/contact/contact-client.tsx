@@ -50,7 +50,7 @@ export default function ContactPageClient() {
       <SiteHeader />
 
       <main className="flex-1 pt-14">
-        <section className="py-20 md:py-32 px-4 md:px-6" aria-label="Follow-Up Leak Audit form">
+        <section className="py-20 md:py-32 px-4 md:px-6" aria-label="Lead Follow-Up Audit form">
           <div className="max-w-2xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -59,14 +59,14 @@ export default function ContactPageClient() {
               className="space-y-6 mb-12"
             >
               <p className="text-xs font-mono text-muted-foreground tracking-wider uppercase">
-                Book a Follow-Up Leak Audit
+                Book Your Lead Follow-Up Audit
               </p>
               <h1 className="text-5xl sm:text-6xl font-serif tracking-tight leading-[0.95]">
-                Bring the current bottleneck.
+                Tell us where follow-up feels weakest.
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Tell us what current CRM you use, where leads are coming from, and where follow-up feels weakest. We will look
-                for the response, routing, nurture, stale-lead recovery, and accountability leaks.
+                Share your team size, lead sources, and the bottleneck you feel today. We will look for the gaps that are
+                costing you deals — slow response, forgotten contacts, unclear ownership, and overdue follow-up.
               </p>
             </motion.div>
 
@@ -115,20 +115,25 @@ export default function ContactPageClient() {
                 </div>
                 <Field id="teamName" label="Team or brokerage" autoComplete="organization" placeholder="Team name" />
                 <div className="grid sm:grid-cols-2 gap-6">
-                  <Field id="crm" label="Current CRM" placeholder="Follow Up Boss, Lofty, kvCORE..." required />
+                  <Field
+                    id="crm"
+                    label="What system do you use to track leads?"
+                    placeholder="Follow Up Boss, Lofty, kvCORE..."
+                    required
+                  />
                   <Field id="teamSize" label="Team size" placeholder="5-25 agents, boutique office..." />
                 </div>
                 <Field id="leadSources" label="Main lead sources" placeholder="Zillow, Google, referrals, website..." />
                 <TextArea
                   id="currentBottleneck"
-                  label="Current bottleneck"
+                  label="Where does follow-up feel weakest?"
                   placeholder="Where are leads getting missed, delayed, or forgotten?"
                   required
                 />
                 <TextArea
                   id="message"
                   label="Anything else?"
-                  placeholder="Share context that would help us understand your current follow-up system."
+                  placeholder="Share anything that would help us understand your current follow-up habits."
                 />
                 <motion.button
                   type="submit"
@@ -146,7 +151,7 @@ export default function ContactPageClient() {
                     />
                   ) : (
                     <>
-                      Book a Follow-Up Leak Audit
+                      Book Your Lead Follow-Up Audit
                       <ArrowRight className="h-4 w-4" aria-hidden="true" />
                     </>
                   )}

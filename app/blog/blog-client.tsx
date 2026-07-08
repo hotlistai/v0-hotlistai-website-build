@@ -57,8 +57,8 @@ export default function BlogPageClient({
                   Blog
                 </h1>
                 <p className="text-lg md:text-xl text-muted-foreground max-w-2xl">
-                  Practical notes on CRM follow-up leaks, stale lead recovery, speed to lead,
-                  nurture discipline, and real-estate team accountability.
+                  Practical notes on follow-up gaps, stale lead recovery, speed to lead,
+                  nurture discipline, and real-estate team accountability — from your Agent Tech Concierge.
                 </p>
                 <p className="text-sm text-muted-foreground">
                   {totalPosts} articles across {categories.length} topics

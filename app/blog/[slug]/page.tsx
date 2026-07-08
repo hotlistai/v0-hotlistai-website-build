@@ -4,6 +4,7 @@ import Link from "next/link"
 import { ArrowLeft, ArrowRight, Clock, Calendar } from "lucide-react"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
+import { ConciergeCta } from "@/components/seo/concierge-cta"
 import { getPostBySlug, getAllSlugs, getAllPosts, getRelatedPosts, slugifyCategory } from "@/lib/blog"
 
 export async function generateStaticParams() {
@@ -411,20 +412,8 @@ export default async function BlogPostPage({
               </section>
             )}
 
-            {/* CTA */}
-            <div className="mt-16 p-8 md:p-12 rounded-2xl bg-muted/30 border border-border/40 text-center">
-              <h2 className="text-2xl md:text-3xl font-serif mb-3">
-                Building Something Meaningful?
-              </h2>
-              <p className="text-muted-foreground max-w-lg mx-auto mb-6">
-                {"If you're building something that matters, let's talk. We work with founders and operators who value clarity, speed, and systems that actually work."}
-              </p>
-              <Link
-                href="/contact"
-                className="inline-flex px-6 py-3 text-sm font-semibold rounded-full bg-foreground text-background hover:opacity-90 transition-opacity"
-              >
-                Get in Touch
-              </Link>
+            <div className="mt-16">
+              <ConciergeCta />
             </div>
           </div>
         </article>

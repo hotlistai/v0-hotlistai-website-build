@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
     { path: "", priority: 1.0, changeFreq: "weekly" as const },
     { path: "/follow-up-leak-audit", priority: 0.95, changeFreq: "weekly" as const },
+    { path: "/how-it-works", priority: 0.9, changeFreq: "monthly" as const },
     { path: "/sample-leak-report", priority: 0.9, changeFreq: "weekly" as const },
     { path: "/follow-up-boss-automation-audit", priority: 0.9, changeFreq: "weekly" as const },
     { path: "/follow-up-boss-cleanup", priority: 0.9, changeFreq: "weekly" as const },

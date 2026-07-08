@@ -3,12 +3,12 @@ import BlogPageClient from "./blog-client"
 import { getAllPosts, getFeaturedPost, getAllCategories } from "@/lib/blog"
 
 export const metadata: Metadata = {
-  title: "Blog — Real Estate Follow-Up Leaks, CRM Discipline & Stale Lead Recovery",
+  title: "Blog — Real Estate Follow-Up Gaps, CRM Discipline & Stale Lead Recovery",
   description:
-    "Practical articles on real-estate CRM follow-up, stale lead recovery, speed to lead, nurture discipline, and team accountability from HotlistAI.",
+    "Practical articles on follow-up gaps, stale lead recovery, speed to lead, nurture discipline, and team accountability from your Agent Tech Concierge at HotlistAI.",
   keywords: [
     "real estate CRM follow up",
-    "Follow-Up Leak Audit",
+    "Lead Follow-Up Audit",
     "stale lead recovery",
     "speed to lead",
     "Follow Up Boss cleanup",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Blog | HotlistAI — Real Estate Follow-Up Systems",
     description:
-      "Practical articles on CRM follow-up leaks, stale lead recovery, and real-estate team accountability.",
+      "Practical articles on follow-up gaps, stale lead recovery, and real-estate team accountability.",
     url: "https://hotlistai.com/blog",
     siteName: "Hotlist AI",
     type: "website",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Blog | HotlistAI",
     description:
-      "Practical articles on CRM follow-up leaks, stale lead recovery, and real-estate team accountability.",
+      "Practical articles on follow-up gaps, stale lead recovery, and real-estate team accountability.",
     images: ["/og-image.jpg"],
     creator: "@hotlistai",
   },
@@ -54,7 +54,7 @@ export default function BlogPage() {
     "@id": "https://hotlistai.com/blog",
     name: "Hotlist AI Blog",
     description:
-      "Practical articles on real-estate CRM follow-up, stale lead recovery, speed to lead, nurture discipline, and team accountability.",
+      "Practical articles on follow-up gaps, stale lead recovery, speed to lead, nurture discipline, and team accountability.",
     url: "https://hotlistai.com/blog",
     publisher: {
       "@type": "Organization",

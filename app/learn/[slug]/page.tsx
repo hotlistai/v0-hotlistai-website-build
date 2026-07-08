@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
+import { ConciergeCta } from "@/components/seo/concierge-cta"
 import { RelatedLinks } from "@/components/seo/related-links"
 import { buildBreadcrumbJsonLd, buildMetadata } from "@/lib/seo"
 import { getHubBySlug, hubEntries } from "@/lib/seo-taxonomy"
@@ -19,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: hub.title,
     description: hub.summary,
     path: `/learn/${hub.slug}`,
-    keywords: [hub.searchIntent, "AI operations", "deployment framework", "workflow governance"],
+    keywords: [hub.searchIntent, "Lead Follow-Up Audit", "real estate follow-up", "Agent Tech Concierge"],
   })
 }
 
@@ -46,7 +47,6 @@ export default async function LearnDetailPage({ params }: { params: Promise<{ sl
             <p className="text-xs font-mono uppercase tracking-wider text-muted-foreground">Topic Hub</p>
             <h1 className="text-4xl md:text-5xl font-serif tracking-tight">{hub.title}</h1>
             <p className="text-lg text-muted-foreground max-w-3xl">{hub.summary}</p>
-            <p className="text-xs uppercase tracking-wider text-muted-foreground">Primary intent: {hub.searchIntent}</p>
           </header>
 
           <section className="grid md:grid-cols-2 gap-6">
@@ -61,6 +61,7 @@ export default async function LearnDetailPage({ params }: { params: Promise<{ sl
           </section>
 
           <RelatedLinks title="Recommended Next Steps" links={hub.nextSteps} />
+          <ConciergeCta />
         </div>
       </main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />

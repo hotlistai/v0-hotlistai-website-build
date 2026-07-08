@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
+import { ConciergeCta } from "@/components/seo/concierge-cta"
 import { RelatedLinks } from "@/components/seo/related-links"
 import { buildBreadcrumbJsonLd, buildMetadata } from "@/lib/seo"
 import { getGlossaryBySlug, glossaryEntries } from "@/lib/seo-taxonomy"
@@ -15,7 +16,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params
   const entry = getGlossaryBySlug(slug)
   if (!entry) return {}
-  return buildMetadata({ title: `${entry.term} Definition`, description: entry.shortDefinition, path: `/glossary/${entry.slug}`, keywords: [entry.term, "AI glossary", "operations definition"] })
+  return buildMetadata({ title: `${entry.term} Definition`, description: entry.shortDefinition, path: `/glossary/${entry.slug}`, keywords: [entry.term, "real estate CRM glossary", "follow-up terms"] })
 }
 
 export default async function GlossaryDetailPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -50,6 +51,7 @@ export default async function GlossaryDetailPage({ params }: { params: Promise<{
             <ul className="space-y-2 text-sm text-muted-foreground">{entry.relatedTerms.map((term) => <li key={term}>• {term}</li>)}</ul>
           </section>
           <RelatedLinks title="Continue Learning" links={entry.nextLinks} />
+          <ConciergeCta />
         </div>
       </main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />

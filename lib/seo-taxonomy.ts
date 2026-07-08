@@ -62,26 +62,26 @@ export const hubEntries: HubEntry[] = [
       "Which old opportunities are still recoverable?",
     ],
     nextSteps: [
-      { label: "Book a Follow-Up Leak Audit", href: "/follow-up-leak-audit" },
-      { label: "See a Sample Leak Report", href: "/sample-leak-report" },
+      { label: "Book Your Lead Follow-Up Audit", href: "/follow-up-leak-audit" },
+      { label: "See a Sample Audit Report", href: "/sample-leak-report" },
       { label: "Follow Up Boss cleanup", href: "/follow-up-boss-cleanup" },
     ],
   },
   {
     slug: "follow-up-leak-audit",
-    title: "Follow-Up Leak Audit",
+    title: "Lead Follow-Up Audit",
     searchIntent: "real estate follow up audit",
     summary:
-      "A diagnostic for finding where response, routing, nurture, stale-lead recovery, and accountability break.",
+      "A free 30-minute review that shows where response, routing, nurture, stale-lead recovery, and accountability break.",
     whoItsFor: ["Team leads", "Broker owners", "Operations-minded agents"],
     coreQuestions: [
       "Where are warm leads waiting too long?",
-      "Which stages and smart lists are underworked?",
+      "Which stages and lead lists are underworked?",
       "What should be fixed in the first 30 days?",
     ],
     nextSteps: [
-      { label: "Audit offer", href: "/follow-up-leak-audit" },
-      { label: "Sample report", href: "/sample-leak-report" },
+      { label: "Book Your Lead Follow-Up Audit", href: "/follow-up-leak-audit" },
+      { label: "See a Sample Audit Report", href: "/sample-leak-report" },
       { label: "Contact", href: "/contact" },
     ],
   },
@@ -100,7 +100,7 @@ export const hubEntries: HubEntry[] = [
     nextSteps: [
       { label: "CRM reactivation", href: "/learn/crm-reactivation" },
       { label: "Database reactivation", href: "/compare/real-estate-database-reactivation" },
-      { label: "Audit", href: "/follow-up-leak-audit" },
+      { label: "Book Your Lead Follow-Up Audit", href: "/follow-up-leak-audit" },
     ],
   },
   {
@@ -117,8 +117,8 @@ export const hubEntries: HubEntry[] = [
     ],
     nextSteps: [
       { label: "Lead routing accountability", href: "/use-cases/lead-routing-accountability" },
-      { label: "Follow-up audit", href: "/follow-up-leak-audit" },
-      { label: "Sample report", href: "/sample-leak-report" },
+      { label: "Book Your Lead Follow-Up Audit", href: "/follow-up-leak-audit" },
+      { label: "See a Sample Audit Report", href: "/sample-leak-report" },
     ],
   },
   {
@@ -136,7 +136,7 @@ export const hubEntries: HubEntry[] = [
     nextSteps: [
       { label: "Stale lead recovery", href: "/learn/stale-lead-recovery" },
       { label: "Follow Up Boss cleanup", href: "/follow-up-boss-cleanup" },
-      { label: "Book audit", href: "/contact" },
+      { label: "Book Your Lead Follow-Up Audit", href: "/follow-up-leak-audit" },
     ],
   },
 ]
@@ -178,7 +178,7 @@ export const useCaseEntries: UseCaseEntry[] = [
     searchIntent: "follow up boss cleanup service",
     summary: "Clean stages, tags, lists, owners, stale leads, and overdue activity so the team can trust the CRM.",
     outcomes: ["Cleaner lists", "Less confusion", "More reliable next actions"],
-    systems: ["Tag and stage cleanup", "Smart list repair", "Lead source visibility"],
+    systems: ["Tag and stage cleanup", "Lead list repair", "Lead source visibility"],
     relatedIndustrySlugs: ["real-estate-teams"],
     relatedCompareSlugs: ["follow-up-boss-cleanup"],
   },
@@ -188,7 +188,7 @@ export const useCaseEntries: UseCaseEntry[] = [
     searchIntent: "real estate speed to lead workflow",
     summary: "Measure and repair first response gaps by source, agent, and time-to-touch.",
     outcomes: ["Faster response", "Better source visibility", "Fewer unworked hot leads"],
-    systems: ["SLA tracking", "Routing checks", "Missed-response escalation"],
+    systems: ["Response-time tracking", "Routing checks", "Missed-response escalation"],
     relatedIndustrySlugs: ["real-estate-teams"],
     relatedCompareSlugs: ["hotlistai-vs-buying-more-leads"],
   },
@@ -197,12 +197,12 @@ export const useCaseEntries: UseCaseEntry[] = [
 export const industryEntries: IndustryEntry[] = [
   {
     slug: "real-estate-teams",
-    title: "Follow-Up Execution for Real Estate Teams",
+    title: "Follow-Up for Real Estate Teams",
     searchIntent: "real estate crm follow up for teams",
     summary:
-      "A real-estate-first system for response, routing, nurture, stale-lead recovery, and accountability.",
+      "A real-estate-first approach to response, routing, nurture, stale-lead recovery, and accountability.",
     recurringPain: ["Warm leads go cold", "CRM lists are underworked", "Team leads lack follow-up visibility"],
-    highLeverageDeployments: ["Follow-Up Leak Audit", "CRM Execution Report", "30-Day Fix Plan"],
+    highLeverageDeployments: ["Lead Follow-Up Audit", "30-Day Fix Plan", "Follow-Up Scorecard"],
     relatedUseCaseSlugs: ["lead-routing-accountability", "stale-lead-recovery", "speed-to-lead"],
   },
   {
@@ -212,7 +212,7 @@ export const industryEntries: IndustryEntry[] = [
     summary:
       "Help smaller brokerages turn lead flow and old databases into a clearer operating rhythm.",
     recurringPain: ["Founder-led follow-up", "Inconsistent agent adoption", "No reliable recovery list"],
-    highLeverageDeployments: ["Follow-Up Leak Scorecard", "Stale-lead recovery", "Agent accountability"],
+    highLeverageDeployments: ["Follow-Up Scorecard", "Stale-lead recovery", "Agent accountability"],
     relatedUseCaseSlugs: ["nurture-discipline", "lead-routing-accountability"],
   },
 ]
@@ -223,16 +223,16 @@ export const compareEntries: CompareEntry[] = [
     title: "HotlistAI vs Buying More Leads",
     searchIntent: "buy more real estate leads or fix follow up",
     summary:
-      "Compare spending more on acquisition with repairing the follow-up leaks inside the current CRM.",
-    evaluatedOptions: ["Buying more leads", "Hiring more follow-up labor", "Fixing the CRM execution layer"],
+      "Compare spending more on acquisition with repairing follow-up gaps inside the current CRM.",
+    evaluatedOptions: ["Buying more leads", "Hiring more follow-up labor", "Fixing follow-up with a Tech Concierge"],
     whenHotlistFits: [
       "You already have meaningful lead flow",
       "Warm leads are going cold before a real conversation",
       "You need proof before increasing lead spend",
     ],
     internalLinks: [
-      { label: "Follow-Up Leak Audit", href: "/follow-up-leak-audit" },
-      { label: "Sample Leak Report", href: "/sample-leak-report" },
+      { label: "Book Your Lead Follow-Up Audit", href: "/follow-up-leak-audit" },
+      { label: "See a Sample Audit Report", href: "/sample-leak-report" },
     ],
   },
   {
@@ -240,11 +240,11 @@ export const compareEntries: CompareEntry[] = [
     title: "HotlistAI vs CRM Automation",
     searchIntent: "real estate crm automation vs follow up system",
     summary:
-      "CRM automation can trigger tasks, but teams still need a practical execution layer for ownership and recovery.",
-    evaluatedOptions: ["Native CRM automations", "Generic workflow tools", "HotlistAI follow-up execution"],
+      "CRM automation can trigger tasks, but teams still need clear ownership, recovery, and accountability to keep follow-up running.",
+    evaluatedOptions: ["Native CRM automations", "Generic workflow tools", "HotlistAI Tech Concierge"],
     whenHotlistFits: [
       "Automations exist but leads still slip",
-      "Smart lists are not turning into action",
+      "Lead lists are not turning into action",
       "Team visibility is weaker than the dashboard suggests",
     ],
     internalLinks: [
@@ -257,12 +257,12 @@ export const compareEntries: CompareEntry[] = [
     title: "Follow Up Boss Automation Audit",
     searchIntent: "follow up boss automation audit",
     summary:
-      "Audit action plans, smart lists, routing rules, tasks, and owner accountability in Follow Up Boss.",
-    evaluatedOptions: ["Current Follow Up Boss setup", "More native automation", "Independent follow-up leak audit"],
+      "Review action plans, lead lists, routing rules, tasks, and owner accountability in Follow Up Boss.",
+    evaluatedOptions: ["Current Follow Up Boss setup", "More native automation", "Lead Follow-Up Audit"],
     whenHotlistFits: [
       "The team uses Follow Up Boss but does not trust the workflow",
       "Action plans exist but follow-up still breaks",
-      "You need a redacted report of what to repair first",
+      "You need a clear report of what to repair first",
     ],
     internalLinks: [
       { label: "Follow Up Boss Automation Audit", href: "/follow-up-boss-automation-audit" },
@@ -274,7 +274,7 @@ export const compareEntries: CompareEntry[] = [
     title: "Follow Up Boss Cleanup",
     searchIntent: "follow up boss cleanup",
     summary:
-      "Compare living with a messy CRM against cleaning tags, stages, stale leads, smart lists, and overdue follow-up.",
+      "Compare living with a messy CRM against cleaning tags, stages, stale leads, lead lists, and overdue follow-up.",
     evaluatedOptions: ["Manual cleanup", "Ignoring old data", "HotlistAI cleanup audit"],
     whenHotlistFits: [
       "The CRM has too many stale or confusing records",
@@ -300,7 +300,7 @@ export const compareEntries: CompareEntry[] = [
     ],
     internalLinks: [
       { label: "CRM reactivation", href: "/learn/crm-reactivation" },
-      { label: "Book audit", href: "/contact" },
+      { label: "Book Your Lead Follow-Up Audit", href: "/follow-up-leak-audit" },
     ],
   },
   {
@@ -308,8 +308,8 @@ export const compareEntries: CompareEntry[] = [
     title: "AI ISA vs Human ISA",
     searchIntent: "ai isa vs human isa real estate",
     summary:
-      "Compare outsourced or automated ISA motions with a follow-up execution system that keeps humans in the right handoff moments.",
-    evaluatedOptions: ["Human ISA", "AI ISA", "CRM follow-up execution layer"],
+      "Compare outsourced or automated ISA motions with Tech Concierge support that keeps humans in the right handoff moments.",
+    evaluatedOptions: ["Human ISA", "AI ISA", "Tech Concierge follow-up support"],
     whenHotlistFits: [
       "You need consistency before another hire",
       "You do not want robotic lead conversion",
@@ -317,16 +317,16 @@ export const compareEntries: CompareEntry[] = [
     ],
     internalLinks: [
       { label: "Nurture discipline", href: "/use-cases/nurture-discipline" },
-      { label: "Sample report", href: "/sample-leak-report" },
+      { label: "See a Sample Audit Report", href: "/sample-leak-report" },
     ],
   },
   {
     slug: "isa-vs-follow-up-execution",
-    title: "ISA vs Follow-Up Execution",
+    title: "ISA vs Follow-Up Support",
     searchIntent: "real estate isa vs follow up execution",
     summary:
       "A team may not need more labor first. It may need clearer ownership, routing, visibility, and next actions.",
-    evaluatedOptions: ["Hire an ISA", "Add more automation", "Repair follow-up execution"],
+    evaluatedOptions: ["Hire an ISA", "Add more automation", "Repair follow-up with a Tech Concierge"],
     whenHotlistFits: [
       "The team has inconsistent process before headcount shortage",
       "Existing leads are underworked",
@@ -334,7 +334,7 @@ export const compareEntries: CompareEntry[] = [
     ],
     internalLinks: [
       { label: "Lead routing accountability", href: "/use-cases/lead-routing-accountability" },
-      { label: "Audit", href: "/follow-up-leak-audit" },
+      { label: "Book Your Lead Follow-Up Audit", href: "/follow-up-leak-audit" },
     ],
   },
   {
@@ -343,9 +343,9 @@ export const compareEntries: CompareEntry[] = [
     searchIntent: "kvcore follow up automation",
     summary:
       "How to think about kvCORE follow-up workflows, stale-lead segmentation, and accountability before adding more leads.",
-    evaluatedOptions: ["Native kvCORE automation", "Manual follow-up", "Execution-layer audit"],
+    evaluatedOptions: ["Native kvCORE automation", "Manual follow-up", "Lead Follow-Up Audit"],
     whenHotlistFits: ["You need clearer next actions", "Stale leads are underworked", "Team visibility is weak"],
-    internalLinks: [{ label: "Book audit", href: "/contact" }],
+    internalLinks: [{ label: "Book Your Lead Follow-Up Audit", href: "/follow-up-leak-audit" }],
   },
   {
     slug: "lofty-follow-up-automation",
@@ -353,9 +353,9 @@ export const compareEntries: CompareEntry[] = [
     searchIntent: "lofty follow up automation real estate",
     summary:
       "How Lofty teams can diagnose response, routing, nurture, and stale-lead recovery gaps.",
-    evaluatedOptions: ["Native Lofty automation", "Manual agent follow-up", "Leak audit"],
+    evaluatedOptions: ["Native Lofty automation", "Manual agent follow-up", "Lead Follow-Up Audit"],
     whenHotlistFits: ["Follow-up is inconsistent", "Old leads need segmentation", "Owners are unclear"],
-    internalLinks: [{ label: "Book audit", href: "/contact" }],
+    internalLinks: [{ label: "Book Your Lead Follow-Up Audit", href: "/follow-up-leak-audit" }],
   },
   {
     slug: "boomtown-lead-routing",
@@ -363,7 +363,7 @@ export const compareEntries: CompareEntry[] = [
     searchIntent: "boomtown lead routing real estate",
     summary:
       "A practical comparison for teams trying to improve BoomTown routing, owner visibility, and speed-to-lead.",
-    evaluatedOptions: ["Current routing", "Manual reassignment", "Follow-up leak repair"],
+    evaluatedOptions: ["Current routing", "Manual reassignment", "Lead Follow-Up Audit"],
     whenHotlistFits: ["Routing is unclear", "Response timing varies by source", "Team lead visibility is late"],
     internalLinks: [{ label: "Speed to lead", href: "/learn/speed-to-lead" }],
   },
@@ -372,19 +372,19 @@ export const compareEntries: CompareEntry[] = [
 export const glossaryEntries: GlossaryEntry[] = [
   {
     slug: "follow-up-leak",
-    term: "Follow-Up Leak",
+    term: "Follow-Up Gap",
     shortDefinition: "A place where a real-estate lead loses momentum because no clear next action happens.",
     deeperExplanation:
-      "Leaks usually happen in response time, routing, stale nurture, unclear ownership, or missed accountability checks.",
+      "Gaps usually happen in response time, routing, stale nurture, unclear ownership, or missed accountability checks.",
     relatedTerms: ["speed-to-lead", "next-action", "crm-reactivation"],
-    nextLinks: [{ label: "Follow-Up Leak Audit", href: "/follow-up-leak-audit" }],
+    nextLinks: [{ label: "Book Your Lead Follow-Up Audit", href: "/follow-up-leak-audit" }],
   },
   {
     slug: "next-action",
     term: "Next Action",
     shortDefinition: "The specific follow-up step assigned to a lead, with an owner and timing.",
     deeperExplanation:
-      "A CRM record without a next action becomes storage. A record with a next action becomes part of an operating system.",
+      "A CRM record without a next action becomes storage. A record with a next action becomes part of a working follow-up rhythm.",
     relatedTerms: ["follow-up-leak", "lead-routing", "nurture-discipline"],
     nextLinks: [{ label: "CRM follow-up", href: "/learn/real-estate-crm-follow-up" }],
   },

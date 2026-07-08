@@ -23,11 +23,11 @@ const googleSiteVerification =
 
 export const metadata: Metadata = {
   title: {
-    default: "HotlistAI | Stop warm leads from dying inside your CRM.",
+    default: "HotlistAI | Your Agent Tech Concierge",
     template: "%s | HotlistAI",
   },
   description:
-    "HotlistAI helps real-estate teams find and fix follow-up leaks inside the CRM they already use.",
+    "HotlistAI audits your follow-up, fixes what is broken, and manages it ongoing — so your real estate team stops losing warm leads and closes more deals with less tech stress.",
   metadataBase: new URL("https://hotlistai.com"),
   alternates: { canonical: "/" },
   openGraph: {
@@ -35,16 +35,16 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://hotlistai.com",
     siteName: "HotlistAI",
-    title: "HotlistAI | Stop warm leads from dying inside your CRM.",
+    title: "HotlistAI | Your Agent Tech Concierge",
     description:
-      "HotlistAI helps real-estate teams find and fix follow-up leaks inside the CRM they already use.",
-    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "HotlistAI follow-up leak audit" }],
+      "Audit your follow-up, fix what is broken, and stay supported monthly. Lead Follow-Up Audits and Tech Concierge for real estate teams.",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "HotlistAI Agent Tech Concierge" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "HotlistAI | Stop warm leads from dying inside your CRM.",
+    title: "HotlistAI | Your Agent Tech Concierge",
     description:
-      "HotlistAI helps real-estate teams find and fix follow-up leaks inside the CRM they already use.",
+      "Audit your follow-up, fix what is broken, and stay supported monthly. Lead Follow-Up Audits and Tech Concierge for real estate teams.",
     images: ["/twitter-image"],
     creator: "@hotlistai",
     site: "@hotlistai",
@@ -95,6 +95,8 @@ const jsonLd = {
       "@id": "https://hotlistai.com/#organization",
       name: "HotlistAI",
       alternateName: "Hotlist AI",
+      description:
+        "Agent Tech Concierge for real estate teams. Lead Follow-Up Audits, follow-up system implementation, and ongoing Tech Concierge support.",
       url: "https://hotlistai.com",
       logo: "https://hotlistai.com/logo-light.png",
       contactPoint: [

@@ -29,7 +29,7 @@ export async function GET() {
   <channel>
     <title>Hotlist AI Blog</title>
     <link>${baseUrl}/blog</link>
-    <description>Practical articles on real-estate CRM follow-up, stale lead recovery, speed to lead, nurture discipline, and team accountability from HotlistAI.</description>
+    <description>Practical articles on follow-up gaps, stale lead recovery, speed to lead, nurture discipline, and team accountability from your Agent Tech Concierge at HotlistAI.</description>
     <language>en-us</language>
     <managingEditor>info@hotlistai.com (Johnny Apple)</managingEditor>
     <webMaster>info@hotlistai.com (HotlistAI)</webMaster>

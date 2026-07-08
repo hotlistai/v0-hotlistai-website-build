@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
+import { ConciergeCta } from "@/components/seo/concierge-cta"
 import { RelatedLinks } from "@/components/seo/related-links"
 import { buildBreadcrumbJsonLd, buildMetadata } from "@/lib/seo"
 import { compareEntries, getCompareBySlug } from "@/lib/seo-taxonomy"
@@ -15,7 +16,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params
   const entry = getCompareBySlug(slug)
   if (!entry) return {}
-  return buildMetadata({ title: entry.title, description: entry.summary, path: `/compare/${entry.slug}`, keywords: [entry.searchIntent, "AI infrastructure comparison", "operations model comparison"] })
+  return buildMetadata({ title: entry.title, description: entry.summary, path: `/compare/${entry.slug}`, keywords: [entry.searchIntent, "HotlistAI comparison", "real estate follow-up"] })
 }
 
 export default async function CompareDetailPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -47,11 +48,12 @@ export default async function CompareDetailPage({ params }: { params: Promise<{ 
               <ul className="space-y-2 text-sm text-muted-foreground">{entry.evaluatedOptions.map((item) => <li key={item}>• {item}</li>)}</ul>
             </div>
             <div className="rounded-xl border border-border/30 bg-muted/20 p-6">
-              <h2 className="text-xl font-semibold mb-3">When Hotlist AI Fits</h2>
+              <h2 className="text-xl font-semibold mb-3">When HotlistAI Fits</h2>
               <ul className="space-y-2 text-sm text-muted-foreground">{entry.whenHotlistFits.map((item) => <li key={item}>• {item}</li>)}</ul>
             </div>
           </section>
           <RelatedLinks title="Related Deep Dives" links={entry.internalLinks} />
+          <ConciergeCta />
         </div>
       </main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />

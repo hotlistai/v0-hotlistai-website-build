@@ -4,23 +4,21 @@ import Image from "next/image"
 import Link from "next/link"
 
 const footerLinks = {
-  company: [
-    { name: "Follow-Up Leak Audit", href: "/follow-up-leak-audit" },
-    { name: "Sample Leak Report", href: "/sample-leak-report" },
-    { name: "Follow Up Boss Automation Audit", href: "/follow-up-boss-automation-audit" },
-    { name: "Follow Up Boss Cleanup", href: "/follow-up-boss-cleanup" },
+  getStarted: [
+    { name: "Lead Follow-Up Audit", href: "/follow-up-leak-audit" },
+    { name: "How It Works", href: "/how-it-works" },
+    { name: "Sample Audit Report", href: "/sample-leak-report" },
     { name: "About", href: "/company" },
     { name: "Contact", href: "/contact" },
+    { name: "FAQ", href: "/faq" },
+    { name: "Our Standards", href: "/governance" },
   ],
-  resources: [
+  guides: [
     { name: "Resources", href: "/resources" },
     { name: "Learn", href: "/learn" },
     { name: "Use Cases", href: "/use-cases" },
-    { name: "Industries", href: "/industries" },
     { name: "Compare", href: "/compare" },
     { name: "Glossary", href: "/glossary" },
-    { name: "FAQ", href: "/faq" },
-    { name: "Governance", href: "/governance" },
     { name: "Blog", href: "/blog" },
   ],
   legal: [
@@ -47,19 +45,19 @@ export function SiteFooter() {
               />
             </Link>
             <p className="text-sm text-muted-foreground max-w-sm">
-              Stop warm leads from dying inside your CRM. HotlistAI helps real-estate teams find and fix follow-up
-              leaks before they buy more leads.
+              HotlistAI is the Agent Tech Concierge for real estate teams. We audit follow-up, fix what is broken, and
+              keep it running.
             </p>
           </div>
 
-          <FooterColumn title="Audit" links={footerLinks.company} />
-          <FooterColumn title="SEO Library" links={footerLinks.resources} />
+          <FooterColumn title="Get Started" links={footerLinks.getStarted} />
+          <FooterColumn title="Guides" links={footerLinks.guides} />
           <FooterColumn title="Legal" links={footerLinks.legal} />
         </div>
 
         <div className="mt-16 pt-8 border-t border-border/40 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
           <p>© 2026 HotlistAI. All rights reserved.</p>
-          <p>Follow-up execution for real-estate teams.</p>
+          <p>Agent Tech Concierge for real-estate teams.</p>
         </div>
       </div>
     </footer>

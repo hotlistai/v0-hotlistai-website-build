@@ -7,9 +7,9 @@ import { buildMetadata } from "@/lib/seo"
 
 export const metadata: Metadata = buildMetadata({
   title: "Real Estate Follow-Up Topic Hubs",
-  description: "Pillar pages covering real-estate CRM follow-up, Follow-Up Leak Audits, stale-lead recovery, speed to lead, and CRM reactivation.",
+  description: "Pillar pages covering real-estate CRM follow-up, Lead Follow-Up Audits, stale-lead recovery, speed to lead, and CRM reactivation.",
   path: "/learn",
-  keywords: ["real estate CRM follow-up", "Follow-Up Leak Audit", "stale lead recovery", "speed to lead"],
+  keywords: ["real estate CRM follow-up", "Lead Follow-Up Audit", "stale lead recovery", "speed to lead"],
 })
 
 export default function LearnIndexPage() {
@@ -27,8 +27,7 @@ export default function LearnIndexPage() {
             {hubEntries.map((hub) => (
               <Link key={hub.slug} href={`/learn/${hub.slug}`} className="block rounded-xl border border-border/30 bg-muted/20 p-6 hover:border-foreground/30 transition-colors">
                 <h2 className="text-2xl font-semibold mb-2">{hub.title}</h2>
-                <p className="text-sm text-muted-foreground mb-3">{hub.summary}</p>
-                <p className="text-xs uppercase tracking-wider text-muted-foreground">Intent: {hub.searchIntent}</p>
+                <p className="text-sm text-muted-foreground">{hub.summary}</p>
               </Link>
             ))}
           </section>
