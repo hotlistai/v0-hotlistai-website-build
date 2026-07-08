@@ -35,7 +35,7 @@ export function SiteFooter() {
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-12">
           <div className="col-span-2">
             <Link href="/" className="inline-block mb-4">
-              <Image src="/logo.png" alt="Hotlist" width={170} height={40} className="h-7 w-auto" />
+              <Image src="/logo.png" alt="Hotlist" width={220} height={52} className="h-9 w-auto sm:h-10" />
             </Link>
             <p className="text-sm text-muted-foreground max-w-sm">
               Hotlist is the Agent Tech Concierge for real estate teams. We audit follow-up, fix what is broken, and
