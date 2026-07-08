@@ -21,14 +21,13 @@ export default function IndustriesIndexPage() {
           <header className="space-y-4">
             <p className="text-xs font-mono uppercase tracking-wider text-muted-foreground">Industry Library</p>
             <h1 className="text-4xl md:text-5xl font-serif tracking-tight">Industry Playbooks</h1>
-            <p className="text-lg text-muted-foreground max-w-3xl">Playbooks for teams that already have lead flow but need cleaner CRM execution, routing, and accountability.</p>
+            <p className="text-lg text-muted-foreground max-w-3xl">Playbooks for teams that already have lead flow but need cleaner follow-up, routing, and accountability.</p>
           </header>
           <section className="grid md:grid-cols-2 gap-5">
             {industryEntries.map((entry) => (
               <Link key={entry.slug} href={`/industries/${entry.slug}`} className="rounded-xl border border-border/30 bg-muted/20 p-6 hover:border-foreground/30 transition-colors">
                 <h2 className="text-xl font-semibold mb-2">{entry.title}</h2>
-                <p className="text-sm text-muted-foreground mb-3">{entry.summary}</p>
-                <p className="text-xs uppercase tracking-wider text-muted-foreground">Intent: {entry.searchIntent}</p>
+                <p className="text-sm text-muted-foreground">{entry.summary}</p>
               </Link>
             ))}
           </section>

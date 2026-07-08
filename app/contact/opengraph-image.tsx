@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og"
 
 export const runtime = "edge"
-export const alt = "Book a Follow-Up Leak Audit with HotlistAI"
+export const alt = "Book Your Lead Follow-Up Audit with HotlistAI"
 export const size = { width: 1200, height: 630 }
 export const contentType = "image/png"
 
@@ -24,10 +24,10 @@ export default async function Image() {
         <h1
           style={{ fontSize: 72, fontWeight: 600, color: "#1a1a1a", textAlign: "center", margin: 0, marginBottom: 30 }}
         >
-          Book a Follow-Up Leak Audit
+          Book Your Lead Follow-Up Audit
         </h1>
         <p style={{ fontSize: 28, color: "#666666", textAlign: "center", margin: 0, maxWidth: 800 }}>
-          Find where warm leads are leaking inside your CRM.
+          See where follow-up is breaking — in plain language.
         </p>
       </div>
       <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 8, backgroundColor: "#1a1a1a" }} />

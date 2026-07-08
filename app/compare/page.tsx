@@ -21,14 +21,13 @@ export default function CompareIndexPage() {
           <header className="space-y-4">
             <p className="text-xs font-mono uppercase tracking-wider text-muted-foreground">Decision Layer</p>
             <h1 className="text-4xl md:text-5xl font-serif tracking-tight">Comparison Guides</h1>
-            <p className="text-lg text-muted-foreground max-w-3xl">Neutral comparison pages for teams deciding whether to buy more leads, hire follow-up labor, or repair the CRM execution layer first.</p>
+            <p className="text-lg text-muted-foreground max-w-3xl">Neutral comparison pages for teams deciding whether to buy more leads, hire follow-up labor, or start with a Lead Follow-Up Audit first.</p>
           </header>
           <section className="space-y-4">
             {compareEntries.map((entry) => (
               <Link key={entry.slug} href={`/compare/${entry.slug}`} className="block rounded-xl border border-border/30 bg-muted/20 p-6 hover:border-foreground/30 transition-colors">
                 <h2 className="text-2xl font-semibold mb-2">{entry.title}</h2>
-                <p className="text-sm text-muted-foreground mb-3">{entry.summary}</p>
-                <p className="text-xs uppercase tracking-wider text-muted-foreground">Intent: {entry.searchIntent}</p>
+                <p className="text-sm text-muted-foreground">{entry.summary}</p>
               </Link>
             ))}
           </section>

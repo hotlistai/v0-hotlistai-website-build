@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
+import { ConciergeCta } from "@/components/seo/concierge-cta"
 import { RelatedLinks } from "@/components/seo/related-links"
 import { buildBreadcrumbJsonLd, buildMetadata } from "@/lib/seo"
 import { getIndustryBySlug, getUseCaseBySlug, useCaseEntries } from "@/lib/seo-taxonomy"
@@ -15,7 +16,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params
   const entry = getUseCaseBySlug(slug)
   if (!entry) return {}
-  return buildMetadata({ title: entry.title, description: entry.summary, path: `/use-cases/${entry.slug}`, keywords: [entry.searchIntent, "AI workflow implementation", "operations execution"] })
+  return buildMetadata({ title: entry.title, description: entry.summary, path: `/use-cases/${entry.slug}`, keywords: [entry.searchIntent, "real estate follow-up", "Lead Follow-Up Audit"] })
 }
 
 export default async function UseCaseDetailPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -55,11 +56,12 @@ export default async function UseCaseDetailPage({ params }: { params: Promise<{ 
               <ul className="space-y-2 text-sm text-muted-foreground">{entry.outcomes.map((item) => <li key={item}>• {item}</li>)}</ul>
             </div>
             <div className="rounded-xl border border-border/30 bg-muted/20 p-6">
-              <h2 className="text-xl font-semibold mb-3">Core System Components</h2>
+              <h2 className="text-xl font-semibold mb-3">What We Fix and Install</h2>
               <ul className="space-y-2 text-sm text-muted-foreground">{entry.systems.map((item) => <li key={item}>• {item}</li>)}</ul>
             </div>
           </section>
           {links.length > 0 ? <RelatedLinks title="Related Pages" links={links} /> : null}
+          <ConciergeCta />
         </div>
       </main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />

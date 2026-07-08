@@ -15,9 +15,9 @@ export interface BlogPost {
 const posts: BlogPost[] = [
   {
     slug: "where-real-estate-leads-leak-inside-a-crm",
-    title: "Where real-estate leads leak inside a CRM",
+    title: "Where real-estate leads go quiet inside a CRM",
     description:
-      "The common response, routing, nurture, stale-lead, and accountability gaps that turn paid leads into quiet waste.",
+      "The common response, routing, nurture, stale-lead, and accountability gaps that turn paid leads into missed opportunities.",
     content: `Most teams do not have an empty CRM problem. They have an underworked CRM problem.
 
 The leads are there. The tasks are there. The old conversations are there. The issue is that nobody can clearly see which lead needs attention next.
@@ -49,12 +49,12 @@ A stale-lead recovery system separates revive-now contacts from long-term nurtur
 - Stale-lead segments
 - Team lead visibility
 
-Before buying more leads, find where the current ones are leaking.`,
+Before buying more leads, find where the current ones are going quiet. A free Lead Follow-Up Audit is the fastest way to see it in plain language.`,
     date: "2026-07-04",
     author: "Johnny Apple",
     authorRole: "Founder, HotlistAI",
-    category: "Follow-Up Leaks",
-    tags: ["CRM", "follow-up leaks", "real estate leads", "lead routing"],
+    category: "Follow-Up Gaps",
+    tags: ["CRM", "follow-up gaps", "real estate leads", "lead routing"],
     readTime: "5 min read",
     featured: true,
   },
@@ -88,7 +88,7 @@ Do not blast the database. Separate leads by stage, source, last activity, and i
 - Smart lists
 - Stale recovery segments
 
-HotlistAI is not affiliated with or endorsed by Follow Up Boss. We audit the workflow your team already operates.`,
+HotlistAI is not affiliated with or endorsed by Follow Up Boss. Start with a free Lead Follow-Up Audit to see what to clean up first.`,
     date: "2026-07-04",
     author: "Johnny Apple",
     authorRole: "Founder, HotlistAI",
@@ -119,7 +119,9 @@ If a hot lead is assigned but not worked, the system needs to surface that befor
 
 ## Mistake 4: no stale-lead path
 
-Old leads should not live forever in vague nurture. They need segmentation and recovery logic.`,
+Old leads should not live forever in vague nurture. They need segmentation and recovery logic.
+
+A Lead Follow-Up Audit shows which automations are helping and which are just creating noise.`,
     date: "2026-07-04",
     author: "Johnny Apple",
     authorRole: "Founder, HotlistAI",
@@ -149,7 +151,7 @@ Some need a human follow-up today. Some belong in long-term nurture. Some should
 
 Revive the leads you already paid for without sounding robotic or desperate.
 
-The cleaner the segments, the better the human handoff.`,
+The cleaner the segments, the better the human handoff. Book a free Lead Follow-Up Audit if you are not sure where to start.`,
     date: "2026-07-04",
     author: "Johnny Apple",
     authorRole: "Founder, HotlistAI",
@@ -180,7 +182,7 @@ Use short, human prompts that match the lead’s original intent.
 
 ## Week 4: route replies and review
 
-The real work is making sure replies go to the right person quickly and that the next action is visible.`,
+The real work is making sure replies go to the right person quickly and that the next action is visible. HotlistAI can install and manage this rhythm as your Tech Concierge.`,
     date: "2026-07-04",
     author: "Johnny Apple",
     authorRole: "Founder, HotlistAI",
@@ -205,7 +207,7 @@ A good SLA defines the response expectation, owner, escalation path, and follow-
 - When the team lead is alerted
 - What the second and third touch should be
 
-Fast response without follow-through still leaks.`,
+Fast response without follow-through still creates gaps. A Lead Follow-Up Audit maps where that happens on your team.`,
     date: "2026-07-04",
     author: "Johnny Apple",
     authorRole: "Founder, HotlistAI",
@@ -229,7 +231,7 @@ The team needs to know who owns the lead, whether they responded, and what happe
 - Which leads need team lead visibility?
 - What happens when the owner misses the window?
 
-Routing is accountability, not just distribution.`,
+Routing is accountability, not just distribution. See how yours is working with a free Lead Follow-Up Audit.`,
     date: "2026-07-04",
     author: "Johnny Apple",
     authorRole: "Founder, HotlistAI",
@@ -303,7 +305,7 @@ Stages drift. Tags multiply. Smart lists stop matching reality. Agents stop trus
 
 The team needs a rhythm for reviewing leaks, cleaning lists, repairing follow-up gaps, and keeping every lead tied to a next action.
 
-That is the difference between a configured CRM and a working follow-up system.`,
+That is the difference between a configured CRM and follow-up that actually happens. HotlistAI helps teams get there — starting with a free Lead Follow-Up Audit.`,
     date: "2026-07-04",
     author: "Johnny Apple",
     authorRole: "Founder, HotlistAI",

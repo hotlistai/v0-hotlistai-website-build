@@ -7,7 +7,7 @@ import { SiteFooter } from "@/components/site-footer"
 import { getCategoryBySlug, getPostsByCategory, getAllCategories, slugifyCategory } from "@/lib/blog"
 
 const categoryDescriptions: Record<string, string> = {
-  "follow-up-leaks": "Where real-estate leads lose momentum inside the CRM and how teams can repair the break.",
+  "follow-up-gaps": "Where real-estate leads lose momentum inside the CRM and how teams can repair the break.",
   "crm-discipline": "Practical CRM cleanup, smart list, owner, stage, and accountability guidance for real-estate teams.",
   "stale-lead-recovery": "How to segment and revive the leads your team already paid to acquire.",
   "speed-to-lead": "How to improve first response, second touch, routing, and escalation discipline.",
@@ -39,7 +39,7 @@ export async function generateMetadata({
       `${formattedCategory} articles`,
       "Hotlist AI blog",
       "real estate CRM follow-up",
-      "Follow-Up Leak Audit",
+      "Lead Follow-Up Audit",
     ],
     openGraph: {
       title: `${formattedCategory} | Hotlist AI Blog`,

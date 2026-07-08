@@ -13,7 +13,7 @@ export async function POST(request: Request) {
     const { name, email, teamName, crm, teamSize, leadSources, currentBottleneck, message } = body
 
     const emailBody = `
-New Follow-Up Leak Audit request from HotlistAI:
+New Lead Follow-Up Audit request from HotlistAI:
 
 Name: ${name}
 Email: ${email}
@@ -33,7 +33,7 @@ ${message || "Not provided"}
       from: "HotlistAI <onboarding@resend.dev>",
       to: "info@hotlistai.com",
       replyTo: email,
-      subject: `Follow-Up Leak Audit request from ${name}`,
+      subject: `Lead Follow-Up Audit request from ${name}`,
       text: emailBody,
     })
 
@@ -50,7 +50,7 @@ ${message || "Not provided"}
           leadSources: leadSources || "Not provided",
           currentBottleneck: currentBottleneck || "Not provided",
           message: message || "Not provided",
-          source: "Follow-Up Leak Audit Form",
+          source: "Lead Follow-Up Audit Form",
           timestamp: new Date().toISOString(),
         }),
       })

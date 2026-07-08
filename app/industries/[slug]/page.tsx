@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
+import { ConciergeCta } from "@/components/seo/concierge-cta"
 import { RelatedLinks } from "@/components/seo/related-links"
 import { buildBreadcrumbJsonLd, buildMetadata } from "@/lib/seo"
 import { getIndustryBySlug, getUseCaseBySlug, industryEntries } from "@/lib/seo-taxonomy"
@@ -15,7 +16,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params
   const entry = getIndustryBySlug(slug)
   if (!entry) return {}
-  return buildMetadata({ title: entry.title, description: entry.summary, path: `/industries/${entry.slug}`, keywords: [entry.searchIntent, "industry AI operations", "vertical process automation"] })
+  return buildMetadata({ title: entry.title, description: entry.summary, path: `/industries/${entry.slug}`, keywords: [entry.searchIntent, "real estate follow-up", "Agent Tech Concierge"] })
 }
 
 export default async function IndustryDetailPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -54,11 +55,12 @@ export default async function IndustryDetailPage({ params }: { params: Promise<{
               <ul className="space-y-2 text-sm text-muted-foreground">{entry.recurringPain.map((item) => <li key={item}>• {item}</li>)}</ul>
             </div>
             <div className="rounded-xl border border-border/30 bg-muted/20 p-6">
-              <h2 className="text-xl font-semibold mb-3">Recommended Deployment Lanes</h2>
+              <h2 className="text-xl font-semibold mb-3">Where to Start</h2>
               <ul className="space-y-2 text-sm text-muted-foreground">{entry.highLeverageDeployments.map((item) => <li key={item}>• {item}</li>)}</ul>
             </div>
           </section>
           {relatedLinks.length > 0 ? <RelatedLinks title="Related Use Cases" links={relatedLinks} /> : null}
+          <ConciergeCta />
         </div>
       </main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />

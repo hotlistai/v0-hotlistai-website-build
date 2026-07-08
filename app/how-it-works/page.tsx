@@ -1,17 +1,80 @@
-import { SiteHeader } from "@/components/site-header"
-import { SiteFooter } from "@/components/site-footer"
-import { CalBookingButton } from "@/components/cal-booking-button"
-import { Search, FileText, Settings, Activity, CheckCircle, Clock } from "lucide-react"
+import Link from "next/link"
+import { ArrowRight, ClipboardList, Headphones, Wrench } from "lucide-react"
 import type { Metadata } from "next"
+import { CalBookingButton } from "@/components/cal-booking-button"
+import { SiteFooter } from "@/components/site-footer"
+import { SiteHeader } from "@/components/site-header"
 import { buildMetadata } from "@/lib/seo"
 
 export const metadata: Metadata = buildMetadata({
-  title: "How Installation Works",
+  title: "How Your Tech Concierge Works",
   description:
-    "Audit, plan, install, and monitor autonomous workflow systems in a governed 7–14 day deployment model.",
+    "Audit your follow-up, fix what is broken, and stay supported monthly. HotlistAI's three-step Agent Tech Concierge path for real estate teams.",
   path: "/how-it-works",
-  keywords: ["AI deployment process", "workflow installation", "automation implementation model"],
+  keywords: [
+    "agent tech concierge",
+    "lead follow-up audit",
+    "real estate CRM support",
+    "follow-up system implementation",
+  ],
 })
+
+const steps = [
+  {
+    number: "01",
+    icon: ClipboardList,
+    title: "Lead Follow-Up Audit",
+    summary: "We find where warm leads are slipping before you spend more on software or lead spend.",
+    details: [
+      "Review how leads enter your system and who owns them",
+      "Check what follow-up actually happens vs. what you think happens",
+      "Identify old contacts worth re-engaging",
+      "Deliver a Follow-Up Scorecard and 30-Day Fix Plan",
+    ],
+    timeline: "A few business days",
+  },
+  {
+    number: "02",
+    icon: Wrench,
+    title: "Fix & Install",
+    summary: "If the gaps are costing you deals, we set up the simple system your team can actually run.",
+    details: [
+      "Set up reminders, daily work lists, and clear ownership rules",
+      "Fix broken automations and overdue follow-up habits",
+      "Sort old contacts into practical recovery segments",
+      "Train the team on what to do each day — without CRM jargon",
+    ],
+    timeline: "Scoped after the audit",
+  },
+  {
+    number: "03",
+    icon: Headphones,
+    title: "Tech Concierge",
+    summary: "We stay with you monthly so follow-up keeps working without you managing the tech.",
+    details: [
+      "Tune systems as your team and lead flow change",
+      "Fix what breaks before it costs you a deal",
+      "Update lists, reminders, and processes as needed",
+      "Be the person your team calls when the CRM feels overwhelming",
+    ],
+    timeline: "Ongoing monthly support",
+  },
+]
+
+const differences = [
+  {
+    title: "Not another CRM",
+    description: "We work inside the system you already pay for. No rip-and-replace required.",
+  },
+  {
+    title: "Not a one-time project",
+    description: "Systems drift. Your Tech Concierge keeps follow-up running after the initial fix.",
+  },
+  {
+    title: "Not built for tech people",
+    description: "Plain language, practical steps, and support your whole team can understand.",
+  },
+]
 
 export default function HowItWorksPage() {
   return (
@@ -19,319 +82,58 @@ export default function HowItWorksPage() {
       <SiteHeader />
 
       <main className="flex-1 pt-14">
-        {/* Hero */}
         <section className="py-20 md:py-32 px-4 md:px-6 border-b border-border/40">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-serif tracking-tight mb-6">How Installation Works</h1>
+            <p className="text-xs font-mono text-muted-foreground tracking-wider uppercase mb-6">How It Works</p>
+            <h1 className="text-4xl md:text-6xl font-serif tracking-tight mb-6">How Your Tech Concierge Works</h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Audit → Plan → Install → License. Repeatability is the product. Every deployment follows the same
-              governed process.
+              Audit your follow-up, fix what is broken, and stay supported monthly. Three steps. One trusted partner.
             </p>
           </div>
         </section>
 
-        {/* Overview */}
-        <section className="py-16 px-4 md:px-6 bg-muted/10 border-b border-border/40">
-          <div className="max-w-5xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="scroll-animate">
-                <h2 className="text-2xl md:text-3xl font-serif tracking-tight mb-6">
-                  Infrastructure Means Repeatability
-                </h2>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  We do not experiment. We install production systems using a repeatability model. Every deployment is
-                  templated, governed, and measured.
-                </p>
-                <p className="text-muted-foreground leading-relaxed">
-                  This is not consulting. This is infrastructure deployment—designed for scale, built for uptime,
-                  delivered with control.
-                </p>
-              </div>
-              <div className="scroll-animate delay-100">
-                <div className="p-8 bg-card border border-border/50 rounded-xl">
-                  <div className="space-y-4">
-                    <div className="flex items-center gap-3">
-                      <Clock className="w-5 h-5 text-green-600" />
-                      <div>
-                        <div className="font-semibold">7-14 Days</div>
-                        <div className="text-sm text-muted-foreground">From audit to production</div>
-                      </div>
+        <section className="py-24 px-4 md:px-6 border-b border-border/40">
+          <div className="max-w-5xl mx-auto space-y-16">
+            {steps.map((step) => (
+              <div key={step.title} className="grid lg:grid-cols-[0.35fr_0.65fr] gap-8 items-start">
+                <div className="flex items-start gap-4">
+                  <div className="w-14 h-14 bg-foreground text-background flex items-center justify-center rounded-xl flex-shrink-0 text-xl font-serif">
+                    {step.number}
+                  </div>
+                  <div>
+                    <div className="flex items-center gap-3 mb-2">
+                      <step.icon className="w-5 h-5" strokeWidth={1.5} />
+                      <h2 className="text-2xl md:text-3xl font-serif tracking-tight">{step.title}</h2>
                     </div>
-                    <div className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-green-600" />
-                      <div>
-                        <div className="font-semibold">Governed Install</div>
-                        <div className="text-sm text-muted-foreground">Controls and approvals built in</div>
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <Activity className="w-5 h-5 text-green-600" />
-                      <div>
-                        <div className="font-semibold">Measured Outcomes</div>
-                        <div className="text-sm text-muted-foreground">Throughput, cycle time, margin</div>
-                      </div>
-                    </div>
+                    <p className="text-sm font-mono uppercase tracking-wider text-muted-foreground">{step.timeline}</p>
                   </div>
                 </div>
+                <div className="rounded-2xl border border-border/40 bg-muted/20 p-6 md:p-8">
+                  <p className="text-lg text-muted-foreground leading-relaxed mb-6">{step.summary}</p>
+                  <ul className="space-y-3">
+                    {step.details.map((detail) => (
+                      <li key={detail} className="text-muted-foreground leading-relaxed">
+                        {detail}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
-            </div>
+            ))}
           </div>
         </section>
 
-        {/* The 4-Step Process */}
-        <section className="py-24 px-4 md:px-6">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16 scroll-animate">
-              <h2 className="text-3xl md:text-4xl font-serif tracking-tight mb-4">The Installation Process</h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto">
-                Four stages. Fixed timeline. Governed execution from day one.
-              </p>
-            </div>
-
-            <div className="space-y-16">
-              {/* Step 1: System Audit */}
-              <div className="scroll-animate">
-                <div className="flex items-start gap-6 mb-8">
-                  <div className="w-16 h-16 bg-foreground text-background flex items-center justify-center rounded-xl flex-shrink-0 text-2xl font-serif">
-                    01
-                  </div>
-                  <div>
-                    <div className="flex items-center gap-3 mb-3">
-                      <Search className="w-6 h-6" />
-                      <h3 className="text-2xl font-serif">System Audit</h3>
-                    </div>
-                    <p className="text-muted-foreground text-lg mb-6">
-                      We map workflows, identify bottlenecks, and calculate overhead cost.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="ml-[88px] space-y-6">
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div className="p-6 border border-border/30 rounded-lg">
-                      <h4 className="font-semibold mb-3">What We Map</h4>
-                      <ul className="space-y-2 text-sm text-muted-foreground">
-                        <li>• Current workflow steps and handoffs</li>
-                        <li>• Coordination overhead per role</li>
-                        <li>• Cycle time and throughput bottlenecks</li>
-                        <li>• Manual tasks and approval chains</li>
-                        <li>• Data sources and integration points</li>
-                      </ul>
-                    </div>
-                    <div className="p-6 border border-border/30 rounded-lg">
-                      <h4 className="font-semibold mb-3">What You Get</h4>
-                      <ul className="space-y-2 text-sm text-muted-foreground">
-                        <li>• Workflow diagram with pain points</li>
-                        <li>• Overhead cost calculation (hours + payroll)</li>
-                        <li>• Deployment recommendation (which lane)</li>
-                        <li>• ROI projection (capacity vs. headcount)</li>
-                        <li>• Risk assessment and governance needs</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div className="p-6 bg-muted/10 border border-border/30 rounded-lg">
-                    <div className="flex items-center gap-2 mb-2">
-                      <Clock className="w-4 h-4 text-muted-foreground" />
-                      <span className="text-sm font-semibold">Timeline: 2-3 days</span>
-                    </div>
-                    <p className="text-sm text-muted-foreground">
-                      Includes stakeholder interviews, workflow observation, and systems review.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Step 2: Deployment Plan */}
-              <div className="scroll-animate">
-                <div className="flex items-start gap-6 mb-8">
-                  <div className="w-16 h-16 bg-foreground text-background flex items-center justify-center rounded-xl flex-shrink-0 text-2xl font-serif">
-                    02
-                  </div>
-                  <div>
-                    <div className="flex items-center gap-3 mb-3">
-                      <FileText className="w-6 h-6" />
-                      <h3 className="text-2xl font-serif">Deployment Plan</h3>
-                    </div>
-                    <p className="text-muted-foreground text-lg mb-6">
-                      We define roles, workflows, controls, and success metrics. You approve before install.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="ml-[88px] space-y-6">
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div className="p-6 border border-border/30 rounded-lg">
-                      <h4 className="font-semibold mb-3">Plan Contents</h4>
-                      <ul className="space-y-2 text-sm text-muted-foreground">
-                        <li>• Role definition and responsibilities</li>
-                        <li>• Workflow steps with approval gates</li>
-                        <li>• Integration requirements and data sources</li>
-                        <li>• Governance controls and audit trails</li>
-                        <li>• Success metrics and KPI targets</li>
-                      </ul>
-                    </div>
-                    <div className="p-6 border border-border/30 rounded-lg">
-                      <h4 className="font-semibold mb-3">Approval Points</h4>
-                      <ul className="space-y-2 text-sm text-muted-foreground">
-                        <li>• Workflow design sign-off</li>
-                        <li>• Messaging and tone approval</li>
-                        <li>• Integration scope confirmation</li>
-                        <li>• Governance controls review</li>
-                        <li>• Go-live criteria agreement</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div className="p-6 bg-muted/10 border border-border/30 rounded-lg">
-                    <div className="flex items-center gap-2 mb-2">
-                      <Clock className="w-4 h-4 text-muted-foreground" />
-                      <span className="text-sm font-semibold">Timeline: 2-3 days</span>
-                    </div>
-                    <p className="text-sm text-muted-foreground">
-                      Includes plan drafting, stakeholder review, and finalization.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Step 3: Install & Test */}
-              <div className="scroll-animate">
-                <div className="flex items-start gap-6 mb-8">
-                  <div className="w-16 h-16 bg-foreground text-background flex items-center justify-center rounded-xl flex-shrink-0 text-2xl font-serif">
-                    03
-                  </div>
-                  <div>
-                    <div className="flex items-center gap-3 mb-3">
-                      <Settings className="w-6 h-6" />
-                      <h3 className="text-2xl font-serif">Install & Test</h3>
-                    </div>
-                    <p className="text-muted-foreground text-lg mb-6">
-                      We deploy counterparts, integrate workflows, and validate governance before go-live.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="ml-[88px] space-y-6">
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div className="p-6 border border-border/30 rounded-lg">
-                      <h4 className="font-semibold mb-3">Installation Phase</h4>
-                      <ul className="space-y-2 text-sm text-muted-foreground">
-                        <li>• Deploy Digital Counterpart infrastructure</li>
-                        <li>• Configure workflow automation</li>
-                        <li>• Integrate CRM, tools, and data sources</li>
-                        <li>• Set up approval gates and controls</li>
-                        <li>• Configure observability dashboard</li>
-                      </ul>
-                    </div>
-                    <div className="p-6 border border-border/30 rounded-lg">
-                      <h4 className="font-semibold mb-3">Testing Phase</h4>
-                      <ul className="space-y-2 text-sm text-muted-foreground">
-                        <li>• Shadow mode validation (no live actions)</li>
-                        <li>• Approval gate verification</li>
-                        <li>• Integration testing with live data</li>
-                        <li>• Throughput and accuracy benchmarking</li>
-                        <li>• Stakeholder UAT and sign-off</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div className="p-6 bg-muted/10 border border-border/30 rounded-lg">
-                    <div className="flex items-center gap-2 mb-2">
-                      <Clock className="w-4 h-4 text-muted-foreground" />
-                      <span className="text-sm font-semibold">Timeline: 5-7 days</span>
-                    </div>
-                    <p className="text-sm text-muted-foreground">
-                      Includes technical installation, integration testing, and go-live approval.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Step 4: License & Monitor */}
-              <div className="scroll-animate">
-                <div className="flex items-start gap-6 mb-8">
-                  <div className="w-16 h-16 bg-foreground text-background flex items-center justify-center rounded-xl flex-shrink-0 text-2xl font-serif">
-                    04
-                  </div>
-                  <div>
-                    <div className="flex items-center gap-3 mb-3">
-                      <Activity className="w-6 h-6" />
-                      <h3 className="text-2xl font-serif">License & Monitor</h3>
-                    </div>
-                    <p className="text-muted-foreground text-lg mb-6">
-                      Ongoing capacity licensing with observability, iteration, and uptime guarantees.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="ml-[88px] space-y-6">
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div className="p-6 border border-border/30 rounded-lg">
-                      <h4 className="font-semibold mb-3">What's Included</h4>
-                      <ul className="space-y-2 text-sm text-muted-foreground">
-                        <li>• Ongoing licensed capacity</li>
-                        <li>• Real-time observability dashboard</li>
-                        <li>• Performance monitoring and alerts</li>
-                        <li>• Weekly optimization reviews</li>
-                        <li>• Governance and audit reporting</li>
-                      </ul>
-                    </div>
-                    <div className="p-6 border border-border/30 rounded-lg">
-                      <h4 className="font-semibold mb-3">Support & Iteration</h4>
-                      <ul className="space-y-2 text-sm text-muted-foreground">
-                        <li>• Workflow refinement and tuning</li>
-                        <li>• Integration expansion as needed</li>
-                        <li>• Role expansion and new counterparts</li>
-                        <li>• Dedicated support channel</li>
-                        <li>• Quarterly strategic reviews</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div className="p-6 bg-muted/10 border border-border/30 rounded-lg">
-                    <div className="flex items-center gap-2 mb-2">
-                      <Activity className="w-4 h-4 text-muted-foreground" />
-                      <span className="text-sm font-semibold">Timeline: Ongoing</span>
-                    </div>
-                    <p className="text-sm text-muted-foreground">
-                      Monthly or annual licensing. Cancel anytime. Uptime SLA enforced.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* What Makes This Different */}
-        <section className="py-24 px-4 md:px-6 border-t border-border/40 bg-muted/10">
+        <section className="py-24 px-4 md:px-6 border-b border-border/40 bg-muted/10">
           <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-12 scroll-animate">
-              <h2 className="text-3xl md:text-4xl font-serif tracking-tight mb-4">What Makes This Different</h2>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-serif tracking-tight mb-4">What makes this different</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
-                This is not consulting. This is infrastructure.
+                You get a partner who understands both real estate follow-up and the tech behind it.
               </p>
             </div>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              {[
-                {
-                  title: "Not Consulting",
-                  description:
-                    "No workshops. No slide decks. We install production systems with SLAs and ongoing uptime guarantees.",
-                },
-                {
-                  title: "Not Software Licenses",
-                  description:
-                    "You are not buying a tool. You are licensing governed capacity that owns outcomes and produces work.",
-                },
-                {
-                  title: "Not Experimentation",
-                  description:
-                    "Every deployment follows the same repeatability model. Governed from day one. Measured from go-live.",
-                },
-              ].map((item, index) => (
-                <div
-                  key={index}
-                  className={`scroll-animate delay-${(index + 1) * 100} p-6 border border-border/30 rounded-lg`}
-                >
+            <div className="grid md:grid-cols-3 gap-6">
+              {differences.map((item) => (
+                <div key={item.title} className="rounded-xl border border-border/40 bg-background p-6">
                   <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">{item.description}</p>
                 </div>
@@ -340,15 +142,22 @@ export default function HowItWorksPage() {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-24 px-4 md:px-6 border-t border-border/40">
-          <div className="max-w-3xl mx-auto text-center scroll-animate">
-            <h2 className="text-3xl md:text-4xl font-serif tracking-tight mb-6">Ready to Install Capacity?</h2>
+        <section className="py-24 px-4 md:px-6">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-serif tracking-tight mb-6">Start with the audit.</h2>
             <p className="text-muted-foreground text-lg mb-8 max-w-xl mx-auto">
-              Start with a System Audit. We map your workflows and propose a deployment plan. 7-14 days from audit to
-              production.
+              The Lead Follow-Up Audit is free. You will see exactly where follow-up is breaking before deciding on
+              implementation or Tech Concierge support.
             </p>
-            <CalBookingButton size="lg">Request a System Audit</CalBookingButton>
+            <div className="flex flex-col sm:flex-row justify-center gap-3">
+              <CalBookingButton size="lg">Book Your Lead Follow-Up Audit</CalBookingButton>
+              <Link
+                href="/sample-leak-report"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-border/60 px-8 py-4 text-sm font-medium hover:border-foreground/40 transition-colors"
+              >
+                See a Sample Audit Report <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              </Link>
+            </div>
           </div>
         </section>
       </main>

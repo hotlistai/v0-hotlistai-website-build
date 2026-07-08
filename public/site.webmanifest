@@ -1,7 +1,7 @@
 {
   "name": "HotlistAI",
   "short_name": "HotlistAI",
-  "description": "Follow-up execution for real-estate teams. Stop warm leads from dying inside your CRM.",
+  "description": "Agent Tech Concierge for real estate teams. Audit follow-up, fix what is broken, and keep it running.",
   "start_url": "/",
   "id": "/",
   "display": "standalone",
@@ -48,16 +48,16 @@
   "screenshots": [],
   "shortcuts": [
     {
-      "name": "Book a Follow-Up Leak Audit",
+      "name": "Book Your Lead Follow-Up Audit",
       "short_name": "Audit",
-      "description": "Find where your real-estate CRM follow-up is leaking",
+      "description": "Find where your team's follow-up is breaking",
       "url": "/contact",
       "icons": [{ "src": "/icon-light.png", "sizes": "192x192" }]
     },
     {
-      "name": "See a Sample Leak Report",
+      "name": "See a Sample Audit Report",
       "short_name": "Sample",
-      "description": "Preview the Follow-Up Leak Scorecard and 30-Day Fix Plan",
+      "description": "Preview the Follow-Up Scorecard and 30-Day Fix Plan",
       "url": "/sample-leak-report",
       "icons": [{ "src": "/icon-light.png", "sizes": "192x192" }]
     }

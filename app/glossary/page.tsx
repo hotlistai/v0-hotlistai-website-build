@@ -7,9 +7,9 @@ import { buildMetadata } from "@/lib/seo"
 
 export const metadata: Metadata = buildMetadata({
   title: "Real Estate CRM Follow-Up Glossary",
-  description: "Definitions for follow-up leaks, next actions, lead routing, speed to lead, CRM reactivation, and nurture discipline.",
+  description: "Definitions for follow-up gaps, next actions, lead routing, speed to lead, CRM reactivation, and nurture discipline.",
   path: "/glossary",
-  keywords: ["real estate CRM glossary", "follow-up leak", "speed to lead", "CRM reactivation"],
+  keywords: ["real estate CRM glossary", "follow-up gap", "speed to lead", "CRM reactivation"],
 })
 
 export default function GlossaryIndexPage() {

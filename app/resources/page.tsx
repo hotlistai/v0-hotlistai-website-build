@@ -7,9 +7,9 @@ import { buildMetadata } from "@/lib/seo"
 export const metadata: Metadata = buildMetadata({
   title: "Resource Library",
   description:
-    "Search-focused resource center for real-estate CRM follow-up, stale lead recovery, routing, speed to lead, and nurture discipline.",
+    "Guides and resources for real-estate CRM follow-up, stale lead recovery, routing, speed to lead, and nurture discipline.",
   path: "/resources",
-  keywords: ["real estate CRM resources", "follow-up leak audit", "stale lead recovery", "speed to lead"],
+  keywords: ["real estate CRM resources", "Lead Follow-Up Audit", "stale lead recovery", "speed to lead"],
 })
 
 const collections = [
@@ -17,7 +17,7 @@ const collections = [
   { title: "Use Cases", description: "Workflow-level pages for routing, nurture, cleanup, and accountability.", href: "/use-cases" },
   { title: "Industry Playbooks", description: "Real-estate team and boutique brokerage follow-up patterns.", href: "/industries" },
   { title: "Comparisons", description: "Decision pages comparing audit-first repair against more leads, CRMs, and ISA options.", href: "/compare" },
-  { title: "Glossary", description: "Definitions for follow-up leaks, next actions, routing, and CRM reactivation.", href: "/glossary" },
+  { title: "Glossary", description: "Definitions for follow-up gaps, next actions, routing, and CRM reactivation.", href: "/glossary" },
 ]
 
 export default function ResourcesPage() {
@@ -30,7 +30,7 @@ export default function ResourcesPage() {
             <p className="text-xs font-mono uppercase tracking-wider text-muted-foreground">Learning Center</p>
             <h1 className="text-4xl md:text-5xl font-serif tracking-tight">Resource Library</h1>
             <p className="text-lg text-muted-foreground max-w-3xl">
-              This library is organized around the places real-estate teams lose opportunity inside the CRM: response, routing, nurture, stale-lead recovery, and accountability.
+              Plain-language guides organized around where real-estate teams lose opportunity: response, routing, nurture, stale-lead recovery, and accountability. Start with a free Lead Follow-Up Audit when you are ready.
             </p>
           </header>
           <section className="grid md:grid-cols-2 gap-5">
