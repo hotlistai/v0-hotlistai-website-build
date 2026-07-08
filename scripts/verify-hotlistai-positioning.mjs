@@ -77,7 +77,7 @@ const requiredText = [
   ["components/site-header.tsx", "Book Your Lead Follow-Up Audit"],
   ["components/site-footer.tsx", "Agent Tech Concierge for real estate teams"],
   ["components/site-footer.tsx", "Guides"],
-  ["components/cal-booking-button.tsx", "free-follow-up-leak-audit"],
+  ["components/cal-booking-button.tsx", "lead-follow-up-audit"],
   ["components/cal-booking-button.tsx", "hotlistai/${CAL_NAMESPACE}"],
   ["components/cal-booking-button.tsx", "data-cal-namespace={CAL_NAMESPACE}"],
   ["components/cal-booking-button.tsx", "useSlotsViewOnSmallScreen"],

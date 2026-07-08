@@ -39,7 +39,7 @@ If created:
 - Category: `Business management consultant` or `Software company`
 - Website: `https://hotlistai.com`
 - Service area: `Dallas-Fort Worth, TX` plus remote/online service wording where allowed
-- Appointment URL: `https://cal.com/hotlistai/free-follow-up-leak-audit`
+- Appointment URL: `https://cal.com/hotlistai/lead-follow-up-audit`
 - Description: `HotlistAI helps real-estate teams find and fix follow-up leaks inside the CRM they already use. The front-door offer is a Follow-Up Leak Audit that identifies where leads are going stale, which follow-up tasks are unowned, and what execution layer should be installed before the team buys more leads.`
 
 Do not use old broad positioning such as `AI systems that run businesses on autopilot` for the public profile.

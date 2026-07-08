@@ -3,7 +3,7 @@
 import { Calendar } from "lucide-react"
 import { useEffect } from "react"
 
-const CAL_NAMESPACE = "free-follow-up-leak-audit"
+const CAL_NAMESPACE = "lead-follow-up-audit"
 const CAL_LINK = `hotlistai/${CAL_NAMESPACE}`
 const CAL_CONFIG = '{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
 
