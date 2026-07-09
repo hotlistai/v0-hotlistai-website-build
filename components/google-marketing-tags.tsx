@@ -5,12 +5,11 @@ const HOTLIST_ENGINE_GA_MEASUREMENT_ID = "G-VFM0J3WGTN"
 const rawGaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
 const rawGtmId = process.env.NEXT_PUBLIC_GTM_ID
 
+const isGaMeasurementId = (measurementId?: string): measurementId is string =>
+  Boolean(measurementId && /^G-[A-Z0-9]+$/.test(measurementId))
+
 const gaMeasurementIds = Array.from(
-  new Set(
-    [HOTLIST_ENGINE_GA_MEASUREMENT_ID, rawGaMeasurementId].filter(
-      (measurementId): measurementId is string => Boolean(measurementId?.startsWith("G-")),
-    ),
-  ),
+  new Set([HOTLIST_ENGINE_GA_MEASUREMENT_ID, rawGaMeasurementId].filter(isGaMeasurementId)),
 )
 const gtmId = rawGtmId?.startsWith("GTM-") ? rawGtmId : undefined
 
@@ -24,7 +23,7 @@ export function GoogleAnalyticsHeadTags() {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            ${gaMeasurementIds.map((measurementId) => `gtag('config', ${JSON.stringify(measurementId)});`).join("\n            ")}
+            ${gaMeasurementIds.map((measurementId) => `gtag('config', '${measurementId}');`).join("\n            ")}
           `,
         }}
       />
