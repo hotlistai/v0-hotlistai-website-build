@@ -12,7 +12,7 @@ The current direct GA4 / Google Ads measurement ID is installed by default:
 
 Optional Vercel environment variables:
 
-- `NEXT_PUBLIC_GA_MEASUREMENT_ID`: overrides the default GA4 web data stream ID.
+- `NEXT_PUBLIC_GA_MEASUREMENT_ID`: adds an extra GA4 web data stream ID if Vercel needs to keep an existing stream active.
 - `NEXT_PUBLIC_GTM_ID`: Google Tag Manager container ID, for example `GTM-XXXXXXX`.
 - `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION`: Search Console HTML meta verification token if DNS verification is not already active.
 

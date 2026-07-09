@@ -2,10 +2,16 @@ import Script from "next/script"
 
 const HOTLIST_ENGINE_GA_MEASUREMENT_ID = "G-VFM0J3WGTN"
 
-const rawGaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || HOTLIST_ENGINE_GA_MEASUREMENT_ID
+const rawGaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
 const rawGtmId = process.env.NEXT_PUBLIC_GTM_ID
 
-const gaMeasurementId = rawGaMeasurementId?.startsWith("G-") ? rawGaMeasurementId : undefined
+const gaMeasurementIds = Array.from(
+  new Set(
+    [HOTLIST_ENGINE_GA_MEASUREMENT_ID, rawGaMeasurementId].filter(
+      (measurementId): measurementId is string => Boolean(measurementId?.startsWith("G-")),
+    ),
+  ),
+)
 const gtmId = rawGtmId?.startsWith("GTM-") ? rawGtmId : undefined
 
 export function GoogleMarketingTags() {
@@ -33,10 +39,10 @@ export function GoogleMarketingTags() {
           </noscript>
         </>
       ) : null}
-      {gaMeasurementId ? (
+      {gaMeasurementIds.length ? (
         <>
           <Script
-            src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`}
+            src={`https://www.googletagmanager.com/gtag/js?id=${HOTLIST_ENGINE_GA_MEASUREMENT_ID}`}
             strategy="afterInteractive"
           />
           <Script id="google-analytics" strategy="afterInteractive">
@@ -44,7 +50,7 @@ export function GoogleMarketingTags() {
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', ${JSON.stringify(gaMeasurementId)});
+              ${gaMeasurementIds.map((measurementId) => `gtag('config', ${JSON.stringify(measurementId)});`).join("\n              ")}
             `}
           </Script>
         </>
