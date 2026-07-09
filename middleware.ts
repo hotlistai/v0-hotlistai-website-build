@@ -7,7 +7,6 @@ const LEGACY_HOSTS = ["hotlistengine.com", "hotlistai.com", "www.hotlistai.com"]
 const legacyRedirects: Record<string, string> = {
   "/deployments": "/follow-up-leak-audit",
   "/ethos": "/company",
-  "/how-it-works": "/follow-up-leak-audit",
   "/labs": "/resources",
   "/lab": "/resources",
   "/developers": "/resources",

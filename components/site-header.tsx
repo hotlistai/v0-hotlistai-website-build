@@ -8,9 +8,9 @@ import { CalBookingButton } from "./cal-booking-button"
 
 const navLinks = [
   { name: "Lead Follow-Up Audit", href: "/follow-up-leak-audit" },
-  { name: "How It Works", href: "/how-it-works" },
+  { name: "How We Fix It", href: "/how-it-works" },
+  { name: "Resources", href: "/resources" },
   { name: "About", href: "/company" },
-  { name: "Contact", href: "/contact" },
 ]
 
 export function SiteHeader() {
@@ -52,7 +52,7 @@ export function SiteHeader() {
 
           <div className="flex items-center gap-2 sm:gap-3">
             <div className="hidden md:block">
-              <CalBookingButton size="sm">Book Your Lead Follow-Up Audit</CalBookingButton>
+              <CalBookingButton size="sm">Book Audit</CalBookingButton>
             </div>
 
             <button
@@ -69,14 +69,14 @@ export function SiteHeader() {
       </header>
 
       {isOpen ? (
-        <div className="lg:hidden fixed inset-0 z-[100]">
+        <div className="lg:hidden fixed inset-x-0 top-16 bottom-0 z-[60]">
           <button
             type="button"
             aria-label="Close menu"
             className="absolute inset-0 bg-background/95 backdrop-blur-sm"
             onClick={() => setIsOpen(false)}
           />
-          <div className="absolute inset-x-0 top-16 bottom-0 bg-background border-t border-border/20 overflow-y-auto overscroll-contain">
+          <div className="absolute inset-0 bg-background border-t border-border/20 overflow-y-auto overscroll-contain">
             <nav className="flex min-h-full flex-col justify-between px-6 py-8 pb-10">
               <div className="flex flex-col gap-1">
                 {navLinks.map((item) => (
@@ -91,8 +91,8 @@ export function SiteHeader() {
                 ))}
               </div>
               <div className="space-y-4 pt-10">
-                <CalBookingButton size="md" className="w-full">
-                  Book Your Lead Follow-Up Audit
+                <CalBookingButton size="md" className="w-full" onClick={() => setIsOpen(false)}>
+                  Book Audit
                 </CalBookingButton>
                 <Link
                   href="/sample-leak-report"

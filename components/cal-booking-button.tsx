@@ -12,13 +12,15 @@ interface CalBookingButtonProps {
   size?: "sm" | "md" | "lg"
   className?: string
   children?: React.ReactNode
+  onClick?: React.MouseEventHandler<HTMLAnchorElement>
 }
 
 export function CalBookingButton({
   variant = "primary",
   size = "md",
   className = "",
-  children
+  children,
+  onClick,
 }: CalBookingButtonProps) {
   useEffect(() => {
     if (typeof window === "undefined") {
@@ -92,12 +94,13 @@ export function CalBookingButton({
     : `${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${className}`
 
   return (
-    <button
-      type="button"
+    <a
+      href={`https://cal.com/${CAL_LINK}`}
       data-cal-link={CAL_LINK}
       data-cal-namespace={CAL_NAMESPACE}
       data-cal-config={CAL_CONFIG}
       className={styles}
+      onClick={onClick}
     >
       {children || (
         <>
@@ -105,6 +108,6 @@ export function CalBookingButton({
           Book a Call
         </>
       )}
-    </button>
+    </a>
   )
 }

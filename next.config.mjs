@@ -9,7 +9,6 @@ const nextConfig = {
   async redirects() {
     return [
       { source: "/deployments", destination: "/follow-up-leak-audit", permanent: true },
-      { source: "/how-it-works", destination: "/follow-up-leak-audit", permanent: true },
       { source: "/lab", destination: "/resources", permanent: true },
       { source: "/labs", destination: "/resources", permanent: true },
       { source: "/hotlist-funnels", destination: "/follow-up-leak-audit", permanent: true },

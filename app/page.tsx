@@ -296,7 +296,7 @@ export default function Home() {
           <section className="py-24 border-b border-border/40 bg-muted/10" aria-labelledby="concierge-path-heading">
             <div className="max-w-6xl mx-auto px-4 md:px-6">
               <header className="max-w-3xl mb-12 scroll-animate">
-                <p className="text-xs font-mono text-muted-foreground tracking-wider uppercase mb-5">How It Works</p>
+                <p className="text-xs font-mono text-muted-foreground tracking-wider uppercase mb-5">How We Fix It</p>
                 <h2 id="concierge-path-heading" className="text-4xl md:text-5xl font-serif tracking-tight">
                   Audit. Fix. Stay on top of it.
                 </h2>
@@ -321,7 +321,7 @@ export default function Home() {
                   href="/how-it-works"
                   className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  See the full concierge process <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                  See how we fix it <ArrowRight className="h-4 w-4" aria-hidden="true" />
                 </Link>
               </div>
             </div>

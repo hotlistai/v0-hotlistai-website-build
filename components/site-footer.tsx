@@ -6,10 +6,10 @@ import Link from "next/link"
 const footerLinks = {
   getStarted: [
     { name: "Lead Follow-Up Audit", href: "/follow-up-leak-audit" },
-    { name: "How It Works", href: "/how-it-works" },
+    { name: "How We Fix It", href: "/how-it-works" },
     { name: "Sample Audit Report", href: "/sample-leak-report" },
     { name: "About", href: "/company" },
-    { name: "Contact", href: "/contact" },
+    { name: "Book Audit", href: "/contact" },
     { name: "FAQ", href: "/faq" },
     { name: "Our Standards", href: "/governance" },
   ],

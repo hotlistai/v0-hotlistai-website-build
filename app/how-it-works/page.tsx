@@ -84,7 +84,7 @@ export default function HowItWorksPage() {
       <main className="flex-1 pt-14">
         <section className="py-20 md:py-32 px-4 md:px-6 border-b border-border/40">
           <div className="max-w-4xl mx-auto text-center">
-            <p className="text-xs font-mono text-muted-foreground tracking-wider uppercase mb-6">How It Works</p>
+            <p className="text-xs font-mono text-muted-foreground tracking-wider uppercase mb-6">How We Fix It</p>
             <h1 className="text-4xl md:text-6xl font-serif tracking-tight mb-6">How Your Tech Concierge Works</h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               Audit your follow-up, fix what is broken, and stay supported monthly. Three steps. One trusted partner.
