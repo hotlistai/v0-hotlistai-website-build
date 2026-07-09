@@ -1,12 +1,8 @@
 import type { Metadata } from "next"
-
-const SITE_URL = "https://hotlistengine.com"
-const SITE_NAME = "Hotlist"
+import { absoluteSiteUrl, SITE_URL, SITE_NAME } from "@/lib/site"
 
 export function absoluteUrl(path: string) {
-  if (!path) return SITE_URL
-  if (path.startsWith("http")) return path
-  return `${SITE_URL}${path.startsWith("/") ? path : `/${path}`}`
+  return absoluteSiteUrl(path)
 }
 
 export function buildMetadata({

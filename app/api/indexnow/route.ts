@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server"
+import { SITE_DOMAIN, SITE_URL } from "@/lib/site"
 
 const INDEXNOW_ENDPOINT = "https://api.indexnow.org/indexnow"
 
@@ -10,8 +11,8 @@ type IndexNowBody = {
 export async function POST(request: Request) {
   try {
     const key = process.env.INDEXNOW_KEY
-    const host = process.env.INDEXNOW_HOST || "hotlistengine.com"
-    const keyLocation = process.env.INDEXNOW_KEY_LOCATION || `https://${host}/indexnow-key.txt`
+    const host = process.env.INDEXNOW_HOST || SITE_DOMAIN
+    const keyLocation = process.env.INDEXNOW_KEY_LOCATION || `${SITE_URL}/indexnow-key.txt`
 
     if (!key) {
       return NextResponse.json({ error: "INDEXNOW_KEY is not configured" }, { status: 503 })

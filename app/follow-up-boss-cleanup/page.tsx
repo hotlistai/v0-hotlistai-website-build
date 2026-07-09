@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: "Follow Up Boss Cleanup for Real Estate Teams | Hotlist",
     description:
       "Real CRM cleanup for Follow Up Boss teams — not cosmetic tidying. Fix the data so follow-up actually works.",
-    url: "https://hotlistengine.com/follow-up-boss-cleanup",
+    url: "https://www.hotlistengine.com/follow-up-boss-cleanup",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Hotlist Lead Follow-Up Audit" }],
   },
   twitter: {

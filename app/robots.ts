@@ -1,9 +1,10 @@
 import type { MetadataRoute } from "next"
+import { SITE_URL } from "@/lib/site"
 
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [{ userAgent: "*", allow: "/", disallow: ["/api/", "/private/"] }],
-    sitemap: "https://hotlistengine.com/sitemap.xml",
-    host: "https://hotlistengine.com",
+    sitemap: [`${SITE_URL}/sitemap.xml`, `${SITE_URL}/sitemap-images.xml`],
+    host: SITE_URL,
   }
 }

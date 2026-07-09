@@ -1,8 +1,9 @@
 import { getAllPosts } from "@/lib/blog"
+import { SITE_URL } from "@/lib/site"
 
 export async function GET() {
   const posts = getAllPosts()
-  const baseUrl = "https://hotlistengine.com"
+  const baseUrl = SITE_URL
 
   const rssItems = posts
     .map(

@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     title: "Blog | Hotlist — Real Estate Follow-Up Systems",
     description:
       "Practical articles on follow-up gaps, stale lead recovery, and real-estate team accountability.",
-    url: "https://hotlistengine.com/blog",
+    url: "https://www.hotlistengine.com/blog",
     siteName: "Hotlist",
     type: "website",
     images: [
@@ -51,18 +51,18 @@ export default function BlogPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Blog",
-    "@id": "https://hotlistengine.com/blog",
+    "@id": "https://www.hotlistengine.com/blog",
     name: "Hotlist Blog",
     description:
       "Practical articles on follow-up gaps, stale lead recovery, speed to lead, nurture discipline, and team accountability.",
-    url: "https://hotlistengine.com/blog",
+    url: "https://www.hotlistengine.com/blog",
     publisher: {
       "@type": "Organization",
       name: "Hotlist",
-      url: "https://hotlistengine.com",
+      url: "https://www.hotlistengine.com",
       logo: {
         "@type": "ImageObject",
-        url: "https://hotlistengine.com/logo-light.png",
+        url: "https://www.hotlistengine.com/logo-light.png",
       },
     },
     blogPost: posts.map((post) => ({
@@ -70,7 +70,7 @@ export default function BlogPage() {
       headline: post.title,
       description: post.description,
       datePublished: post.date,
-      url: `https://hotlistengine.com/blog/${post.slug}`,
+      url: `https://www.hotlistengine.com/blog/${post.slug}`,
       author: {
         "@type": "Person",
         name: post.author,

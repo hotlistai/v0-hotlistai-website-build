@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     title: "Book Your Lead Follow-Up Audit | Hotlist",
     description:
       "Tell us where follow-up feels weakest. We will find the gaps costing you deals and show you what to fix first.",
-    url: "https://hotlistengine.com/contact",
+    url: "https://www.hotlistengine.com/contact",
     siteName: "Hotlist",
     type: "website",
     images: [

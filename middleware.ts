@@ -1,16 +1,17 @@
 import { NextResponse } from "next/server"
 import type { NextRequest } from "next/server"
 
-const PRIMARY_HOST = "hotlistengine.com"
-const LEGACY_HOSTS = ["hotlistai.com", "www.hotlistai.com"]
+const PRIMARY_HOST = "www.hotlistengine.com"
+const LEGACY_HOSTS = ["hotlistengine.com", "hotlistai.com", "www.hotlistai.com"]
 
 const legacyRedirects: Record<string, string> = {
-  "/deployments": "/how-it-works",
+  "/deployments": "/follow-up-leak-audit",
   "/ethos": "/company",
-  "/labs": "/",
-  "/lab": "/",
-  "/developers": "/",
-  "/hotlist-funnels": "/",
+  "/how-it-works": "/follow-up-leak-audit",
+  "/labs": "/resources",
+  "/lab": "/resources",
+  "/developers": "/resources",
+  "/hotlist-funnels": "/follow-up-leak-audit",
   "/press": "/company",
 }
 

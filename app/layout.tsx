@@ -6,6 +6,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import Script from "next/script"
 import { ChatWidget } from "@/components/chat-widget"
 import { GoogleMarketingTags } from "@/components/google-marketing-tags"
+import { SITE_URL } from "@/lib/site"
 import "./globals.css"
 
 const _geist = Geist({ subsets: ["latin"], variable: "--font-geist-sans" })
@@ -28,12 +29,12 @@ export const metadata: Metadata = {
   },
   description:
     "Hotlist audits your follow-up, fixes what is broken, and manages it ongoing — so your real estate team stops losing warm leads and closes more deals with less tech stress.",
-  metadataBase: new URL("https://hotlistengine.com"),
+  metadataBase: new URL(SITE_URL),
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://hotlistengine.com",
+    url: SITE_URL,
     siteName: "Hotlist",
     title: "Hotlist | Your Agent Tech Concierge",
     description:
@@ -91,13 +92,13 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "https://hotlistengine.com/#organization",
+      "@id": `${SITE_URL}/#organization`,
       name: "Hotlist",
       alternateName: "Hotlist Engine",
       description:
         "Agent Tech Concierge for real estate teams. Lead Follow-Up Audits, follow-up system implementation, and ongoing Tech Concierge support.",
-      url: "https://hotlistengine.com",
-      logo: "https://hotlistengine.com/logo.png",
+      url: SITE_URL,
+      logo: `${SITE_URL}/logo.png`,
       contactPoint: [
         {
           "@type": "ContactPoint",
@@ -114,16 +115,16 @@ const jsonLd = {
     },
     {
       "@type": "WebSite",
-      "@id": "https://hotlistengine.com/#website",
-      url: "https://hotlistengine.com",
+      "@id": `${SITE_URL}/#website`,
+      url: SITE_URL,
       name: "Hotlist",
-      publisher: { "@id": "https://hotlistengine.com/#organization" },
+      publisher: { "@id": `${SITE_URL}/#organization` },
       inLanguage: "en-US",
       potentialAction: {
         "@type": "SearchAction",
         target: {
           "@type": "EntryPoint",
-          urlTemplate: "https://hotlistengine.com/blog?query={search_term_string}",
+          urlTemplate: `${SITE_URL}/blog?query={search_term_string}`,
         },
         "query-input": "required name=search_term_string",
       },

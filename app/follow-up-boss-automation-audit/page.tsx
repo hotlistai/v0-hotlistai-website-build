@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: "Follow Up Boss Automation Audit | Hotlist",
     description:
       "A specialized Lead Follow-Up Audit for Follow Up Boss teams. Find broken automations before they cost you deals.",
-    url: "https://hotlistengine.com/follow-up-boss-automation-audit",
+    url: "https://www.hotlistengine.com/follow-up-boss-automation-audit",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Hotlist Lead Follow-Up Audit" }],
   },
   twitter: {

@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     title: "Ethos | Hotlist AI",
     description:
       "How Hotlist AI thinks and builds. Clarity over complexity. Speed over sprawl. The digital counterpart model.",
-    url: "https://hotlistengine.com/ethos",
+    url: "https://www.hotlistengine.com/ethos",
     siteName: "Hotlist",
     type: "website",
     images: [

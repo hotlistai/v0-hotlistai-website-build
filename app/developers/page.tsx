@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     title: "Developers | The Foundry | Hotlist AI",
     description:
       "Developer infrastructure for Digital Counterparts. REST APIs, SDKs, webhooks, and self-hosted deployment. Request early access.",
-    url: "https://hotlistengine.com/developers",
+    url: "https://www.hotlistengine.com/developers",
     siteName: "Hotlist",
     type: "website",
     images: [

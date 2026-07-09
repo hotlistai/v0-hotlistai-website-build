@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     title: "Hotlist Funnels | High-Velocity Lead Generation Platform",
     description:
       "Mobile-first conversion funnels powered by Lead Intelligence. Sub-1-second load times, 3x engagement. Starting at $495/mo.",
-    url: "https://hotlistengine.com/hotlist-funnels",
+    url: "https://www.hotlistengine.com/hotlist-funnels",
     siteName: "Hotlist",
     type: "website",
     images: [

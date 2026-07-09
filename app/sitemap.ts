@@ -1,16 +1,15 @@
 import type { MetadataRoute } from "next"
 import { getAllPosts, getAllCategories, slugifyCategory } from "@/lib/blog"
 import { getSeoProgrammaticUrls } from "@/lib/seo-taxonomy"
+import { SITE_URL } from "@/lib/site"
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://hotlistengine.com"
+  const baseUrl = SITE_URL
   const now = new Date().toISOString()
 
-  // Static routes
   const staticRoutes = [
     { path: "", priority: 1.0, changeFreq: "weekly" as const },
     { path: "/follow-up-leak-audit", priority: 0.95, changeFreq: "weekly" as const },
-    { path: "/how-it-works", priority: 0.9, changeFreq: "monthly" as const },
     { path: "/sample-leak-report", priority: 0.9, changeFreq: "weekly" as const },
     { path: "/follow-up-boss-automation-audit", priority: 0.9, changeFreq: "weekly" as const },
     { path: "/follow-up-boss-cleanup", priority: 0.9, changeFreq: "weekly" as const },
@@ -41,7 +40,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: route.priority,
   }))
 
-  // Blog post routes
   const posts = getAllPosts()
   const blogEntries: MetadataRoute.Sitemap = posts.map((post) => ({
     url: `${baseUrl}/blog/${post.slug}`,
@@ -50,7 +48,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: post.featured ? 0.9 : 0.8,
   }))
 
-  // Blog category routes
   const categories = getAllCategories()
   const categoryEntries: MetadataRoute.Sitemap = categories.map((category) => ({
     url: `${baseUrl}/blog/category/${slugifyCategory(category)}`,

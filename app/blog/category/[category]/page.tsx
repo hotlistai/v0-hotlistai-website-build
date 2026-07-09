@@ -44,7 +44,7 @@ export async function generateMetadata({
     openGraph: {
       title: `${formattedCategory} | Hotlist Blog`,
       description,
-      url: `https://hotlistengine.com/blog/category/${category}`,
+      url: `https://www.hotlistengine.com/blog/category/${category}`,
       siteName: "Hotlist",
       type: "website",
     },
@@ -83,16 +83,16 @@ export default async function CategoryPage({
     "@type": "CollectionPage",
     name: `${formattedCategory} Articles — Hotlist Blog`,
     description,
-    url: `https://hotlistengine.com/blog/category/${category}`,
+    url: `https://www.hotlistengine.com/blog/category/${category}`,
     isPartOf: {
       "@type": "Blog",
       name: "Hotlist Blog",
-      url: "https://hotlistengine.com/blog",
+      url: "https://www.hotlistengine.com/blog",
     },
     publisher: {
       "@type": "Organization",
       name: "Hotlist",
-      url: "https://hotlistengine.com",
+      url: "https://www.hotlistengine.com",
     },
   }
 
