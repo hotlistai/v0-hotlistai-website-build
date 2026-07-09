@@ -1,32 +1,38 @@
-# HotlistAI Launch Analytics And Profile Checklist
+# Hotlist Engine Launch Analytics And Profile Checklist
 
-Last updated: 2026-07-04
+Last updated: 2026-07-09
 
 ## Website Measurement
 
-The site already renders Vercel Analytics. Vercel Speed Insights and optional Google tags are wired in `app/layout.tsx`.
+The site renders Vercel Analytics, Vercel Speed Insights, and Google marketing tags through `app/layout.tsx`.
 
-Add these Vercel environment variables only when the real IDs are confirmed:
+The current direct GA4 / Google Ads measurement ID is installed by default:
 
-- `NEXT_PUBLIC_GA_MEASUREMENT_ID`: GA4 web data stream ID, for example `G-XXXXXXXXXX`.
+- `G-VFM0J3WGTN`
+
+Optional Vercel environment variables:
+
+- `NEXT_PUBLIC_GA_MEASUREMENT_ID`: overrides the default GA4 web data stream ID.
 - `NEXT_PUBLIC_GTM_ID`: Google Tag Manager container ID, for example `GTM-XXXXXXX`.
 - `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION`: Search Console HTML meta verification token if DNS verification is not already active.
 
-Use either GA4 directly or GTM. If `NEXT_PUBLIC_GTM_ID` exists, GTM owns Google tags and the direct GA4 script is skipped to avoid double pageviews.
+The direct GA4 tag stays on-page even if GTM is later added, because Google Ads / Analytics setup needs to detect this measurement stream directly on `hotlistengine.com`.
 
 ## Search Console
 
 Recommended property:
 
-- Domain property: `hotlistai.com`
+- Domain property: `hotlistengine.com`
 
 Immediate submit/check list:
 
-- Submit `https://hotlistai.com/sitemap.xml`.
-- Inspect and request indexing for `https://hotlistai.com/`.
-- Inspect and request indexing for `https://hotlistai.com/follow-up-leak-audit`.
-- Inspect and request indexing for `https://hotlistai.com/sample-leak-report`.
-- Inspect and request indexing for `https://hotlistai.com/blog`.
+- Submit `https://www.hotlistengine.com/sitemap.xml`.
+- Submit `https://www.hotlistengine.com/sitemap-images.xml`.
+- Inspect and request indexing for `https://www.hotlistengine.com/`.
+- Inspect and request indexing for `https://www.hotlistengine.com/follow-up-leak-audit`.
+- Inspect and request indexing for `https://www.hotlistengine.com/follow-up-boss-cleanup`.
+- Inspect and request indexing for `https://www.hotlistengine.com/sample-leak-report`.
+- Inspect and request indexing for `https://www.hotlistengine.com/blog`.
 - Keep Search Console access under the current working Google account for now; add delegated HotlistAI-specific access later if operations get messy.
 
 ## Google Business Profile

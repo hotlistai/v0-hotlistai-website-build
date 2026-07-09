@@ -1,6 +1,8 @@
 import Script from "next/script"
 
-const rawGaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
+const HOTLIST_ENGINE_GA_MEASUREMENT_ID = "G-VFM0J3WGTN"
+
+const rawGaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || HOTLIST_ENGINE_GA_MEASUREMENT_ID
 const rawGtmId = process.env.NEXT_PUBLIC_GTM_ID
 
 const gaMeasurementId = rawGaMeasurementId?.startsWith("G-") ? rawGaMeasurementId : undefined
@@ -31,7 +33,7 @@ export function GoogleMarketingTags() {
           </noscript>
         </>
       ) : null}
-      {gaMeasurementId && !gtmId ? (
+      {gaMeasurementId ? (
         <>
           <Script
             src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`}
