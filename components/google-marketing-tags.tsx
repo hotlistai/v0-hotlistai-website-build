@@ -14,6 +14,24 @@ const gaMeasurementIds = Array.from(
 )
 const gtmId = rawGtmId?.startsWith("GTM-") ? rawGtmId : undefined
 
+export function GoogleAnalyticsHeadTags() {
+  return (
+    <>
+      <script async src={`https://www.googletagmanager.com/gtag/js?id=${HOTLIST_ENGINE_GA_MEASUREMENT_ID}`} />
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            ${gaMeasurementIds.map((measurementId) => `gtag('config', ${JSON.stringify(measurementId)});`).join("\n            ")}
+          `,
+        }}
+      />
+    </>
+  )
+}
+
 export function GoogleMarketingTags() {
   return (
     <>
@@ -37,22 +55,6 @@ export function GoogleMarketingTags() {
               title="Google Tag Manager"
             />
           </noscript>
-        </>
-      ) : null}
-      {gaMeasurementIds.length ? (
-        <>
-          <Script
-            src={`https://www.googletagmanager.com/gtag/js?id=${HOTLIST_ENGINE_GA_MEASUREMENT_ID}`}
-            strategy="afterInteractive"
-          />
-          <Script id="google-analytics" strategy="afterInteractive">
-            {`
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              ${gaMeasurementIds.map((measurementId) => `gtag('config', ${JSON.stringify(measurementId)});`).join("\n              ")}
-            `}
-          </Script>
         </>
       ) : null}
     </>

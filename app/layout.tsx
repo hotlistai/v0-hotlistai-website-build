@@ -5,7 +5,7 @@ import { Analytics } from "@vercel/analytics/next"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import Script from "next/script"
 import { ChatWidget } from "@/components/chat-widget"
-import { GoogleMarketingTags } from "@/components/google-marketing-tags"
+import { GoogleAnalyticsHeadTags, GoogleMarketingTags } from "@/components/google-marketing-tags"
 import { SITE_URL } from "@/lib/site"
 import "./globals.css"
 
@@ -146,6 +146,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <meta name="format-detection" content="telephone=no" />
+        <GoogleAnalyticsHeadTags />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         <Script id="hs-script-loader" src="//js-na2.hs-scripts.com/242682996.js" strategy="afterInteractive" async defer />
       </head>
